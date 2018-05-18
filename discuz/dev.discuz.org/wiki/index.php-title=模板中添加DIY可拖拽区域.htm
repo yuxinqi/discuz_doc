@@ -1,0 +1,231 @@
+<html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="zh-cn" dir="ltr">
+<head>
+<title>模板中添加DIY可拖拽区域 - Discuz! 技术文库</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="MediaWiki 1.16.2" />
+<link rel="shortcut icon" href="../favicon.ico" tppabs="http://dev.discuz.org/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" tppabs="http://dev.discuz.org/wiki/opensearch_desc.php" title="Discuz! 技术文库 (zh-cn)" />
+<link rel="alternate" type="application/atom+xml" title="Discuz! 技术文库的Atom订阅" href="index.php-title=特殊-最近更改&feed=atom" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&feed=atom" />
+<link rel="stylesheet" href="skins/common/shared.css-270" tppabs="http://dev.discuz.org/wiki/skins/common/shared.css?270" media="screen" />
+<link rel="stylesheet" href="skins/common/commonPrint.css-270" tppabs="http://dev.discuz.org/wiki/skins/common/commonPrint.css?270" media="print" />
+<link rel="stylesheet" href="skins/monobook/main.css-270" tppabs="http://dev.discuz.org/wiki/skins/monobook/main.css?270" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE50Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE55Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki/skins/monobook/IE60Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki/skins/monobook/IE70Fixes.css?270" media="screen" /><![endif]-->
+<link rel="stylesheet" href="index.php-title=MediaWiki-Common.css&usemsgcache=yes&ctype=text-css&smaxage=18000&action=raw&maxage=18000" tppabs="http://dev.discuz.org/wiki/index.php?title=MediaWiki:Common.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" />
+<link rel="stylesheet" href="index.php-title=MediaWiki-Print.css&usemsgcache=yes&ctype=text-css&smaxage=18000&action=raw&maxage=18000" tppabs="http://dev.discuz.org/wiki/index.php?title=MediaWiki:Print.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" media="print" />
+<link rel="stylesheet" href="index.php-title=MediaWiki-Monobook.css&usemsgcache=yes&ctype=text-css&smaxage=18000&action=raw&maxage=18000" tppabs="http://dev.discuz.org/wiki/index.php?title=MediaWiki:Monobook.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" />
+<link rel="stylesheet" href="index.php-title=-&action=raw&maxage=18000&gen=css" tppabs="http://dev.discuz.org/wiki/index.php?title=-&action=raw&maxage=18000&gen=css" />
+<script>
+var skin="monobook",
+stylepath="/wiki/skins",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/wiki/index.php?title=$1",
+wgScriptPath="/wiki",
+wgScriptExtension=".php",
+wgScript="/wiki/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="http://dev.discuz.org/",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="模板中添加DIY可拖拽区域",
+wgTitle="模板中添加DIY可拖拽区域",
+wgAction="view",
+wgArticleId=14,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="zh-cn",
+wgContentLanguage="zh-cn",
+wgBreakFrames=false,
+wgCurRevisionId=38,
+wgVersion="1.16.2",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="首页",
+wgFormattedNamespaces={"-2": "媒体", "-1": "特殊", "0": "", "1": "讨论", "2": "用户", "3": "用户讨论", "4": "Discuz! 技术文库", "5": "Discuz! 技术文库讨论", "6": "文件", "7": "文件讨论", "8": "MediaWiki", "9": "MediaWiki讨论", "10": "模板", "11": "模板讨论", "12": "帮助", "13": "帮助讨论", "14": "分类", "15": "分类讨论"},
+wgNamespaceIds={"媒体": -2, "特殊": -1, "": 0, "讨论": 1, "用户": 2, "用户讨论": 3, "discuz!_技术文库": 4, "discuz!_技术文库讨论": 5, "文件": 6, "文件讨论": 7, "mediawiki": 8, "mediawiki讨论": 9, "模板": 10, "模板讨论": 11, "帮助": 12, "帮助讨论": 13, "分类": 14, "分类讨论": 15, "对话": 1, "用户对话": 3, "图像": 6, "档案": 6, "image": 6, "image_talk": 7, "图像对话": 7, "图像讨论": 7, "档案对话": 7, "档案讨论": 7, "文件对话": 7, "模板对话": 11, "帮助对话": 13, "分类对话": 15},
+wgSiteName="Discuz! 技术文库",
+wgCategories=[],
+wgRestrictionEdit=[],
+wgRestrictionMove=[];
+</script><script src="skins/common/wikibits.js-270" tppabs="http://dev.discuz.org/wiki/skins/common/wikibits.js?270"></script>
+<script src="skins/common/ajax.js-270" tppabs="http://dev.discuz.org/wiki/skins/common/ajax.js?270"></script>
+<script src="index.php-title=-&action=raw&gen=js&useskin=monobook&270" tppabs="http://dev.discuz.org/wiki/index.php?title=-&action=raw&gen=js&useskin=monobook&270"></script>
+
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-模板中添加DIY可拖拽区域 skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content" >
+	<a id="top"></a>
+
+	<h1 id="firstHeading" class="firstHeading">模板中添加DIY可拖拽区域</h1>
+	<div id="bodyContent">
+		<h3 id="siteSub">出自Discuz! 技术文库</h3>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">跳转到： <a href="#column-one">导航</a>, <a href="#searchInput">搜索</a></div>
+		<!-- start content -->
+
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E5.9C.A8.E5.B7.B2.E7.BB.8F.E6.9C.89.E5.8F.AF.E6.8B.96.E6.8B.BD.E5.8C.BA.E5.9F.9F.E7.9A.84.E6.A8.A1.E6.9D.BF.E4.B8.AD.E6.B7.BB.E5.8A.A0.E6.9B.B4.E5.A4.9A.E7.9A.84.E5.8F.AF.E6.8B.96.E6.8B.BD.E5.8C.BA.E5.9F.9F"><span class="tocnumber">1</span> <span class="toctext">在已经有可拖拽区域的模板中添加更多的可拖拽区域</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#.E8.AE.A9.E8.87.AA.E5.B7.B1.E7.9A.84.E7.A8.8B.E5.BA.8F.E5.92.8C.E6.A8.A1.E6.9D.BF.E9.A1.B5.E9.9D.A2.E4.B9.9F.E5.8F.AF.E4.BB.A5DIY"><span class="tocnumber">2</span> <span class="toctext">让自己的程序和模板页面也可以DIY</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#test.php.E7.A8.8B.E5.BA.8F.E4.BB.A3.E7.A0.81.E4.B8.BA"><span class="tocnumber">2.1</span> <span class="toctext">test.php程序代码为</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#.E6.A8.A1.E6.9D.BF.E6.96.87.E4.BB.B6.E4.BB.A3.E7.A0.81"><span class="tocnumber">2.2</span> <span class="toctext">模板文件代码</span></a></li>
+
+</ul>
+</li>
+</ul>
+</td></tr></table><script>if (window.showTocToggle) { var tocShowText = "显示"; var tocHideText = "隐藏"; showTocToggle(); } </script>
+<h2> <span class="mw-headline" id=".E5.9C.A8.E5.B7.B2.E7.BB.8F.E6.9C.89.E5.8F.AF.E6.8B.96.E6.8B.BD.E5.8C.BA.E5.9F.9F.E7.9A.84.E6.A8.A1.E6.9D.BF.E4.B8.AD.E6.B7.BB.E5.8A.A0.E6.9B.B4.E5.A4.9A.E7.9A.84.E5.8F.AF.E6.8B.96.E6.8B.BD.E5.8C.BA.E5.9F.9F">在已经有可拖拽区域的模板中添加更多的可拖拽区域</span></h2>
+<dl><dd>在Discuz! X默认模板的大部分模板文件中已经内置了多个可拖拽区域，但是如果你觉得这些还不够，还需要添加更多的可拖拽区域怎么办？ 
+</dd></dl>
+<dl><dd>打开你要添加可拖拽区域的模板文件，在要添加的位置加入如下代码 
+</dd></dl>
+<pre>&lt;!--[diy=diyid]--&gt;&lt;div id=&quot;diyid&quot; class=&quot;area&quot;&gt;&lt;/div&gt;&lt;!--[/diy]--&gt;
+
+</pre> 
+<dl><dd><ul><li>DIY使用的tag标签为div,指定的class为area
+</li><li>&lt;!--[diy=diyid]--&gt;和&lt;!--[/diy]--&gt;是一对完整的DIY可拖拽区域闭合标识
+</li><li>[diy=diyid]中的diyid要与后面的DIV的id相同，同时要确保其在页面中唯一，即不能与页面已有元素ID相同。 
+</li></ul>
+</dd></dl>
+<h2> <span class="mw-headline" id=".E8.AE.A9.E8.87.AA.E5.B7.B1.E7.9A.84.E7.A8.8B.E5.BA.8F.E5.92.8C.E6.A8.A1.E6.9D.BF.E9.A1.B5.E9.9D.A2.E4.B9.9F.E5.8F.AF.E4.BB.A5DIY">让自己的程序和模板页面也可以DIY</span></h2>
+<dl><dd>假设你新建的PHP文件名为test.php,对应的模板文件为/template/default/home/testtpl.htm
+</dd></dl>
+<h3> <span class="mw-headline" id="test.php.E7.A8.8B.E5.BA.8F.E4.BB.A3.E7.A0.81.E4.B8.BA"> test.php程序代码为  </span></h3>
+
+<pre> 
+&lt;?php&gt;
+$var = '';
+$arr = array();
+... //程序逻辑
+loadcache('diytemplatename');//加载DIY页面缓存，X2中的改进，此缓存必需要加载，目的是为了减少磁盘的IO操作
+template('diy:home/testtpl');//加载为模板文件，其中 “diy:”表示支持页面DIY操作
+&lt;?&gt;
+</pre> 
+<dl><dd><ul><li><b>loadcache('diytemplatename')X2中的改进，此缓存最好是在网站根目录的应用入口文件中加载，如下</b>
+</li></ul>
+</dd></dl>
+<pre>...
+$cachelist = array('yourcache', 'diytemplatename');
+$discuz-&gt;cachelist = $cachelist;
+$discuz-&gt;init();
+...
+</pre>
+<h3> <span class="mw-headline" id=".E6.A8.A1.E6.9D.BF.E6.96.87.E4.BB.B6.E4.BB.A3.E7.A0.81">模板文件代码</span></h3>
+
+<pre>...
+&lt;style id=&quot;diy_style&quot; type=&quot;text/css&quot;&gt;&lt;/style&gt;&lt;!--在模板文件中添加存放CSS代码的标签--&gt;
+&lt;div id='ct'&gt;
+...
+&lt;!--[diy=diyid]--&gt;&lt;div id=&quot;diyid&quot; class=&quot;area&quot;&gt;&lt;/div&gt;&lt;!--[/diy]--&gt;&lt;!--在你需要的地方添加可拖拽区域--&gt;
+
+..
+&lt;/div&gt;
+&lt;!--[diy=diyid2]--&gt;&lt;div id=&quot;diyid2&quot; class=&quot;area&quot;&gt;&lt;/div&gt;&lt;!--[/diy]--&gt;&lt;!--在你需要的地方添加可拖拽区域--&gt;
+...
+</pre> 
+<dl><dd><ul><li>DIY使用的tag标签为div,指定的class为area 
+</li><li>&lt;!--[diy=diyid]--&gt;和&lt;!--[/diy]--&gt;是一对完整的DIY可拖拽区域闭合标识 
+
+</li><li>[diy=diyid]中的diyid要与后面的DIV的id相同，同时要确保其在页面中唯一，即不能与页面已有元素ID相同。
+</li></ul>
+</dd></dl>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 1/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key dev-mw_:pcache:idhash:14-0!1!0!!zh-cn!2!edit=0 and timestamp 20110425112222 -->
+<div class="printfooter">
+取自“<a href="index.php-title=模板中添加DIY可拖拽区域.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6">http://dev.discuz.org/wiki/index.php?title=%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6</a>”</div>
+		<div id='catlinks' class='catlinks catlinks-allhidden'></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>查看</h5>
+		<div class="pBody">
+			<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="index.php-title=模板中添加DIY可拖拽区域.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6" title="查看页面内容 [c]" accesskey="c">页面</a></li>
+				 <li id="ca-talk" class="new"><a href="javascript:if(confirm('http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9&hidebots=0&days=14&hideliu=1&target=%E6%96%87%E4%BB%B6%3AIntroff_1jLOYlJZaqiA.jpg  \n\nļδ Teleport Pro ȡأΪ һļ˳ʼַ̫ԶˡӿʼַȡصȣͿȡصһļ  \n\nҪӷϴ'))window.location='http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9&hidebots=0&days=14&hideliu=1&target=%E6%96%87%E4%BB%B6%3AIntroff_1jLOYlJZaqiA.jpg'" tppabs="http://dev.discuz.org/wiki/index.php?title=%E8%AE%A8%E8%AE%BA:%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6&action=edit&redlink=1" title="关于页面正文的讨论 [t]" accesskey="t">讨论</a></li>
+				 <li id="ca-viewsource"><a href="index.php-title=模板中添加DIY可拖拽区域&action=edit.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6&action=edit" title="此页面已被保护，你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></li>
+				 <li id="ca-history"><a href="index.php-title=模板中添加DIY可拖拽区域&action=history.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6&action=history" title="此页面的早前修订版本 [h]" accesskey="h">历史</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>个人工具</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="index.php-title=特殊-用户登录&returnto=模板中添加DIY可拖拽区域.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&returnto=%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6" title="我们鼓励您登录，但这并不是必须的 [o]" accesskey="o">登录</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/wiki/images/wiki.gif);" href="index.php-title=首页.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E9%A6%96%E9%A1%B5" title="访问首页"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>导航</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="index.php-title=首页.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E9%A6%96%E9%A1%B5" title="访问首页 [z]" accesskey="z">首页</a></li>
+				<li id="n-portal"><a href="index.php-title=Discuz!_技术文库-社区.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E7%A4%BE%E5%8C%BA" title="关于本计划，您可以做什么，应该如何做">社区入口</a></li>
+				<li id="n-currentevents"><a href="index.php-title=Discuz!_技术文库-当前事件.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E5%BD%93%E5%89%8D%E4%BA%8B%E4%BB%B6" title="查找当前事件的背景信息">当前事件</a></li>
+				<li id="n-recentchanges"><a href="index.php-title=特殊-最近更改.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" title="列出该网站的最近修改 [r]" accesskey="r">最近更改</a></li>
+				<li id="n-randompage"><a href="index.php-title=特殊-用户登录&returnto=特殊-链出更改&returntoquery=hidemyself=1&from=20111128013601&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%9A%8F%E6%9C%BA%E9%A1%B5%E9%9D%A2" title="随机载入一个页面 [x]" accesskey="x">随机页面</a></li>
+				<li id="n-help"><a href="index.php-title=帮助-目录.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E5%B8%AE%E5%8A%A9:%E7%9B%AE%E5%BD%95" title="寻求帮助">帮助</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">搜索</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="http://dev.discuz.org/wiki/index.php" id="searchform">
+				<input type='hidden' name="title" value="特殊:搜索"/>
+				<input id="searchInput" title="搜索该网站" accesskey="f" type="search" name="search" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="进入" title="如果相同的标题存在的话便直接前往该页面" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="搜索" title="搜索该文字的页面" />
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>工具箱</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="index.php-title=特殊-链入页面-模板中添加DIY可拖拽区域.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%85%A5%E9%A1%B5%E9%9D%A2/%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6" title="列出所有与此页相链的页面 [j]" accesskey="j">链入页面</a></li>
+				<li id="t-recentchangeslinked"><a href="index.php-title=特殊-链出更改-模板中添加DIY可拖拽区域.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9/%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6" title="从此页链出的所有页面的更改 [k]" accesskey="k">链出更改</a></li>
+<li id="t-specialpages"><a href="index.php-title=特殊-特殊页面.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+				<li id="t-print"><a href="index.php-title=模板中添加DIY可拖拽区域&printable=yes.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6&printable=yes" rel="alternate" title="这个页面的可打印版本 [p]" accesskey="p">可打印版</a></li>				<li id="t-permalink"><a href="index.php-title=模板中添加DIY可拖拽区域&oldid=38.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6&oldid=38" title="这个页面修订版本的永久链接">永久链接</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico"><a href="javascript:if(confirm('http://www.mediawiki.org/  \n\nļδ Teleport Pro ȡأΪ ·ʼַõķΧ  \n\nҪӷϴ'))window.location='http://www.mediawiki.org/'" tppabs="http://www.mediawiki.org/"><img src="skins/common/images/poweredby_mediawiki_88x31.png" tppabs="http://dev.discuz.org/wiki/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a></div>
+	<ul id="f-list">
+		<li id="lastmod"> 此页面最后修订于2011年4月13日 (星期三) 04:38。</li>
+		<li id="privacy"><a href="err:bad_redirect" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E9%9A%90%E7%A7%81%E6%94%BF%E7%AD%96" title="Discuz! 技术文库:隐私政策">隐私政策</a></li>
+		<li id="about"><a href="index.php-title=Discuz!_技术文库-关于.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E5%85%B3%E4%BA%8E" title="Discuz! 技术文库:关于">关于Discuz! 技术文库</a></li>
+		<li id="disclaimer"><a href="err:bad_redirect" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E" title="Discuz! 技术文库:免责声明">免责声明</a></li>
+	</ul>
+</div>
+</div>
+
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.060 secs. --></body><!-- Cached 20110425112222 -->
+</html>

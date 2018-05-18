@@ -1,0 +1,1268 @@
+<html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="zh-cn" dir="ltr">
+<head>
+<title>Function core - Discuz! 技术文库</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="MediaWiki 1.16.2" />
+<link rel="shortcut icon" href="../favicon.ico" tppabs="http://dev.discuz.org/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" tppabs="http://dev.discuz.org/wiki/opensearch_desc.php" title="Discuz! 技术文库 (zh-cn)" />
+<link rel="alternate" type="application/atom+xml" title="Discuz! 技术文库的Atom订阅" href="index.php-title=特殊-最近更改&feed=atom" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&feed=atom" />
+<link rel="stylesheet" href="skins/common/shared.css-270" tppabs="http://dev.discuz.org/wiki/skins/common/shared.css?270" media="screen" />
+<link rel="stylesheet" href="skins/common/commonPrint.css-270" tppabs="http://dev.discuz.org/wiki/skins/common/commonPrint.css?270" media="print" />
+<link rel="stylesheet" href="skins/monobook/main.css-270" tppabs="http://dev.discuz.org/wiki/skins/monobook/main.css?270" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE50Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE55Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki/skins/monobook/IE60Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki/skins/monobook/IE70Fixes.css?270" media="screen" /><![endif]-->
+<link rel="stylesheet" href="index.php-title=MediaWiki-Common.css&usemsgcache=yes&ctype=text-css&smaxage=18000&action=raw&maxage=18000" tppabs="http://dev.discuz.org/wiki/index.php?title=MediaWiki:Common.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" />
+<link rel="stylesheet" href="index.php-title=MediaWiki-Print.css&usemsgcache=yes&ctype=text-css&smaxage=18000&action=raw&maxage=18000" tppabs="http://dev.discuz.org/wiki/index.php?title=MediaWiki:Print.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" media="print" />
+<link rel="stylesheet" href="index.php-title=MediaWiki-Monobook.css&usemsgcache=yes&ctype=text-css&smaxage=18000&action=raw&maxage=18000" tppabs="http://dev.discuz.org/wiki/index.php?title=MediaWiki:Monobook.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" />
+<link rel="stylesheet" href="index.php-title=-&action=raw&maxage=18000&gen=css" tppabs="http://dev.discuz.org/wiki/index.php?title=-&action=raw&maxage=18000&gen=css" />
+<script>
+var skin="monobook",
+stylepath="/wiki/skins",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/wiki/index.php?title=$1",
+wgScriptPath="/wiki",
+wgScriptExtension=".php",
+wgScript="/wiki/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="http://dev.discuz.org/",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="Function_core",
+wgTitle="Function core",
+wgAction="view",
+wgArticleId=36,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="zh-cn",
+wgContentLanguage="zh-cn",
+wgBreakFrames=false,
+wgCurRevisionId=296,
+wgVersion="1.16.2",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="首页",
+wgFormattedNamespaces={"-2": "媒体", "-1": "特殊", "0": "", "1": "讨论", "2": "用户", "3": "用户讨论", "4": "Discuz! 技术文库", "5": "Discuz! 技术文库讨论", "6": "文件", "7": "文件讨论", "8": "MediaWiki", "9": "MediaWiki讨论", "10": "模板", "11": "模板讨论", "12": "帮助", "13": "帮助讨论", "14": "分类", "15": "分类讨论"},
+wgNamespaceIds={"媒体": -2, "特殊": -1, "": 0, "讨论": 1, "用户": 2, "用户讨论": 3, "discuz!_技术文库": 4, "discuz!_技术文库讨论": 5, "文件": 6, "文件讨论": 7, "mediawiki": 8, "mediawiki讨论": 9, "模板": 10, "模板讨论": 11, "帮助": 12, "帮助讨论": 13, "分类": 14, "分类讨论": 15, "对话": 1, "用户对话": 3, "图像": 6, "档案": 6, "image": 6, "image_talk": 7, "图像对话": 7, "图像讨论": 7, "档案对话": 7, "档案讨论": 7, "文件对话": 7, "模板对话": 11, "帮助对话": 13, "分类对话": 15},
+wgSiteName="Discuz! 技术文库",
+wgCategories=[],
+wgRestrictionEdit=[],
+wgRestrictionMove=[];
+</script><script src="skins/common/wikibits.js-270" tppabs="http://dev.discuz.org/wiki/skins/common/wikibits.js?270"></script>
+<script src="skins/common/ajax.js-270" tppabs="http://dev.discuz.org/wiki/skins/common/ajax.js?270"></script>
+<script src="index.php-title=-&action=raw&gen=js&useskin=monobook&270" tppabs="http://dev.discuz.org/wiki/index.php?title=-&action=raw&gen=js&useskin=monobook&270"></script>
+
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Function_core skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content" >
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">Function core</h1>
+	<div id="bodyContent">
+		<h3 id="siteSub">出自Discuz! 技术文库</h3>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">跳转到： <a href="#column-one">导航</a>, <a href="#searchInput">搜索</a></div>
+		<!-- start content -->
+<pre>
+
+
+/**
+ * 系统错误处理
+ * @param &lt;type&gt; $message 错误信息
+ * @param &lt;type&gt; $show 是否显示信息
+ * @param &lt;type&gt; $save 是否存入日志
+ * @param &lt;type&gt; $halt 是否中断访问
+ */
+function system_error($message, $show = true, $save = true, $halt = true) {
+    ......    
+}
+
+/**
+ * 更新 session
+ * @global &lt;type&gt; $_G
+ * @staticvar boolean $updated
+ * @param boolean $force
+ * @return boolean
+ */
+function updatesession($force = false) {
+    ......    
+}
+
+/**
+ * 获取 microtime float 数值,为了兼容php4
+ * @return &lt;float&gt;
+ */
+function dmicrotime() {
+    ......    
+}
+
+/**
+ * 设置全局 $_G 中的变量
+ * @global &lt;array&gt; $_G
+ * @param &lt;string&gt; $key 键
+ * @param &lt;string&gt; $value 值
+ * @param &lt;mix&gt; $group 组(准备废弃,尽量不用)
+ * @return true
+ *
+ * @example
+ * setglobal('test', 1); // $_G['test'] = 1;
+ * setglobal('config/test/abc') = 2; //$_G['config']['test']['abc'] = 2;
+ *
+ */
+function setglobal($key , $value, $group = null) {
+    ......    
+}
+
+/**
+ * 获取全局变量 $_G 当中的某个数值
+ * @global  $_G
+ * @param &lt;type&gt; $key
+ * @param &lt;type&gt; $group 计划废弃的参数,不建议使用
+ * @return &lt;mix&gt;
+ *
+ * $v = getglobal('test'); // $v = $_G['test']
+ * $v = getglobal('test/hello/ok');  // $v = $_G['test']['hello']['ok']
+ */
+function getglobal($key, $group = null) {
+    ......    
+}
+
+/**
+ * 取出 get, post, cookie 当中的某个变量
+ *
+ * @param string $k  key 值
+ * @param string $type 类型
+ * @return mix
+ */
+function getgpc($k, $type='GP') {
+    ......    
+}
+
+/**
+ * 根据uid 获取用户基本数据
+ * @staticvar array $users 存放已经获取的用户的信息,避免重复查库
+ * @param &lt;int&gt; $uid
+ * @return &lt;array&gt;
+ */
+function getuserbyuid($uid) {
+    ......    
+}
+
+/**
+* 获取当前用户的扩展资料
+* @param $field 字段
+*/
+function getuserprofile($field) {
+    ......    
+}
+
+/**
+ * 对字符串或者输入进行 addslashes 操作
+ * @param &lt;mix&gt; $string
+ * @param &lt;int&gt; $force
+ * @return &lt;mix&gt;
+ */
+function daddslashes($string, $force = 1) {
+    ......    
+}
+
+/**
+ * 对字符串进行加密和解密
+ * @param &lt;string&gt; $string
+ * @param &lt;string&gt; $operation  DECODE 解密 | ENCODE  加密
+ * @param &lt;string&gt; $key 当为空的时候,取全局密钥
+ * @param &lt;int&gt; $expiry 有效期,单位秒
+ * @return &lt;string&gt;
+ */
+function authcode($string, $operation = 'DECODE', $key = '', $expiry = 0) {
+    ......    
+}
+
+/**
+ * 远程文件文件请求兼容函数
+ */
+function dfsockopen($url, $limit = 0, $post = '', $cookie = '', $bysocket = FALSE, $ip = '', $timeout = 15, $block = TRUE) {
+    ......    
+}
+
+/**
+* HTML转义字符
+* @param $string - 字符串
+* @return 返回转义好的字符串
+*/
+function dhtmlspecialchars($string) {
+    ......    
+}
+
+/**
+ * 退出程序 同 exit 的区别, 对输出数据会进行 重新加工和处理
+ * 通常情况下,我们建议使用本函数终止程序, 除非有特别需求
+ * @param &lt;type&gt; $message
+ */
+function dexit($message = '') {
+    ......    
+}
+
+/**
+ * 同 php header函数, 针对 location 跳转做了特殊处理
+ * @param &lt;type&gt; $string
+ * @param &lt;type&gt; $replace
+ * @param &lt;type&gt; $http_response_code
+ */
+function dheader($string, $replace = true, $http_response_code = 0) {
+    ......    
+}
+
+/**
+* 设置cookie
+* @param $var - 变量名
+* @param $value - 变量值
+* @param $life - 生命期
+* @param $prefix - 前缀
+* @param $httponly - 安全属性
+*/
+function dsetcookie($var, $value = '', $life = 0, $prefix = 1, $httponly = false) {
+    ......    
+}
+
+/**
+ * 获取cookie
+ * @param $key - cookie名称，不需要带前缀
+ */
+function getcookie($key) {
+    ......    
+}
+
+/**
+ * 获取文件扩展名
+ * @param $filename 文件名
+ */
+function fileext($filename) {
+    ......    
+}
+
+/**
+* 检查是否是以手机浏览器进入(IN_MOBILE)
+*/
+function checkmobile() {
+    ......    
+}
+
+/**
+ * 字符串方式实现 preg_match(&quot;/(s1|s2|s3)/&quot;, $string, $match)
+ * @param string $string 源字符串
+ * @param array $arr 要查找的字符串 如array('s1', 's2', 's3')
+ * @param bool $returnvalue 是否返回找到的值
+ * @return bool
+ */
+function dstrpos($string, &amp;$arr, $returnvalue = false) {
+    ......    
+}
+
+/**
+* 检查邮箱是否有效
+* @param $email 要检查的邮箱
+* @param 返回结果
+*/
+function isemail($email) {
+    ......    
+}
+
+/**
+* 问题答案加密
+* @param $questionid - 问题
+* @param $answer - 答案
+* @return 返回加密的字串
+*/
+function quescrypt($questionid, $answer) {
+    ......    
+}
+
+/**
+* 产生随机码
+* @param $length - 要多长
+* @param $numberic - 数字还是字符串
+* @return 返回字符串
+*/
+function random($length, $numeric = 0) {
+    ......    
+}
+
+/**
+ * 判断一个字符串是否在另一个字符串中存在
+ *
+ * @param string 原始字串 $string
+ * @param string 查找 $find
+ * @return boolean
+ */
+function strexists($string, $find) {
+    ......    
+}
+
+/**
+ * 获取头像
+ *
+ * @param int $uid 需要获取的用户UID值
+ * @param string $size 获取尺寸 'small', 'middle', 'big'
+ * @param boolean $returnsrc 是否直接返回图片src
+ * @param boolean $real 是否返回真实图片
+ * @param boolean $static 是否返回真实路径
+ * @param string $ucenterurl 强制uc路径
+ */
+function avatar($uid, $size = 'middle', $returnsrc = FALSE, $real = FALSE, $static = FALSE, $ucenterurl = '') {
+    ......    
+}
+
+/**
+* 加载语言
+* 语言文件统一为 $lang = array();
+* @param $file - 语言文件，可包含路径如 forum/xxx home/xxx
+* @param $langvar - 语言文字索引
+* @param $vars - 变量替换数组
+* @param $default - 指定默认值，当找不到对应言包时生效
+* @return 语言文字
+*/
+function lang($file, $langvar = null, $vars = array(), $default = null) {
+    ......    
+}
+
+/**
+* 检查模板源文件是否更新
+* 当编译文件不存时强制重新编译
+* 当 tplrefresh = 1 时检查文件
+* 当 tplrefresh &gt; 1 时，则根据 tplrefresh 取余，无余时则检查更新
+*
+*/
+function checktplrefresh($maintpl, $subtpl, $timecompare, $templateid, $cachefile, $tpldir, $file) {
+    ......    
+}
+
+/**
+* 解析模板
+* @return 返回域名
+*/
+function template($file, $templateid = 0, $tpldir = '', $gettplfile = 0, $primaltpl='') {
+    ......    
+}
+
+/**
+ * 对某id进行个性化md5
+ */
+function modauthkey($id) {
+    ......    
+}
+
+/**
+ * 获得当前应用页面选中的导航id
+ */
+function getcurrentnav() {
+    ......    
+}
+
+/**
+* 读取缓存
+* @param $cachenames - 缓存名称数组或字串
+*/
+function loadcache($cachenames, $force = false) {
+    ......    
+}
+
+/**
+ * 通过memcache\mysql\file等几种手段读缓存
+ * @param mixed $cachenames 缓存名的数组或字串
+ */
+function cachedata($cachenames) {
+    ......    
+}
+
+/**
+* 格式化时间
+* @param $timestamp - 时间戳
+* @param $format - dt=日期时间 d=日期 t=时间 u=个性化 其他=自定义
+* @param $timeoffset - 时区
+* @return string
+*/
+function dgmdate($timestamp, $format = 'dt', $timeoffset = '9999', $uformat = '') {
+    ......    
+}
+
+/**
+	得到时间戳
+*/
+function dmktime($date) {
+    ......    
+}
+
+/**
+* 更新缓存
+* @param $cachename - 缓存名称
+* @param $data - 缓存数据
+*/
+function save_syscache($cachename, $data) {
+    ......    
+}
+
+/**
+* Portal模块
+* @param $parameter - 参数集合
+*/
+function block_get($parameter) {
+    ......    
+}
+
+/**
+* Portal 模块显示
+*
+* @param $parameter - 参数集合
+*/
+function block_display($bid) {
+    ......    
+}
+
+/**
+* 返回库文件的全路径
+*
+* @param string $libname 库文件分类及名称
+* @param string $folder 模块目录'module','include','class'
+* @return string
+*
+* @example require DISCUZ_ROOT.'./source/function/function_cache.php'
+* @example 我们可以利用此函数简写为：require libfile('function/cache');
+*
+*/
+function libfile($libname, $folder = '') {
+    ......    
+}
+
+/**
+ * 针对uft-8进行特殊处理的strlen
+ * @param string $str
+ * @return int
+ */
+function dstrlen($str) {
+    ......    
+}
+
+/**
+* 根据中文裁减字符串
+* @param $string - 字符串
+* @param $length - 长度
+* @param $doc - 缩略后缀
+* @return 返回带省略号被裁减好的字符串
+*/
+function cutstr($string, $length, $dot = ' ...') {
+    ......    
+}
+
+/**
+* 论坛 aid url 生成
+*/
+function aidencode($aid, $type = 0, $tid = 0) {
+    ......    
+}
+
+/**
+ * 返回论坛缩放附件图片的地址 url
+ */
+function getforumimg($aid, $nocache = 0, $w = 140, $h = 140, $type = '') {
+    ......    
+}
+
+
+/**
+ * 获取rewrite字符串
+ * @param string $type 需要获取的rewite
+ * @param boolean $returntype true:直接返回href, false:返回a标签
+ * @param string $host 可选网站域名
+ * @return string
+ */
+function rewriteoutput($type, $returntype, $host) {
+    ......    
+}
+
+/**
+* 手机模式下替换所有链接为mobile=yes形式
+* @param $file - 正则匹配到的文件字符串
+* @param $file - 要被替换的字符串
+* @$replace 替换后字符串
+*/
+function mobilereplace($file, $replace) {
+    ......    
+}
+
+/**
+* 手机的output函数
+*/
+function mobileoutput() {
+    ......    
+}
+
+/**
+* 系统输出
+* @return 返回内容
+*/
+function output() {
+    ......    
+}
+
+/**
+ * ajax footer使用输出页面内容
+ */
+function output_ajax() {
+    ......    
+}
+
+/**
+ * 运行钩子
+ */
+function runhooks() {
+    ......    
+}
+
+/**
+ * 执行插件脚本
+ */
+function hookscript($script, $hscript, $type = 'funcs', $param = array(), $func = '') {
+    ......    
+}
+
+/**
+ * 获取插件模块
+ */
+function pluginmodule($pluginid, $type) {
+    ......    
+}
+
+/**
+ * 执行积分规则
+ * @param String $action:  规则action名称
+ * @param Integer $uid: 操作用户
+ * @param array $extrasql: common_member_count的额外操作字段数组格式为 array('extcredits1' =&gt; '1')
+ * @param String $needle: 防重字符串
+ * @param Integer $coef: 积分放大倍数
+ * @param Integer $update: 是否执行更新操作
+ * @param Integer $fid: 版块ID
+ * @return 返回积分策略
+ */
+function updatecreditbyaction($action, $uid = 0, $extrasql = array(), $needle = '', $coef = 1, $update = 1, $fid = 0) {
+    ......    
+}
+
+/**
+* 检查积分下限
+* @param string $action: 策略动作Action或者需要检测的操作积分值使如extcredits1积分进行减1操作检测array('extcredits1' =&gt; -1)
+* @param Integer $uid: 用户UID
+* @param Integer $coef: 积分放大倍数/负数为减分操作
+* @param Integer $returnonly: 只要返回结果，不用中断程序运行
+*/
+function checklowerlimit($action, $uid = 0, $coef = 1, $fid = 0, $returnonly = 0) {
+    ......    
+}
+
+/**
+ * 批量执行某一条策略规则
+ * @param String $action:  规则action名称
+ * @param Integer $uids: 操作用户可以为单个uid或uid数组
+ * @param array $extrasql: common_member_count的额外操作字段数组格式为 array('extcredits1' =&gt; '1')
+ * @param Integer $coef: 积分放大倍数，当为负数时为反转操作
+ * @param Integer $fid: 版块ID
+ */
+function batchupdatecredit($action, $uids = 0, $extrasql = array(), $coef = 1, $fid = 0) {
+    ......    
+}
+
+/**
+ * 添加积分
+ * @param Integer $uids: 用户uid或者uid数组
+ * @param String $dataarr: member count相关操作数组，例: array('threads' =&gt; 1, 'doings' =&gt; -1)
+ * @param Boolean $checkgroup: 是否检查用户组 true or false
+ * @param String $operation: 操作类型
+ * @param Integer $relatedid:
+ * @param String $ruletxt: 积分规则文本
+ */
+
+function updatemembercount($uids, $dataarr = array(), $checkgroup = true, $operation = '', $relatedid = 0, $ruletxt = '') {
+	if(!empty($uids) &amp;&amp; (is_array($dataarr) &amp;&amp; $dataarr)) {
+		require_once libfile('function/credit');
+		return _updatemembercount($uids, $dataarr, $checkgroup, $operation, $relatedid, $ruletxt);
+	}
+	return true;
+}
+
+/**
+ * 校验用户组
+ * @param $uid
+ */
+function checkusergroup($uid = 0) {
+    ......    
+}
+
+/**
+* 调试信息
+*/
+function debuginfo() {
+    ......    
+}
+
+/**
+ * 随机取出一个站长推荐的条目
+ * @param $module 当前模块
+ * @return array
+*/
+function getfocus_rand($module) {
+    ......    
+}
+
+/**
+ * 检查验证码正确性
+ * @param $value 验证码变量值
+ */
+function check_seccode($value, $idhash) {
+    ......    
+}
+
+/**
+ * 检查验证问答正确性
+ * @param $value 验证问答变量值
+ */
+function check_secqaa($value, $idhash) {
+    ......    
+}
+
+/**
+ * 获取广告
+ */
+function adshow($parameter) {
+    ......    
+}
+
+/**
+ * 显示提示信息
+ * @param $message - 提示信息，可中文也可以是 lang_message.php 中的数组 key 值
+ * @param $url_forward - 提示后跳转的 url
+ * @param $values - 提示信息中可替换的变量值 array(key =&gt; value ...) 形式
+ * @param $extraparam - 扩展参数 array(key =&gt; value ...) 形式
+ *	跳转控制
+		header		header跳转
+		location	location JS 跳转，限于 msgtype = 2、3
+		timeout		定时跳转
+		refreshtime	自定义跳转时间
+		closetime	自定义关闭时间，限于 msgtype = 2，值为 true 时为默认
+		locationtime	自定义跳转时间，限于 msgtype = 2，值为 true 时为默认
+	内容控制
+		alert		alert 图标样式 right/info/error
+		return		显示请返回
+		redirectmsg	下载时用的提示信息，当跳转时显示的信息样式
+ 					0:如果您的浏览器没有自动跳转，请点击此链接
+ 					1:如果 n 秒后下载仍未开始，请点击此链接
+		msgtype		信息样式
+ 					1:非 Ajax
+ 					2:Ajax 弹出框
+ 					3:Ajax 只显示信息文本
+		showmsg		显示信息文本
+		showdialog	关闭原弹出框显示 showDialog 信息，限于 msgtype = 2
+		login		未登录时显示登录链接
+		extrajs		扩展 js
+		striptags	过滤 HTML 标记
+	Ajax 控制
+		handle		执行 js 回调函数
+		showid		控制显示的对象 ID
+ */
+function showmessage($message, $url_forward = '', $values = array(), $extraparam = array(), $custom = 0) {
+    ......    
+}
+
+/**
+* 检查是否正确提交了表单
+* @param $var 需要检查的变量
+* @param $allowget 是否允许GET方式
+* @param $seccodecheck 验证码检测是否开启
+* @return 返回是否正确提交了表单
+*/
+function submitcheck($var, $allowget = 0, $seccodecheck = 0, $secqaacheck = 0) {
+    ......    
+}
+
+/**
+* 分页
+* @param $num - 总数
+* @param $perpage - 每页数
+* @param $curpage - 当前页
+* @param $mpurl - 跳转的路径
+* @param $maxpages - 允许显示的最大页数
+* @param $page - 最多显示多少页码
+* @param $autogoto - 最后一页，自动跳转
+* @param $simple - 是否简洁模式（简洁模式不显示上一页、下一页和页码跳转）
+* @return 返回分页代码
+*/
+function multi($num, $perpage, $curpage, $mpurl, $maxpages = 0, $page = 10, $autogoto = FALSE, $simple = FALSE) {
+    ......    
+}
+
+/**
+* 只有上一页下一页的分页（无需知道数据总数）
+* @param $num - 本次所取数据条数
+* @param $perpage - 每页数
+* @param $curpage - 当前页
+* @param $mpurl - 跳转的路径
+* @return 返回分页代码
+*/
+function simplepage($num, $perpage, $curpage, $mpurl) {
+    ......    
+}
+
+/**
+ * 词语过滤
+ * @param $message - 词语过滤文本
+ * @return 成功返回原始文本，否则提示错误或被替换
+ */
+function censor($message, $modword = NULL, $return = FALSE) {
+    ......    
+}
+
+/**
+	词语过滤，检测是否含有需要审核的词
+*/
+function censormod($message) {
+    ......    
+}
+
+/**
+* 刷新重定向
+*/
+function dreferer($default = '') {
+    ......    
+}
+
+/**
+ * 远程FTP使用
+ */
+function ftpcmd($cmd, $arg1 = '') {
+    ......    
+}
+
+/**
+ * 编码转换
+ * @param &lt;string&gt; $str 要转码的字符
+ * @param &lt;string&gt; $in_charset 输入字符集
+ * @param &lt;string&gt; $out_charset 输出字符集(默认当前)
+ * @param &lt;boolean&gt; $ForceTable 强制使用码表(默认不强制)
+ *
+ */
+function diconv($str, $in_charset, $out_charset = CHARSET, $ForceTable = FALSE) {
+    ......    
+}
+
+/**
+ * 重建数组
+ * @param &lt;string&gt; $array 需要反转的数组
+ * @return array 原数组与的反转后的数组
+ */
+function renum($array) {
+    ......    
+}
+
+/**
+ * 获取当前脚本在线人数
+ * @param &lt;int&gt; $fid 分类 ID，版块、群组 的 id，
+ * @param &lt;int&gt; $tid 内容 ID，帖子 的 id
+ */
+function getonlinenum($fid = 0, $tid = 0) {
+    ......    
+}
+
+/**
+* 字节格式化单位
+* @param $filesize - 大小(字节)
+* @return 返回格式化后的文本
+*/
+function sizecount($size) {
+    ......    
+}
+
+/**
+ * 写入运行日志
+ */
+function writelog($file, $log) {
+    ......    
+}
+
+/**
+ * 调色板
+ * @param &lt;type&gt; $colorid
+ * @param &lt;type&gt; $id
+ * @param &lt;type&gt; $background
+ * @return &lt;type&gt;
+ */
+function getcolorpalette($colorid, $id, $background, $fun = '') {
+    ......    
+}
+
+/**
+ * 取得某标志位的数值 （0|1）
+ *
+ * @param 数值 $status
+ * @param 位置 $position
+ * @return 0 | 1
+ */
+function getstatus($status, $position) {
+    ......    
+}
+
+/**
+ * 设置某一bit位的数值 0 or 1
+ *
+ * @param int $position  1-16
+ * @param int $value  0|1
+ * @param 原始数值 $baseon  0x0000-0xffff
+ * @return int
+ */
+function setstatus($position, $value, $baseon = null) {
+    ......    
+}
+
+/**
+ * 通知
+ * @param Integer $touid: 通知给谁
+ * @param String $type: 通知类型
+ * @param String $note: 语言key
+ * @param Array $notevars: 语言变量对应的值
+ * @param Integer $system: 是否为系统通知 0:非系统通知; 1:系统通知
+ */
+function notification_add($touid, $type, $note, $notevars = array(), $system = 0) {
+    ......    
+}
+
+/**
+* 发送管理通知
+* @param $type - 通知类型
+*/
+function manage_addnotify($type, $from_num = 0, $langvar = array()) {
+    ......    
+}
+
+/**
+* 发送短消息（兼容提醒）
+* @param $toid - 接收方id
+* @param $subject - 标题
+* @param $message - 内容
+* @param $fromid - 发送方id
+*/
+function sendpm($toid, $subject, $message, $fromid = '', $replypmid = 0, $isusername = 0, $type = 0) {
+    ......    
+}
+
+/**
+ *
+ * 通过tid得到相应的单一post表名或post表集合
+ * @param &lt;mix&gt; $tids: 允许传进单个tid，也可以是tid集合
+ * @param $primary: 是否只查主题表 0:遍历所有表;1:只查主表
+ * @return 当传进来的是单一的tid将直接返回表名，否则返回表集合的二维数组例:array('forum_post' =&gt; array(tids),'forum_post_1' =&gt; array(tids))
+ * @TODO tid传进来的是字符串的，返回单个表名，传进来的是数组的，不管是不是一个数组，返回的还是数组，保证进出值对应
+ */
+function getposttablebytid($tids, $primary = 0) {
+    ......    
+}
+
+/**
+ * 获取论坛帖子表名
+ * @param &lt;int&gt; $tableid: 分表ID，默认为：fourm_post表
+ * @param &lt;boolean&gt; $prefix: 是否默认带有表前缀
+ * @return forum_post or forum_post_*
+ */
+function getposttable($tableid = 0, $prefix = false) {
+    ......    
+}
+
+/**
+ * 内存读写接口函数
+ *
+ * @param 命令 $cmd (set|get|rm|check)
+ * @param 键值 $key
+ * @param 数据 $value
+ * @param 有效期 $ttl
+ * @return mix
+ *
+ * @example set&nbsp;: 写入内存 $ret = memory('set', 'test', 'ok')
+ * @example get&nbsp;: 读取内存 $data = memory('get', 'test')
+ * @example rm&nbsp;: 删除内存  $ret = memory('rm', 'test')
+ * @example check&nbsp;: 检查内存功能是否可用 $allow = memory('check')
+ */
+function memory($cmd, $key='', $value='', $ttl = 0) {
+    ......    
+}
+
+/**
+* ip允许访问
+* @param $ip 要检查的ip地址
+* @param - $accesslist 允许访问的ip地址
+* @param 返回结果
+*/
+function ipaccess($ip, $accesslist) {
+    ......    
+}
+
+/**
+* ip限制访问
+* @param $ip 要检查的ip地址
+* @param 返回结果
+*/
+function ipbanned($onlineip) {
+    ......    
+}
+
+/**
+ * 系统级消息
+ */
+function sysmessage($message) {
+    ......    
+}
+
+/**
+* 论坛权限
+* @param $permstr - 权限信息
+* @param $groupid - 只判断用户组
+* @return 0 无权限 &gt; 0 有权限
+*/
+function forumperm($permstr, $groupid = 0) {
+    ......    
+}
+
+/**
+ * PHP 兼容性函数
+ */
+if(!function_exists('file_put_contents')) {
+	if(!defined('FILE_APPEND')) define('FILE_APPEND', 8);
+	function file_put_contents($filename, $data, $flag = 0) {
+		$return = false;
+		if($fp = @fopen($filename, $flag&nbsp;!= FILE_APPEND&nbsp;? 'w'&nbsp;: 'a')) {
+			if($flag == LOCK_EX) @flock($fp, LOCK_EX);
+			$return = fwrite($fp, is_array($data)&nbsp;? implode('', $data)&nbsp;: $data);
+			fclose($fp);
+		}
+		return $return;
+	}
+}
+
+//检查权限
+function checkperm($perm) {
+	global $_G;
+	return (empty($_G['group'][$perm])?'':$_G['group'][$perm]);
+}
+
+/**
+* 时间段设置检测
+* @param $periods - 那种时间段 $settings[$periods]  $settings['postbanperiods'] $settings['postmodperiods']
+* @param $showmessage - 是否提示信息
+* @return 返回检查结果
+*/
+function periodscheck($periods, $showmessage = 1) {
+    ......    
+}
+
+/**
+ * 用户操作日志
+ * @param int $uid 用户ID
+ * @param string $action 操作类型 tid=thread pid=post blogid=blog picid=picture doid=doing sid=share aid=article uid_cid/blogid_cid/sid_cid/picid_cid/aid_cid/topicid_cid=comment
+ * @return bool
+ */
+function useractionlog($uid, $action) {
+    ......    
+}
+
+/**
+ * 得到用户操作的代码或代表字符，参数为数字返回字符串，参数为字符串返回数字
+ * @param string/int $var
+ * @return int/string 注意：如果失败返回false，请使用===判断，因为代码0代表tid
+ */
+function getuseraction($var) {
+    ......    
+}
+
+/**
+ * 获取我的中心中展示的应用
+ */
+function getuserapp($panel = 0) {
+    ......    
+}
+
+/**
+ * 获取manyou应用本地图标路径
+ * @param &lt;type&gt; $appid
+ */
+function getmyappiconpath($appid, $iconstatus=0) {
+    ......    
+}
+
+/**
+ * 获取文字内的url列表
+ *
+ * @param $message 文字
+ * @return &lt;array&gt; url列表
+ *
+ */
+function get_url_list($message) {
+    ......    
+}
+
+/**
+ * 检查文字内的URL
+ *
+ * @param $allowposturl 用户组设置中的值 0=禁止 1=允许但审核 2=允许但不解析
+ * @param $message 待处理的文字内容
+ * @return 0=禁止 1=允许但审核 2=允许但不解析
+ */
+function checkurl($allowposturl, &amp;$message) {
+    ......    
+}
+
+/**
+ * 更新页面和模块的关系
+ * @param string $targettplname 页面名称
+ * @param array $blocks 模块IDS
+ */
+function update_template_block($targettplname, $blocks) {
+    ......    
+}
+
+/**
+ * 获取批定类型的关联连接
+ *
+ * @param string $extent 内容所需关联链接范围　article, forum, group, blog
+ * @return string 有效的关联链接
+ */
+function getrelatedlink($extent) {
+    ......    
+}
+
+/**
+ * 判断 Connect 链接参数有效性
+ * @global  $_G
+ * @param array $params 参数数组
+ * @param array $connect_params 返回参数
+ * @return boolean
+ */
+function connect_valid($params, &amp;$connect_params) {
+    ......    
+}
+
+/**
+ * 获取 Token
+ * @global  $_G
+ * @param string $type
+ * @return string
+ */
+function connect_get_access_token($type = 'USER') {
+    ......    
+}
+
+/**
+ * 获取 Connect 参数签名
+ * @param array $params 参数数组
+ * @param string $access_token 加密 Token
+ * @return string
+ */
+function connect_get_sig($params, $access_token) {
+    ......    
+}
+
+/**
+ * 通过 AID 获取附件表名
+ * @param &lt;int&gt; $aid
+ */
+function getattachtablebyaid($aid) {
+    ......    
+}
+
+/**
+ * 返回指定 TID 所对应的附件表编号
+ * @param &lt;int&gt; $tid
+ */
+function getattachtableid($tid) {
+    ......    
+}
+
+/**
+ * 通过 TID 获取附件表名
+ * @param &lt;int&gt; $tid
+ */
+function getattachtablebytid($tid) {
+    ......    
+}
+
+/**
+ * 通过 PID 获取附件表名
+ * @param &lt;int&gt; $pid
+ */
+function getattachtablebypid($pid) {
+    ......    
+}
+
+/**
+ * 添加一个新的附件索引记录，并返回新附件 ID
+ * @param &lt;int&gt; $uid
+ */
+function getattachnewaid($uid = 0) {
+    ......    
+}
+
+/**
+ * 获取 SEO设置
+ * @param string $page 调用哪个页面的
+ * @param array $data 可替换数据
+ * @return array('seotitle', 'seodescription', 'seokeywords')
+ */
+function get_seosetting($page, $data = array(), $defset = array()) {
+    ......    
+}
+
+/**
+ * 需处理连续分隔符的str_replace()
+ * @param array $searchs 被替换的数组
+ * @param array $replaces 用于替换的数组
+ * @param string $str 目标字符串
+ */
+function strreplace_strip_split($searchs, $replaces, $str) {
+    ......    
+}
+
+/**
+ * 返回带第几页的title
+ * @global  $_G
+ * @param string $navtitle 源标题
+ * @param int $page 页码
+ * @return string
+ */
+function get_title_page($navtitle, $page){
+	if($page &gt; 1) {
+    ......    
+}
+
+/**
+ *
+ * 生成缩略图文件名
+ * @param String $fileStr: 原文件名,允许附带路径
+ * @param String $extend: 新文件名后缀
+ * @param Boolean $holdOldExt: 是否保留原扩展名
+ * @return 返加新的后缀文件名
+ */
+function getimgthumbname($fileStr, $extend='.thumb.jpg', $holdOldExt=true) {
+    ......    
+}
+
+/**
+ * 更新数据的审核状态
+ * @param &lt;string&gt; $idtype 数据类型 tid=thread pid=post blogid=blog picid=picture doid=doing sid=share aid=article uid_cid/blogid_cid/sid_cid/picid_cid/aid_cid/topicid_cid=comment
+ * @param &lt;array/int&gt; $ids ID 数组、ID 值
+ * @param &lt;int&gt; $status 状态 0=加入审核(默认) 1=忽略审核 2=审核通过
+ */
+function updatemoderate($idtype, $ids, $status = 0) {
+    ......    
+}
+
+/**
+ * 显示漫游应用公告
+ */
+function userappprompt() {
+    ......    
+}
+
+</pre>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 4/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key dev-mw_:pcache:idhash:36-0!1!0!!zh-cn!2!edit=0 and timestamp 20110425123014 -->
+<div class="printfooter">
+取自“<a href="index.php-title=Function_core.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Function_core">http://dev.discuz.org/wiki/index.php?title=Function_core</a>”</div>
+		<div id='catlinks' class='catlinks catlinks-allhidden'></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>查看</h5>
+		<div class="pBody">
+			<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="index.php-title=Function_core.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Function_core" title="查看页面内容 [c]" accesskey="c">页面</a></li>
+				 <li id="ca-talk" class="new"><a href="javascript:if(confirm('http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9&hidemyself=1&limit=250&from=20111128013628&target=%E6%96%87%E4%BB%B6%3AIntroff_1jLOYlJZaqiA.jpg  \n\n�ļ���δ�� Teleport Pro ȡ�أ���Ϊ ��һ�ļ��������˳�ʼ��ַ̫Զ�ˡ���������ӿ�ʼ��ַ����ȡ�ص���ȣ���Ϳ���ȡ�ص���һ�ļ���  \n\n��Ҫ�ӷ������ϴ�����'))window.location='http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9&hidemyself=1&limit=250&from=20111128013628&target=%E6%96%87%E4%BB%B6%3AIntroff_1jLOYlJZaqiA.jpg'" tppabs="http://dev.discuz.org/wiki/index.php?title=%E8%AE%A8%E8%AE%BA:Function_core&action=edit&redlink=1" title="关于页面正文的讨论 [t]" accesskey="t">讨论</a></li>
+				 <li id="ca-viewsource"><a href="index.php-title=Function_core&action=edit.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Function_core&action=edit" title="此页面已被保护，你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></li>
+				 <li id="ca-history"><a href="index.php-title=Function_core&action=history.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Function_core&action=history" title="此页面的早前修订版本 [h]" accesskey="h">历史</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>个人工具</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="index.php-title=特殊-用户登录&returnto=Function_core.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&returnto=Function_core" title="我们鼓励您登录，但这并不是必须的 [o]" accesskey="o">登录</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/wiki/images/wiki.gif);" href="index.php-title=首页.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E9%A6%96%E9%A1%B5" title="访问首页"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>导航</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="index.php-title=首页.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E9%A6%96%E9%A1%B5" title="访问首页 [z]" accesskey="z">首页</a></li>
+				<li id="n-portal"><a href="index.php-title=Discuz!_技术文库-社区.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E7%A4%BE%E5%8C%BA" title="关于本计划，您可以做什么，应该如何做">社区入口</a></li>
+				<li id="n-currentevents"><a href="index.php-title=Discuz!_技术文库-当前事件.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E5%BD%93%E5%89%8D%E4%BA%8B%E4%BB%B6" title="查找当前事件的背景信息">当前事件</a></li>
+				<li id="n-recentchanges"><a href="index.php-title=特殊-最近更改.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" title="列出该网站的最近修改 [r]" accesskey="r">最近更改</a></li>
+				<li id="n-randompage"><a href="index.php-title=特殊-用户登录&returnto=特殊-链出更改&returntoquery=hidemyself=1&from=20111128013601&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%9A%8F%E6%9C%BA%E9%A1%B5%E9%9D%A2" title="随机载入一个页面 [x]" accesskey="x">随机页面</a></li>
+				<li id="n-help"><a href="index.php-title=帮助-目录.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E5%B8%AE%E5%8A%A9:%E7%9B%AE%E5%BD%95" title="寻求帮助">帮助</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">搜索</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="http://dev.discuz.org/wiki/index.php" id="searchform">
+				<input type='hidden' name="title" value="特殊:搜索"/>
+				<input id="searchInput" title="搜索该网站" accesskey="f" type="search" name="search" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="进入" title="如果相同的标题存在的话便直接前往该页面" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="搜索" title="搜索该文字的页面" />
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>工具箱</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="index.php-title=特殊-链入页面-Function_core.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%85%A5%E9%A1%B5%E9%9D%A2/Function_core" title="列出所有与此页相链的页面 [j]" accesskey="j">链入页面</a></li>
+				<li id="t-recentchangeslinked"><a href="index.php-title=特殊-链出更改-Function_core.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9/Function_core" title="从此页链出的所有页面的更改 [k]" accesskey="k">链出更改</a></li>
+<li id="t-specialpages"><a href="index.php-title=特殊-特殊页面.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+				<li id="t-print"><a href="index.php-title=Function_core&printable=yes.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Function_core&printable=yes" rel="alternate" title="这个页面的可打印版本 [p]" accesskey="p">可打印版</a></li>				<li id="t-permalink"><a href="index.php-title=Function_core&oldid=296.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Function_core&oldid=296" title="这个页面修订版本的永久链接">永久链接</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico"><a href="javascript:if(confirm('http://www.mediawiki.org/  \n\n�ļ���δ�� Teleport Pro ȡ�أ���Ϊ �������·��������ʼ��ַ�����õķ�Χ��  \n\n��Ҫ�ӷ������ϴ�����'))window.location='http://www.mediawiki.org/'" tppabs="http://www.mediawiki.org/"><img src="skins/common/images/poweredby_mediawiki_88x31.png" tppabs="http://dev.discuz.org/wiki/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a></div>
+	<ul id="f-list">
+		<li id="lastmod"> 此页面最后修订于2011年4月19日 (星期二) 03:24。</li>
+		<li id="privacy"><a href="err:bad_redirect" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E9%9A%90%E7%A7%81%E6%94%BF%E7%AD%96" title="Discuz! 技术文库:隐私政策">隐私政策</a></li>
+		<li id="about"><a href="index.php-title=Discuz!_技术文库-关于.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E5%85%B3%E4%BA%8E" title="Discuz! 技术文库:关于">关于Discuz! 技术文库</a></li>
+		<li id="disclaimer"><a href="err:bad_redirect" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E" title="Discuz! 技术文库:免责声明">免责声明</a></li>
+	</ul>
+</div>
+</div>
+
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.095 secs. --></body><!-- Cached 20110425123014 -->
+</html>

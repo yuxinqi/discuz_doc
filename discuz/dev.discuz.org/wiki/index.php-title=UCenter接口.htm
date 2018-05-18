@@ -1,0 +1,1021 @@
+<html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="zh-cn" dir="ltr">
+<head>
+<title>UCenter接口 - Discuz! 技术文库</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="MediaWiki 1.16.2" />
+<link rel="shortcut icon" href="../favicon.ico" tppabs="http://dev.discuz.org/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" tppabs="http://dev.discuz.org/wiki/opensearch_desc.php" title="Discuz! 技术文库 (zh-cn)" />
+<link rel="alternate" type="application/atom+xml" title="Discuz! 技术文库的Atom订阅" href="index.php-title=特殊-最近更改&feed=atom" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&feed=atom" />
+<link rel="stylesheet" href="skins/common/shared.css-270" tppabs="http://dev.discuz.org/wiki/skins/common/shared.css?270" media="screen" />
+<link rel="stylesheet" href="skins/common/commonPrint.css-270" tppabs="http://dev.discuz.org/wiki/skins/common/commonPrint.css?270" media="print" />
+<link rel="stylesheet" href="skins/monobook/main.css-270" tppabs="http://dev.discuz.org/wiki/skins/monobook/main.css?270" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE50Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE55Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki/skins/monobook/IE60Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki/skins/monobook/IE70Fixes.css?270" media="screen" /><![endif]-->
+<link rel="stylesheet" href="index.php-title=MediaWiki-Common.css&usemsgcache=yes&ctype=text-css&smaxage=18000&action=raw&maxage=18000" tppabs="http://dev.discuz.org/wiki/index.php?title=MediaWiki:Common.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" />
+<link rel="stylesheet" href="index.php-title=MediaWiki-Print.css&usemsgcache=yes&ctype=text-css&smaxage=18000&action=raw&maxage=18000" tppabs="http://dev.discuz.org/wiki/index.php?title=MediaWiki:Print.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" media="print" />
+<link rel="stylesheet" href="index.php-title=MediaWiki-Monobook.css&usemsgcache=yes&ctype=text-css&smaxage=18000&action=raw&maxage=18000" tppabs="http://dev.discuz.org/wiki/index.php?title=MediaWiki:Monobook.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" />
+<link rel="stylesheet" href="index.php-title=-&action=raw&maxage=18000&gen=css" tppabs="http://dev.discuz.org/wiki/index.php?title=-&action=raw&maxage=18000&gen=css" />
+<script>
+var skin="monobook",
+stylepath="/wiki/skins",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/wiki/index.php?title=$1",
+wgScriptPath="/wiki",
+wgScriptExtension=".php",
+wgScript="/wiki/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="http://dev.discuz.org/",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="UCenter接口",
+wgTitle="UCenter接口",
+wgAction="view",
+wgArticleId=39,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="zh-cn",
+wgContentLanguage="zh-cn",
+wgBreakFrames=false,
+wgCurRevisionId=185,
+wgVersion="1.16.2",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="首页",
+wgFormattedNamespaces={"-2": "媒体", "-1": "特殊", "0": "", "1": "讨论", "2": "用户", "3": "用户讨论", "4": "Discuz! 技术文库", "5": "Discuz! 技术文库讨论", "6": "文件", "7": "文件讨论", "8": "MediaWiki", "9": "MediaWiki讨论", "10": "模板", "11": "模板讨论", "12": "帮助", "13": "帮助讨论", "14": "分类", "15": "分类讨论"},
+wgNamespaceIds={"媒体": -2, "特殊": -1, "": 0, "讨论": 1, "用户": 2, "用户讨论": 3, "discuz!_技术文库": 4, "discuz!_技术文库讨论": 5, "文件": 6, "文件讨论": 7, "mediawiki": 8, "mediawiki讨论": 9, "模板": 10, "模板讨论": 11, "帮助": 12, "帮助讨论": 13, "分类": 14, "分类讨论": 15, "对话": 1, "用户对话": 3, "图像": 6, "档案": 6, "image": 6, "image_talk": 7, "图像对话": 7, "图像讨论": 7, "档案对话": 7, "档案讨论": 7, "文件对话": 7, "模板对话": 11, "帮助对话": 13, "分类对话": 15},
+wgSiteName="Discuz! 技术文库",
+wgCategories=[],
+wgRestrictionEdit=[],
+wgRestrictionMove=[];
+</script><script src="skins/common/wikibits.js-270" tppabs="http://dev.discuz.org/wiki/skins/common/wikibits.js?270"></script>
+<script src="skins/common/ajax.js-270" tppabs="http://dev.discuz.org/wiki/skins/common/ajax.js?270"></script>
+<script src="index.php-title=-&action=raw&gen=js&useskin=monobook&270" tppabs="http://dev.discuz.org/wiki/index.php?title=-&action=raw&gen=js&useskin=monobook&270"></script>
+
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-UCenter接口 skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content" >
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">UCenter接口</h1>
+	<div id="bodyContent">
+		<h3 id="siteSub">出自Discuz! 技术文库</h3>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">跳转到： <a href="#column-one">导航</a>, <a href="#searchInput">搜索</a></div>
+		<!-- start content -->
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E6.8E.A5.E5.8F.A3.E5.87.BD.E6.95.B0"><span class="tocnumber">1</span> <span class="toctext">接口函数</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#.E7.94.A8.E6.88.B7.E6.8E.A5.E5.8F.A3"><span class="tocnumber">1.1</span> <span class="toctext">用户接口</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#.E7.9F.AD.E6.B6.88.E6.81.AF.E6.8E.A5.E5.8F.A3"><span class="tocnumber">1.2</span> <span class="toctext">短消息接口</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#.E5.A5.BD.E5.8F.8B.E6.8E.A5.E5.8F.A3"><span class="tocnumber">1.3</span> <span class="toctext">好友接口</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#.E7.A7.AF.E5.88.86.E6.8E.A5.E5.8F.A3"><span class="tocnumber">1.4</span> <span class="toctext">积分接口</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#.E5.A4.B4.E5.83.8F.E6.8E.A5.E5.8F.A3"><span class="tocnumber">1.5</span> <span class="toctext">头像接口</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#.E6.A0.87.E7.AD.BE.E6.8E.A5.E5.8F.A3"><span class="tocnumber">1.6</span> <span class="toctext">标签接口</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#.E4.BA.8B.E4.BB.B6.E6.8E.A5.E5.8F.A3"><span class="tocnumber">1.7</span> <span class="toctext">事件接口</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#.E5.BA.94.E7.94.A8.E6.8E.A5.E5.8F.A3"><span class="tocnumber">1.8</span> <span class="toctext">应用接口</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#.E9.82.AE.E4.BB.B6.E6.8E.A5.E5.8F.A3"><span class="tocnumber">1.9</span> <span class="toctext">邮件接口</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#API.E6.8E.A5.E5.8F.A3"><span class="tocnumber">2</span> <span class="toctext">API接口</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#.E5.B8.B8.E9.87.8F.E5.AE.9A.E4.B9.89"><span class="tocnumber">2.1</span> <span class="toctext">常量定义</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#.E9.80.9A.E7.9F.A5.E6.96.B9.E5.BC.8F.E5.88.A4.E6.96.AD.E4.BB.A5.E5.8F.8A.E5.88.9D.E5.A7.8B.E5.8C.96.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0"><span class="tocnumber">2.2</span> <span class="toctext">通知方式判断以及初始化输入参数</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#.E6.8E.A5.E5.8F.A3.E4.BB.A3.E7.A0.81.E6.AE.B5"><span class="tocnumber">2.3</span> <span class="toctext">接口代码段</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#.E5.87.BD.E6.95.B0.E5.AE.9A.E4.B9.89"><span class="tocnumber">2.4</span> <span class="toctext">函数定义</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#.E8.8C.83.E4.BE.8B.E7.A8.8B.E5.BA.8F"><span class="tocnumber">3</span> <span class="toctext">范例程序</span></a></li>
+</ul>
+</td></tr></table><script>if (window.showTocToggle) { var tocShowText = "显示"; var tocHideText = "隐藏"; showTocToggle(); } </script>
+<h2> <span class="mw-headline" id=".E6.8E.A5.E5.8F.A3.E5.87.BD.E6.95.B0">接口函数</span></h2>
+<h3> <span class="mw-headline" id=".E7.94.A8.E6.88.B7.E6.8E.A5.E5.8F.A3">用户接口</span></h3>
+<dl><dd>此部分接口负责用户的注册、登录，可实现用户表的统一管理。
+</dd></dl>
+<dl><dd><ul><li><a href="index.php-title=uc_user_register.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_user_register" title="Uc user register">uc_user_register</a>
+</li></ul>
+<dl><dd><dl><dd>用于新用户的注册
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_user_login.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_user_login" title="Uc user login">uc_user_login</a>
+</li></ul>
+<dl><dd><dl><dd>用于用户的登录验证
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_get_user.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_get_user" title="Uc get user">uc_get_user</a>
+</li></ul>
+<dl><dd><dl><dd>用于获取用户在 UCenter 的基本数据
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_user_edit.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_user_edit" title="Uc user edit">uc_user_edit</a>
+</li></ul>
+<dl><dd><dl><dd>用于更新用户资料
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_user_delete.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_user_delete" title="Uc user delete">uc_user_delete</a>
+</li></ul>
+<dl><dd><dl><dd>用于删除用户
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_user_deleteavatar.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_user_deleteavatar" title="Uc user deleteavatar">uc_user_deleteavatar</a>
+</li></ul>
+<dl><dd><dl><dd>用于删除用户头像
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_user_synlogin.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_user_synlogin" title="Uc user synlogin">uc_user_synlogin</a>
+</li></ul>
+<dl><dd><dl><dd>用于用户同步登录
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_user_synlogout.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_user_synlogout" title="Uc user synlogout">uc_user_synlogout</a>
+</li></ul>
+<dl><dd><dl><dd>用于用户同步退出
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_user_checkemail.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_user_checkemail" title="Uc user checkemail">uc_user_checkemail</a>
+</li></ul>
+<dl><dd><dl><dd>用于检查用户输入的 Email 的合法性
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_user_checkname.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_user_checkname" title="Uc user checkname">uc_user_checkname</a>
+</li></ul>
+<dl><dd><dl><dd>用于检查用户输入的用户名的合法性
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_user_addprotected.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_user_addprotected" title="Uc user addprotected">uc_user_addprotected</a>
+</li></ul>
+<dl><dd><dl><dd>用于添加被保护的用户
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_user_deleteprotected.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_user_deleteprotected" title="Uc user deleteprotected">uc_user_deleteprotected</a>
+</li></ul>
+<dl><dd><dl><dd>用于删除被保护的用户
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_user_getprotected.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_user_getprotected" title="Uc user getprotected">uc_user_getprotected</a>
+</li></ul>
+<dl><dd><dl><dd>用于获得被保护的用户列表
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_user_merge.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_user_merge" title="Uc user merge">uc_user_merge</a>
+</li></ul>
+<dl><dd><dl><dd>用于把重名的用户合并到 UCenter
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_user_merge_remove.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_user_merge_remove" title="Uc user merge remove">uc_user_merge_remove</a>
+</li></ul>
+<dl><dd><dl><dd>用于移除重名用户记录中的指定记录
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_user_getcredit.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_user_getcredit" title="Uc user getcredit">uc_user_getcredit</a>
+</li></ul>
+<dl><dd><dl><dd>用于获取指定应用的指定用户积分
+</dd></dl>
+</dd></dl>
+</dd></dl>
+<p><br />
+</p>
+<h3> <span class="mw-headline" id=".E7.9F.AD.E6.B6.88.E6.81.AF.E6.8E.A5.E5.8F.A3">短消息接口</span></h3>
+<dl><dd>此部分接口负责用户间的短消息传输，可以跨应用间互相发送短消息。“短消息中心”的界面接口可以让应用只需一个函数接口即拥有短消息功能，对于高级用户 UCenter 也提供了丰富的收发接口函数供用户自己开发短消息系统。
+</dd></dl>
+<dl><dd><ul><li><a href="index.php-title=uc_pm_location.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_pm_location" title="Uc pm location">uc_pm_location</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数运行后会发送一个 header 的 location 请求，使当前页面跳转到短消息中心。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_pm_checknew.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_pm_checknew" title="Uc pm checknew">uc_pm_checknew</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数会检查指定用户是否有新的短消息。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_pm_send.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_pm_send" title="Uc pm send">uc_pm_send</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数用于发送短消息。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_pm_delete.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_pm_delete" title="Uc pm delete">uc_pm_delete</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数将删除指定文件夹中的指定消息 ID 的短消息。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_pm_deleteuser.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_pm_deleteuser" title="Uc pm deleteuser">uc_pm_deleteuser</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数将删除和 uid 对话的 touids 中的所有短消息。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_pm_deletechat.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_pm_deletechat" title="Uc pm deletechat">uc_pm_deletechat</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数用于群聊短消息的退出和删除。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_pm_readstatus.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_pm_readstatus" title="Uc pm readstatus">uc_pm_readstatus</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数用于标记短消息的已读/未读状态。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_pm_list.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_pm_list" title="Uc pm list">uc_pm_list</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数用于获取指定文件夹的短消息列表。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_pm_ignore.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_pm_ignore" title="Uc pm ignore">uc_pm_ignore</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数用于直接忽略未读短消息的提示状态。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_pm_view.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_pm_view" title="Uc pm view">uc_pm_view</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数用于返回指定用户的指定消息 ID 的消息。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_pm_view_num.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_pm_view_num" title="Uc pm view num">uc_pm_view_num</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数用于返回指定会话的消息数量。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_pm_viewnode.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_pm_viewnode" title="Uc pm viewnode">uc_pm_viewnode</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数用于查询单条短消息内容。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_pm_chatpmmemberlist.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_pm_chatpmmemberlist" title="Uc pm chatpmmemberlist">uc_pm_chatpmmemberlist</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数用于返回群聊成员列表。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_pm_kickchatpm.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_pm_kickchatpm" title="Uc pm kickchatpm">uc_pm_kickchatpm</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数用于将指定用户踢出群聊会话。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_pm_appendchatpm.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_pm_appendchatpm" title="Uc pm appendchatpm">uc_pm_appendchatpm</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数用于添加群聊成员。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_pm_blackls_get.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_pm_blackls_get" title="Uc pm blackls get">uc_pm_blackls_get</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数返回用户的黑名单设置的内容。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_pm_blackls_set.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_pm_blackls_set" title="Uc pm blackls set">uc_pm_blackls_set</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数用于更新用户的黑名单列表数据。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_pm_blackls_add.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_pm_blackls_add" title="Uc pm blackls add">uc_pm_blackls_add</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数用于添加用户的黑名单项目。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_pm_blackls_delete.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_pm_blackls_delete" title="Uc pm blackls delete">uc_pm_blackls_delete</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数用于删除用户的黑名单项目。
+</dd></dl>
+</dd></dl>
+</dd></dl>
+<p><br />
+</p>
+<h3> <span class="mw-headline" id=".E5.A5.BD.E5.8F.8B.E6.8E.A5.E5.8F.A3">好友接口</span></h3>
+<dl><dd>此部分接口负责用户好友信息的共享。一个应用更新的好友资料其他应用都能够看到。
+</dd></dl>
+<dl><dd><ul><li><a href="index.php-title=uc_friend_add.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_friend_add" title="Uc friend add">uc_friend_add</a>
+</li></ul>
+<dl><dd><dl><dd>本函数接口用于把 friendid 添加为 uid 的好友。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_friend_delete.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_friend_delete" title="Uc friend delete">uc_friend_delete</a>
+</li></ul>
+<dl><dd><dl><dd>本函数接口用于删除指定用户的好友。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_friend_totalnum.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_friend_totalnum" title="Uc friend totalnum">uc_friend_totalnum</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数用于返回指定用户的好友数。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_friend_ls.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_friend_ls" title="Uc friend ls">uc_friend_ls</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数用于返回好友列表数据。
+</dd></dl>
+</dd></dl>
+</dd></dl>
+<p><br />
+</p>
+<h3> <span class="mw-headline" id=".E7.A7.AF.E5.88.86.E6.8E.A5.E5.8F.A3">积分接口</span></h3>
+<dl><dd>此部分接口负责应用间的积分兑换。
+</dd></dl>
+<dl><dd><ul><li><a href="index.php-title=uc_credit_exchange_request.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_credit_exchange_request" title="Uc credit exchange request">uc_credit_exchange_request</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数用于积分兑换处理。
+</dd></dl>
+</dd></dl>
+</dd></dl>
+<p><br />
+</p>
+<h3> <span class="mw-headline" id=".E5.A4.B4.E5.83.8F.E6.8E.A5.E5.8F.A3">头像接口</span></h3>
+<dl><dd>此部分接口提供了一套用户头像的编辑、显示的平台，可以让应用拥有用头像的编辑功能。
+</dd></dl>
+<dl><dd><ul><li><a href="index.php-title=uc_avatar.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_avatar" title="Uc avatar">uc_avatar</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数用于返回设置用户头像的 HTML 代码。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_check_avatar.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_check_avatar" title="Uc check avatar">uc_check_avatar</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数用于检测指定用户的头像是否存在。
+</dd></dl>
+</dd></dl>
+</dd></dl>
+<p><br />
+</p>
+<h3> <span class="mw-headline" id=".E6.A0.87.E7.AD.BE.E6.8E.A5.E5.8F.A3">标签接口</span></h3>
+<dl><dd>此部分接口负责应用间标签信息的聚合。
+</dd></dl>
+<dl><dd><ul><li><a href="index.php-title=uc_tag_get.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_tag_get" title="Uc tag get">uc_tag_get</a>
+</li></ul>
+<dl><dd><dl><dd>本接口会向用户中心发起一个请求，要求获取用户中心中所有应用的标签数据。
+</dd></dl>
+</dd></dl>
+</dd></dl>
+<p><br />
+</p>
+<h3> <span class="mw-headline" id=".E4.BA.8B.E4.BB.B6.E6.8E.A5.E5.8F.A3">事件接口</span></h3>
+<dl><dd>此部分接口负责应用间信息的聚合。
+</dd></dl>
+<dl><dd><ul><li><a href="index.php-title=uc_feed_add.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_feed_add" title="Uc feed add">uc_feed_add</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数用于向 UCenter Home 添加事件。如果正确则返回事件的 ID。
+</dd></dl>
+</dd></dl>
+<ul><li><a href="index.php-title=uc_feed_get.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_feed_get" title="Uc feed get">uc_feed_get</a>
+</li></ul>
+<dl><dd><dl><dd>本接口函数用于提取事件。如果正确则返回事件列表数组。
+</dd></dl>
+</dd></dl>
+</dd></dl>
+<p><br />
+</p>
+<h3> <span class="mw-headline" id=".E5.BA.94.E7.94.A8.E6.8E.A5.E5.8F.A3">应用接口</span></h3>
+<dl><dd>此部分接口用于获取应用相关信息。
+</dd></dl>
+<dl><dd><ul><li><a href="index.php-title=uc_app_ls.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_app_ls" title="Uc app ls">uc_app_ls</a>
+</li></ul>
+<dl><dd><dl><dd>本接口获取 UCenter 中所有应用的列表数据。
+</dd></dl>
+</dd></dl>
+</dd></dl>
+<p><br />
+</p>
+<h3> <span class="mw-headline" id=".E9.82.AE.E4.BB.B6.E6.8E.A5.E5.8F.A3">邮件接口</span></h3>
+<dl><dd>此部分接口用来将邮件加入到邮件队列，或者直接发送邮件（当level为0时）。
+</dd></dl>
+<dl><dd><ul><li><a href="index.php-title=uc_mail_queue.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Uc_mail_queue" title="Uc mail queue">uc_mail_queue</a>
+</li></ul>
+<dl><dd><dl><dd>本函数用来将邮件加入到邮件队列，或者直接发送邮件（当level为0时）。
+</dd></dl>
+</dd></dl>
+</dd></dl>
+<p><br />
+</p>
+<h2> <span class="mw-headline" id="API.E6.8E.A5.E5.8F.A3">API接口</span></h2>
+<p>UCenter 的 API 接口文件必须存放于应用程序根目录的“api/”目录中，且文件名可以自定义，默认为 uc.php，即“api/uc.php”。文件结构可分为 4 部分，包含 12 个接口项目。第 1 部分为常量定义、第 2 部分为通知方式判断以及初始化输入参数、第 3 部分为接口类代码段、第 4 部分为函数定义。
+</p><p><br />
+</p>
+<h3> <span class="mw-headline" id=".E5.B8.B8.E9.87.8F.E5.AE.9A.E4.B9.89">常量定义</span></h3>
+<pre>
+define('UC_CLIENT_VERSION', '1.5.0');	//note UCenter 版本标识
+define('UC_CLIENT_RELEASE', '20081031');
+
+define('API_DELETEUSER', 1);		//note 用户删除 API 接口开关
+define('API_RENAMEUSER', 1);		//note 用户改名 API 接口开关
+define('API_GETTAG', 1);		//note 获取标签 API 接口开关
+define('API_SYNLOGIN', 1);		//note 同步登录 API 接口开关
+define('API_SYNLOGOUT', 1);		//note 同步登出 API 接口开关
+define('API_UPDATEPW', 1);		//note 更改用户密码 开关
+define('API_UPDATEBADWORDS', 1);	//note 更新关键字列表 开关
+define('API_UPDATEHOSTS', 1);		//note 更新域名解析缓存 开关
+define('API_UPDATEAPPS', 1);		//note 更新应用列表 开关
+define('API_UPDATECLIENT', 1);		//note 更新客户端缓存 开关
+define('API_UPDATECREDIT', 1);		//note 更新用户积分 开关
+define('API_GETCREDITSETTINGS', 1);	//note 向 UCenter 提供积分设置 开关
+define('API_GETCREDIT', 1);		//note 获取用户的某项积分 开关
+define('API_UPDATECREDITSETTINGS', 1);	//note 更新应用积分设置 开关
+
+define('API_RETURN_SUCCEED', '1');
+define('API_RETURN_FAILED', '-1');
+define('API_RETURN_FORBIDDEN', '-2');
+</pre>
+<p>常量定义部分定义了接口所用到的 14 个接口项目的开关设置，“1”为开启“0”为关闭。如果开启，则代码段运行后返回 API_RETURN_SUCCEED，否则返回 API_RETURN_FORBIDDEN。接口运行失败则返回 API_RETURN_FAILED。
+</p>
+<h3> <span class="mw-headline" id=".E9.80.9A.E7.9F.A5.E6.96.B9.E5.BC.8F.E5.88.A4.E6.96.AD.E4.BB.A5.E5.8F.8A.E5.88.9D.E5.A7.8B.E5.8C.96.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0">通知方式判断以及初始化输入参数</span></h3>
+<pre>
+if(!defined('IN_UC')) {
+
+	error_reporting(0);
+	set_magic_quotes_runtime(0);
+
+	define('DISCUZ_ROOT', substr(dirname(__FILE__), 0, -3));
+	defined('MAGIC_QUOTES_GPC') || define('MAGIC_QUOTES_GPC', get_magic_quotes_gpc());
+	require_once DISCUZ_ROOT.'./config.inc.php';
+
+	$_DCACHE = $get = $post = array();
+
+	$code = @$_GET['code'];
+	parse_str(_authcode($code, 'DECODE', UC_KEY), $get);
+	if(MAGIC_QUOTES_GPC) {
+		$get = _stripslashes($get);
+	}
+
+	$timestamp = time();
+	if($timestamp - $get['time'] &gt; 3600) {
+		exit('Authracation has expiried');
+	}
+	if(empty($get)) {
+		exit('Invalid Request');
+	}
+	$action = $get['action'];
+
+	require_once DISCUZ_ROOT.'./uc_client/lib/xml.class.php';
+	$post = xml_unserialize(file_get_contents('php://input'));
+
+	if(in_array($get['action'], array('test', 'deleteuser', 'renameuser', 'gettag', 'synlogin', 'synlogout', 'updatepw', 'updatebadwords', 'updatehosts', 'updateapps', 'updateclient', 'updatecredit', 'getcreditsettings', 'updatecreditsettings'))) {
+		require_once DISCUZ_ROOT.'./include/db_'.$database.'.class.php';
+		$GLOBALS['db'] = new dbstuff;
+		$GLOBALS['db']-&gt;connect($dbhost, $dbuser, $dbpw, $dbname, $pconnect, true, $dbcharset);
+		$GLOBALS['tablepre'] = $tablepre;
+		unset($dbhost, $dbuser, $dbpw, $dbname, $pconnect);
+		$uc_note = new uc_note();
+		exit($uc_note-&gt;$get['action']($get, $post));
+	} else {
+		exit(API_RETURN_FAILED);
+	}
+
+} else {
+
+	define('DISCUZ_ROOT', $app['extra']['apppath']);
+	require_once DISCUZ_ROOT.'./config.inc.php';
+	require_once DISCUZ_ROOT.'./include/db_'.$database.'.class.php';
+	$GLOBALS['db'] = new dbstuff;
+	$GLOBALS['db']-&gt;connect($dbhost, $dbuser, $dbpw, $dbname, $pconnect, true, $dbcharset);
+	$GLOBALS['tablepre'] = $tablepre;
+	unset($dbhost, $dbuser, $dbpw, $dbname, $pconnect);
+}
+</pre>
+<p>通过常量 IN_UC 来判断接口文件是通过远程 HTTP 方式访问还是直接包含方式调用
+</p>
+<h3> <span class="mw-headline" id=".E6.8E.A5.E5.8F.A3.E4.BB.A3.E7.A0.81.E6.AE.B5">接口代码段</span></h3>
+<p>接口类名称为 uc_note ，接口名称作为此类的一个方法，uc_note 代码结构大体如下：
+</p>
+<pre>
+class uc_note {
+
+	var $dbconfig = '';
+	//var $db = '';
+	var $appdir = '';
+
+	function _serialize($arr, $htmlon = 0) {
+		if(!function_exists('xml_serialize')) {
+			include_once DISCUZ_ROOT.'./uc_client/lib/xml.class.php';
+		}
+		return xml_serialize($arr, $htmlon);
+	}
+
+	function uc_note() {
+		$this-&gt;appdir = substr(dirname(__FILE__), 0, -3);
+		$this-&gt;dbconfig = $this-&gt;appdir.'./config.inc.php';
+	}
+
+	function test($get, $post) {
+		return API_RETURN_SUCCEED;
+	}
+
+	function deleteuser($get, $post) {
+		/*代码省略*/
+		return API_RETURN_SUCCEED;
+	}
+	
+	/* 更多接口项目 */
+
+}
+</pre>
+<p>具体可以参考Discuz7.2代码中的/api/uc.php
+</p>
+<ul><li>test
+</li></ul>
+<dl><dd>此接口供仅测试连接。当 UCenter 发起 test 的接口请求时，如果成功获取到接口返回的 API_RETURN_SUCCEED 值，表示 UCenter 和应用通讯正常。
+</dd></dl>
+<ul><li>deleteuser
+</li></ul>
+<dl><dd>当 UCenter 删除一个用户时，会发起 deleteuser 的接口请求，通知所有应用程序删除相应的用户。
+</dd><dd>输入的参数放在 $get['ids'] 中，值为用逗号分隔的用户 ID。如果删除成功则输出 API_RETURN_SUCCEED。
+</dd><dd>deleteuser 接口示例 (PHP)
+</dd></dl>
+<pre>
+$query = $db-&gt;query(&quot;DELETE FROM {$tablepre}members WHERE uid IN ($get[ids])&quot;);
+exit(API_RETURN_SUCCEED);
+</pre>
+<ul><li>renameuser
+</li></ul>
+<dl><dd>当 UCenter 更改一个用户的用户名时，会发起 renameuser 的接口请求，通知所有应用程序改名。
+</dd><dd>输入的参数 $get['uid'] 表示用户 ID，$get['oldusername'] 表示旧用户名，$get['newusername'] 表示新用户名。如果修改成功则输出 API_RETURN_SUCCEED。
+</dd><dd>renameuser 接口示例 (PHP)
+</dd></dl>
+<pre>
+$uid = $get['uid'];
+$usernamenew = $get['newusername'];
+
+$db-&gt;query(&quot;UPDATE {$tablepre}members SET username='$usernamenew' WHERE uid='$uid'&quot;);
+exit(API_RETURN_SUCCEED);
+</pre>
+<ul><li>updatepw
+</li></ul>
+<dl><dd>当用户更改用户密码时，此接口负责接受 UCenter 发来的新密码。
+</dd><dd>输入的参数 $get['username'] 表示用户名，$get['password'] 表示新密码。如果修改成功则输出 API_RETURN_SUCCEED。
+</dd><dd>updatepw 接口示例 (PHP)
+</dd></dl>
+<pre>
+$username = $get['username'];
+$password = md5($get['password']);
+$db-&gt;query(&quot;UPDATE members SET password='$password' WHERE username='$username'&quot;);
+exit(API_RETURN_SUCCEED);
+</pre>
+<ul><li>gettag
+</li></ul>
+<dl><dd>如果应用程序存在标签功能，可以通过此接口把应用程序的标签数据传递给 UCenter。
+</dd><dd>输入的参数放在 $get['id'] 中，值为标签名称。输出的数组需经过 uc_serialize 处理。
+</dd></dl>
+<dl><dd><table>
+
+<tr>
+<td> integer[0]
+</td><td> 标签名称
+</td></tr>
+<tr>
+<td> array[1]
+</td><td> 标签数据 mixed['xxx'] 自定义  <br />自定义多个数组项，索引名任意，一同返回给 UCenter。为了保证应用间数据的共享，您需要在“应用管理管理”的“标签单条显示模板”和“标签模板标记说明”设置模板和说明。模板中“{xxx}”表示标签数据的索引，代表相应的数据。如扩展数据模板中的“{image}”将显示“['image']”数组项的内容。
+</td></tr></table></dd></dl>
+<dl><dd>gettag 接口示例 (PHP)
+</dd></dl>
+<pre>
+$query = $db-&gt;query(&quot;SELECT * FROM threadtags WHERE tagname='$get[id]' ORDER BY dateline DESC LIMIT 10&quot;);
+$threadlist = array();
+while($data = $db-&gt;fetch_array($query)) {
+	$threadlist[] = array(
+		'name' =&gt; $data['subject'],
+		'uid' =&gt; $data['authorid'],
+		'username' =&gt; $data['author'],
+		'dateline' =&gt; $data['dateline'],
+		'url' =&gt; 'http://www.yourwebsite.com/thread.php?id='.$data['id'],
+		'image' =&gt; ''http://www.yourwebsite.com/threadimage.php?id='.$data['id'],
+		);
+	}
+}
+
+$return = array($name, $threadlist);
+echo uc_serialize($return, 1);
+</pre>
+<ul><li>synlogin
+</li></ul>
+<dl><dd>如果应用程序需要和其他应用程序进行同步登录，此部分代码负责标记指定用户的登录状态。
+</dd><dd>输入的参数放在 $get['uid'] 中，值为用户 ID。此接口为通知接口，无输出内容。同步登录需使用 P3P 标准。
+</dd><dd>synlogin 接口示例 (PHP)
+</dd></dl>
+<pre>
+$query = $db-&gt;query(&quot;SELECT uid, username FROM members WHERE uid='$get[uid]'&quot;);
+if($member = $db-&gt;fetch_array($query)) {
+	header('P3P: CP=&quot;CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR&quot;');
+	dsetcookie('Example_auth', authcode($member['uid'].&quot;\t&quot;.$member['username'], 'ENCODE'), 86400 * 365);
+}
+</pre>
+<ul><li>synlogout
+</li></ul>
+<dl><dd>如果应用程序需要和其他应用程序进行同步退出登录，此部分代码负责撤销用户的登录的状态。
+</dd><dd>此接口为通知接口，无输入参数和输出内容。同步退出需使用 P3P 标准。
+</dd><dd>synlogout 接口示例 (PHP)
+</dd></dl>
+<pre>
+header('P3P: CP=&quot;CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR&quot;');
+dsetcookie('Example_auth', '', -86400 * 365);
+</pre>
+<ul><li>updatebadwords
+</li></ul>
+<dl><dd>当 UCenter 的词语过滤设置变更时，此接口负责通知所有应用程序更新后的词语过滤设置内容。
+</dd><dd>设置内容用 POST 方式提交到接口。接口运行完毕输出 API_RETURN_SUCCEED。
+</dd><dd>updatebadwords 接口示例 (PHP)
+</dd></dl>
+<pre>
+$post = uc_unserialize(file_get_contents('php://input'));
+$cachefile = DISCUZ_ROOT.'./uc_client/data/cache/badwords.php';
+$fp = fopen($cachefile, 'w');
+$s = &quot;&lt;?php\r\n&quot;;
+$s .= '$_CACHE[\'badwords\'] = '.var_export($post, TRUE).&quot;;\r\n&quot;;
+fwrite($fp, $s);
+fclose($fp);
+exit(API_RETURN_SUCCEED);
+</pre>
+<ul><li>updatehosts
+</li></ul>
+<dl><dd>当 UCenter 的域名解析设置变更时，此接口负责通知所有应用程序更新后的域名解析设置内容。
+</dd><dd>设置内容用 POST 方式提交到接口。接口运行完毕输出 API_RETURN_SUCCEED。
+</dd><dd>updatehosts 接口示例 (PHP)
+</dd></dl>
+<pre>
+$post = uc_unserialize(file_get_contents('php://input'));
+$cachefile = DISCUZ_ROOT.'./uc_client/data/cache/hosts.php';
+$fp = fopen($cachefile, 'w');
+$s = &quot;&lt;?php\r\n&quot;;
+$s .= '$_CACHE[\'hosts\'] = '.var_export($post, TRUE).&quot;;\r\n&quot;;
+fwrite($fp, $s);
+fclose($fp);
+exit(API_RETURN_SUCCEED);
+</pre>
+<ul><li>updateapps
+</li></ul>
+<dl><dd>当 UCenter 的应用程序列表变更时，此接口负责通知所有应用程序更新后的应用程序列表。
+</dd><dd>设置内容用 POST 方式提交到接口。接口运行完毕输出 API_RETURN_SUCCEED。
+</dd><dd>updateapps 接口示例 (PHP)
+</dd></dl>
+<pre>
+$post = uc_unserialize(file_get_contents('php://input'));
+$cachefile = DISCUZ_ROOT.'./uc_client/data/cache/apps.php';
+$fp = fopen($cachefile, 'w');
+$s = &quot;&lt;?php\r\n&quot;;
+$s .= '$_CACHE[\'apps\'] = '.var_export($post, TRUE).&quot;;\r\n&quot;;
+fwrite($fp, $s);
+fclose($fp);
+exit(API_RETURN_SUCCEED);
+</pre>
+<ul><li>updateclient
+</li></ul>
+<dl><dd>当 UCenter 的基本设置信息变更时，此接口负责通知所有应用程序更新后的基本设置内容。
+</dd><dd>设置内容用 POST 方式提交到接口。接口运行完毕输出 API_RETURN_SUCCEED。
+</dd><dd>updateclient 接口示例 (PHP)
+</dd></dl>
+<pre>
+$post = uc_unserialize(file_get_contents('php://input'));
+$cachefile = DISCUZ_ROOT.'./uc_client/data/cache/setting.php';
+$fp = fopen($cachefile, 'w');
+$s = &quot;&lt;?php\r\n&quot;;
+$s .= '$_CACHE[\'setting\'] = '.var_export($post, TRUE).&quot;;\r\n&quot;;
+fwrite($fp, $s);
+fclose($fp);
+exit(API_RETURN_SUCCEED);
+</pre>
+<ul><li>updatecredit
+</li></ul>
+<dl><dd>当某应用执行了积分兑换请求的接口函数 uc_credit_exchange_request() 后，此接口负责通知被兑换的目的应用程序所需修改的用户积分值。
+</dd><dd>输入的参数 $get['credit'] 表示积分编号，$get['amount'] 表示积分的增减值，$get['uid'] 表示用户 ID。
+</dd><dd>updatecredit 接口示例 (PHP)
+</dd></dl>
+<pre>
+$credit = intval($get['credit']);
+$amount = intval($get['amount']);
+$uid = intval($get['uid']);
+
+$db-&gt;query(&quot;UPDATE members SET extcredits$credit=extcredits$credit+'$amount' WHERE uid='$uid'&quot;);
+exit(API_RETURN_SUCCEED);
+</pre>
+<ul><li>getcreditsettings
+</li></ul>
+<dl><dd>此接口负责把应用程序的积分设置传递给 UCenter，以供 UCenter 在积分兑换设置中使用。
+</dd><dd>此接口无输入参数。输出的数组需经过 uc_serialize 处理。
+</dd><dd>输出的数组单条结构:
+</dd></dl>
+<dl><dd><table style="background-color:#feb; border-collapse: collapse; border-spacing: 3px; border:1px solid #fd8; margin: 0px; width: 100%" cellpadding="3">
+
+<tr>
+<td> <b>key</b>
+</td><td> <b>类型</b>
+</td><td> <b>value</b>
+</td></tr>
+<tr>
+<td> n键值为积分编号
+</td><td> array
+</td><td> string [0]	积分名称<br />string [1]	积分单位
+</td></tr></table></dd></dl>
+<dl><dd>如：
+</dd></dl>
+<pre>
+array(
+        '1' =&gt; array('威望', ''),
+        '2' =&gt; array('金钱', '枚'),
+)
+</pre>
+<dl><dd>getcreditsettings 接口示例 (PHP)
+</dd></dl>
+<pre>
+$credits = array();
+foreach($_DCACHE['settings']['extcredits'] as $id =&gt; $extcredits) {
+	$credits[$id] = array($extcredits['title'], $extcredits['unit']);
+}
+echo uc_serialize($credits);
+</pre>
+<ul><li>updatecreditsettings
+</li></ul>
+<dl><dd>此接口负责接收 UCenter 积分兑换设置的参数。
+</dd><dd>输入的参数放在 $get['credit'] 中，值为设置的参数数组。接口运行完毕输出 API_RETURN_SUCCEED。
+</dd><dd>输入的数组单条结构：
+</dd></dl>
+<dl><dd><table style="background-color:#feb; border-collapse: collapse; border-spacing: 3px; border:1px solid #fd8; margin: 0px; width: 100%" cellpadding="3">
+
+<tr>
+<td> <b>key</b>
+</td><td> <b>类型</b>
+</td><td> <b>value</b>
+</td></tr>
+<tr>
+<td> appid 应用程序 ID
+</td><td> array
+</td><td> integer ['appiddesc']	积分兑换的目标应用程序 ID<br />integer ['creditdesc']	积分兑换的目标积分编号<br />integer ['creditsrc']	积分兑换的源积分编号<br />string ['title']	积分名称<br />string ['unit']	积分单位<br />integer ['ratio']	积分兑换比率
+</td></tr></table></dd></dl>
+<dl><dd>如：
+</dd></dl>
+<pre>
+array(
+        '1' =&gt; array(
+                'appiddesc' =&gt; 2,
+                'creditdesc' =&gt; 1,
+                'creditsrc' =&gt; 1,
+                'title' =&gt; '金钱',
+                'unit' =&gt; '枚',
+                'ratio' =&gt; 2,
+        ),
+)
+</pre>
+<dl><dd>updatecreditsettings 接口示例 (PHP)
+</dd></dl>
+<pre>
+$outextcredits = array();
+foreach($get['credit'] as $appid =&gt; $credititems) {
+	if($appid == UC_APPID) {
+		foreach($credititems as $value) {
+			$outextcredits[$value['appiddesc'].'|'.$value['creditdesc']] = array(
+				'creditsrc' =&gt; $value['creditsrc'],
+				'title' =&gt; $value['title'],
+				'unit' =&gt; $value['unit'],
+				'ratio' =&gt; $value['ratio']
+			);
+		}
+	}
+}
+
+$db-&gt;query(&quot;REPLACE INTO cdb_settings (variable, value) VALUES ('outextcredits', '&quot;.addslashes(serialize($outextcredits)).&quot;');&quot;, 'UNBUFFERED');
+exit(API_RETURN_SUCCEED);
+</pre>
+<ul><li>getcredit
+</li></ul>
+<dl><dd>此接口用于把应用程序中指定用户的积分传递给 UCenter。
+</dd><dd>输入的参数 $get['uid'] 为用户 ID，$get['credit'] 为积分编号。接口运行完毕输出积分值。
+</dd><dd>getcredit 接口示例 (PHP)
+</dd></dl>
+<pre>
+$uid = intval($get['uid']);
+$credit = intval($get['credit']);
+echo $db-&gt;result_first(&quot;SELECT extcredits$credit FROM members WHERE uid='$uid'&quot;);
+</pre>
+<p><br />
+</p>
+<h3> <span class="mw-headline" id=".E5.87.BD.E6.95.B0.E5.AE.9A.E4.B9.89">函数定义</span></h3>
+<p>接口函数中必须包含以下函数，否则无法正确对 UCenter 传递过来的数据进行解码。
+</p>
+<pre>
+function authcode($string, $operation = 'DECODE', $key = '', $expiry = 0) {
+
+	$ckey_length = 4;
+
+	$key = md5($key&nbsp;? $key&nbsp;: UC_KEY);
+	$keya = md5(substr($key, 0, 16));
+	$keyb = md5(substr($key, 16, 16));
+	$keyc = $ckey_length&nbsp;? ($operation == 'DECODE'&nbsp;? substr($string, 0, $ckey_length): substr(md5(microtime()), -$ckey_length))&nbsp;: '';
+
+	$cryptkey = $keya.md5($keya.$keyc);
+	$key_length = strlen($cryptkey);
+
+	$string = $operation == 'DECODE'&nbsp;? base64_decode(substr($string, $ckey_length))&nbsp;: sprintf('%010d', $expiry&nbsp;? $expiry + time()&nbsp;: 0).substr(md5($string.$keyb), 0, 16).$string;
+	$string_length = strlen($string);
+
+	$result = '';
+	$box = range(0, 255);
+
+	$rndkey = array();
+	for($i = 0; $i &lt;= 255; $i++) {
+		$rndkey[$i] = ord($cryptkey[$i&nbsp;% $key_length]);
+	}
+
+	for($j = $i = 0; $i &lt; 256; $i++) {
+		$j = ($j + $box[$i] + $rndkey[$i])&nbsp;% 256;
+		$tmp = $box[$i];
+		$box[$i] = $box[$j];
+		$box[$j] = $tmp;
+	}
+
+	for($a = $j = $i = 0; $i &lt; $string_length; $i++) {
+		$a = ($a + 1)&nbsp;% 256;
+		$j = ($j + $box[$a])&nbsp;% 256;
+		$tmp = $box[$a];
+		$box[$a] = $box[$j];
+		$box[$j] = $tmp;
+		$result .= chr(ord($string[$i]) ^ ($box[($box[$a] + $box[$j])&nbsp;% 256]));
+	}
+
+	if($operation == 'DECODE') {
+		if((substr($result, 0, 10) == 0 || substr($result, 0, 10) - time() &gt; 0) &amp;&amp; substr($result, 10, 16) == substr(md5(substr($result, 26).$keyb), 0, 16)) {
+			return substr($result, 26);
+		} else {
+			return '';
+		}
+	} else {
+		return $keyc.str_replace('=', '', base64_encode($result));
+	}
+
+}
+
+function uc_serialize($arr, $htmlon = 0) {
+	include_once UC_CLIENT_ROOT.'./lib/xml.class.php';
+	return xml_serialize($arr, $htmlon);
+}
+
+function uc_unserialize($s) {
+	include_once UC_CLIENT_ROOT.'./lib/xml.class.php';
+	return xml_unserialize($s);
+}
+</pre>
+<h2> <span class="mw-headline" id=".E8.8C.83.E4.BE.8B.E7.A8.8B.E5.BA.8F">范例程序</span></h2>
+<p>为了方便开发，我们把所有的 UCenter 接口函数组合在一起，制作了范例程序。要运行此范例程序，您需要做的准备工作如下：
+</p>
+<ol><li>范例程序中默认不包含 client 目录，如果要运行此范例程序，请复制一份 UCenter 安装包中的 client 到范例程序根目录。
+</li><li>在 UCenter 添加一个应用，设置范例程序运行的 URL 等信息，通信密钥可随意填写，如“123456”。
+</li><li>打开范例程序的 config.inc.php 设置范例程序连接 UCenter 的方式，设置数据库连接等参数。“UC_KEY”填写在 UCenter 设置的通信密钥（上例的“12345”），“UC_APPID”填写刚才添加的应用 ID。
+</li></ol>
+<p><br />
+ucexample_1.php 为无用户表的范例程序主文件
+</p><p>ucexample_2.php 为有自己的用户表的范例程序主文件
+</p><p><br />
+具体目录结构请见下表：
+</p>
+<table border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse;">
+
+<tr>
+<td style="background-color:#f3f3f3;border:1px solid #bbb;"> client/
+</td><td style="border:1px solid #bbb;"> UCenter 客户端的文件目录，默认不包含此目录。
+</td></tr>
+<tr>
+<td style="background-color:#f3f3f3;border:1px solid #bbb;"> api/
+</td><td style="border:1px solid #bbb;"> API 接口目录
+</td></tr>
+<tr>
+<td style="background-color:#f3f3f3;border:1px solid #bbb;"> code/
+</td><td style="border:1px solid #bbb;"> 范例代码程序段目录
+</td></tr>
+<tr>
+<td style="background-color:#f3f3f3;border:1px solid #bbb;"> code/login_nodb.php
+</td><td style="border:1px solid #bbb;"> ucexample_1.php 的用户登录范例代码，包含登录验证、同步登录的范例代码。让你了解到没有用户表也可以整合 UCenter。
+</td></tr>
+<tr>
+<td style="background-color:#f3f3f3;border:1px solid #bbb;"> code/login_db.php
+</td><td style="border:1px solid #bbb;"> ucexample_2.php 的用户登录范例代码，包含登录验证、同步登录和用户激活的范例代码。
+</td></tr>
+<tr>
+<td style="background-color:#f3f3f3;border:1px solid #bbb;"> code/register_nodb.php
+</td><td style="border:1px solid #bbb;"> ucexample_1.php 的用户注册范例代码，包含注册信息验证的范例代码。
+</td></tr>
+<tr>
+<td style="background-color:#f3f3f3;border:1px solid #bbb;"> code/register_db.php
+</td><td style="border:1px solid #bbb;"> ucexample_2.php 的用户注册范例代码，包含注册信息验证、用户激活判断的范例代码。
+</td></tr>
+<tr>
+<td style="background-color:#f3f3f3;border:1px solid #bbb;"> code/pmwin.php
+</td><td style="border:1px solid #bbb;"> 直接进入短消息中心的范例代码。
+</td></tr>
+<tr>
+<td style="background-color:#f3f3f3;border:1px solid #bbb;"> code/pmlist.php
+</td><td style="border:1px solid #bbb;"> 自制短消息平台的范例代码，包含获取短消息的列表、内容以及发送短消息的范例代码。
+</td></tr>
+<tr>
+<td style="background-color:#f3f3f3;border:1px solid #bbb;"> code/friend.php
+</td><td style="border:1px solid #bbb;"> 管理好友列表的范例代码
+</td></tr>
+<tr>
+<td style="background-color:#f3f3f3;border:1px solid #bbb;"> code/avatar.php
+</td><td style="border:1px solid #bbb;"> 查看、编辑头像的范例代码
+</td></tr>
+<tr>
+<td style="background-color:#f3f3f3;border:1px solid #bbb;"> include/
+</td><td style="border:1px solid #bbb;"> 库文件文件
+</td></tr>
+<tr>
+<td style="background-color:#f3f3f3;border:1px solid #bbb;"> view/
+</td><td style="border:1px solid #bbb;"> 模板目录
+</td></tr>
+<tr>
+<td style="background-color:#f3f3f3;border:1px solid #bbb;"> config.inc.php
+</td><td style="border:1px solid #bbb;"> 配置文件
+</td></tr>
+<tr>
+<td style="background-color:#f3f3f3;border:1px solid #bbb;"> ucexample_1.php
+</td><td style="border:1px solid #bbb;"> 应用程序无用户表的范例程序主文件
+</td></tr>
+<tr>
+<td style="background-color:#f3f3f3;border:1px solid #bbb;"> ucexample_2.php
+</td><td style="border:1px solid #bbb;"> 应用程序有自己的用户表的范例程序主文件
+</td></tr></table>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 242/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key dev-mw_:pcache:idhash:39-0!1!0!!zh-cn!2!edit=0 and timestamp 20110425105257 -->
+<div class="printfooter">
+取自“<a href="index.php-title=UCenter接口.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=UCenter%E6%8E%A5%E5%8F%A3">http://dev.discuz.org/wiki/index.php?title=UCenter%E6%8E%A5%E5%8F%A3</a>”</div>
+		<div id='catlinks' class='catlinks catlinks-allhidden'></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>查看</h5>
+		<div class="pBody">
+			<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="index.php-title=UCenter接口.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=UCenter%E6%8E%A5%E5%8F%A3" title="查看页面内容 [c]" accesskey="c">页面</a></li>
+				 <li id="ca-talk" class="new"><a href="index.php-title=特殊-链出更改&limit=50&from=20111128013601&hideliu=1&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E8%AE%A8%E8%AE%BA:UCenter%E6%8E%A5%E5%8F%A3&action=edit&redlink=1" title="关于页面正文的讨论 [t]" accesskey="t">讨论</a></li>
+				 <li id="ca-viewsource"><a href="index.php-title=特殊-链出更改&limit=100&from=20111128013601&hideliu=1&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=UCenter%E6%8E%A5%E5%8F%A3&action=edit" title="此页面已被保护，你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></li>
+				 <li id="ca-history"><a href="index.php-title=特殊-链出更改&limit=250&from=20111128013601&hideliu=1&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=UCenter%E6%8E%A5%E5%8F%A3&action=history" title="此页面的早前修订版本 [h]" accesskey="h">历史</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>个人工具</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="index.php-title=特殊-链出更改&limit=500&from=20111128013601&hideliu=1&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&returnto=UCenter%E6%8E%A5%E5%8F%A3" title="我们鼓励您登录，但这并不是必须的 [o]" accesskey="o">登录</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/wiki/images/wiki.gif);" href="index.php-title=首页.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E9%A6%96%E9%A1%B5" title="访问首页"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>导航</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="index.php-title=首页.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E9%A6%96%E9%A1%B5" title="访问首页 [z]" accesskey="z">首页</a></li>
+				<li id="n-portal"><a href="index.php-title=Discuz!_技术文库-社区.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E7%A4%BE%E5%8C%BA" title="关于本计划，您可以做什么，应该如何做">社区入口</a></li>
+				<li id="n-currentevents"><a href="index.php-title=Discuz!_技术文库-当前事件.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E5%BD%93%E5%89%8D%E4%BA%8B%E4%BB%B6" title="查找当前事件的背景信息">当前事件</a></li>
+				<li id="n-recentchanges"><a href="index.php-title=特殊-最近更改.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" title="列出该网站的最近修改 [r]" accesskey="r">最近更改</a></li>
+				<li id="n-randompage"><a href="index.php-title=特殊-用户登录&returnto=特殊-链出更改&returntoquery=hidemyself=1&from=20111128013601&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%9A%8F%E6%9C%BA%E9%A1%B5%E9%9D%A2" title="随机载入一个页面 [x]" accesskey="x">随机页面</a></li>
+				<li id="n-help"><a href="index.php-title=帮助-目录.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E5%B8%AE%E5%8A%A9:%E7%9B%AE%E5%BD%95" title="寻求帮助">帮助</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">搜索</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="http://dev.discuz.org/wiki/index.php" id="searchform">
+				<input type='hidden' name="title" value="特殊:搜索"/>
+				<input id="searchInput" title="搜索该网站" accesskey="f" type="search" name="search" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="进入" title="如果相同的标题存在的话便直接前往该页面" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="搜索" title="搜索该文字的页面" />
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>工具箱</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="index.php-title=特殊-链出更改&hideminor=1&from=20111128013601&hideliu=1&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%85%A5%E9%A1%B5%E9%9D%A2/UCenter%E6%8E%A5%E5%8F%A3" title="列出所有与此页相链的页面 [j]" accesskey="j">链入页面</a></li>
+				<li id="t-recentchangeslinked"><a href="index.php-title=特殊-链出更改&hidebots=0&from=20111128013601&hideliu=1&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9/UCenter%E6%8E%A5%E5%8F%A3" title="从此页链出的所有页面的更改 [k]" accesskey="k">链出更改</a></li>
+<li id="t-specialpages"><a href="index.php-title=特殊-特殊页面.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+				<li id="t-print"><a href="index.php-title=特殊-链出更改&hideanons=1&from=20111128013601&hideliu=1&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=UCenter%E6%8E%A5%E5%8F%A3&printable=yes" rel="alternate" title="这个页面的可打印版本 [p]" accesskey="p">可打印版</a></li>				<li id="t-permalink"><a href="index.php-title=特殊-链出更改&hideliu=0&from=20111128013601&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=UCenter%E6%8E%A5%E5%8F%A3&oldid=185" title="这个页面修订版本的永久链接">永久链接</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico"><a href="javascript:if(confirm('http://www.mediawiki.org/  \n\nļδ Teleport Pro ȡأΪ ·ʼַõķΧ  \n\nҪӷϴ'))window.location='http://www.mediawiki.org/'" tppabs="http://www.mediawiki.org/"><img src="skins/common/images/poweredby_mediawiki_88x31.png" tppabs="http://dev.discuz.org/wiki/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a></div>
+	<ul id="f-list">
+		<li id="lastmod"> 此页面最后修订于2011年4月13日 (星期三) 04:06。</li>
+		<li id="privacy"><a href="err:bad_redirect" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E9%9A%90%E7%A7%81%E6%94%BF%E7%AD%96" title="Discuz! 技术文库:隐私政策">隐私政策</a></li>
+		<li id="about"><a href="index.php-title=Discuz!_技术文库-关于.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E5%85%B3%E4%BA%8E" title="Discuz! 技术文库:关于">关于Discuz! 技术文库</a></li>
+		<li id="disclaimer"><a href="err:bad_redirect" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E" title="Discuz! 技术文库:免责声明">免责声明</a></li>
+	</ul>
+</div>
+</div>
+
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.266 secs. --></body><!-- Cached 20110425105258 -->
+</html>

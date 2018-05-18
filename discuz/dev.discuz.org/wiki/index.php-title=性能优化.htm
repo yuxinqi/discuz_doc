@@ -1,0 +1,231 @@
+<html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="zh-cn" dir="ltr">
+<head>
+<title>性能优化 - Discuz! 技术文库</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="MediaWiki 1.16.2" />
+<link rel="shortcut icon" href="../favicon.ico" tppabs="http://dev.discuz.org/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" tppabs="http://dev.discuz.org/wiki/opensearch_desc.php" title="Discuz! 技术文库 (zh-cn)" />
+<link rel="alternate" type="application/atom+xml" title="Discuz! 技术文库的Atom订阅" href="index.php-title=特殊-最近更改&feed=atom" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&feed=atom" />
+<link rel="stylesheet" href="skins/common/shared.css-270" tppabs="http://dev.discuz.org/wiki/skins/common/shared.css?270" media="screen" />
+<link rel="stylesheet" href="skins/common/commonPrint.css-270" tppabs="http://dev.discuz.org/wiki/skins/common/commonPrint.css?270" media="print" />
+<link rel="stylesheet" href="skins/monobook/main.css-270" tppabs="http://dev.discuz.org/wiki/skins/monobook/main.css?270" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE50Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE55Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki/skins/monobook/IE60Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki/skins/monobook/IE70Fixes.css?270" media="screen" /><![endif]-->
+<link rel="stylesheet" href="index.php-title=MediaWiki-Common.css&usemsgcache=yes&ctype=text-css&smaxage=18000&action=raw&maxage=18000" tppabs="http://dev.discuz.org/wiki/index.php?title=MediaWiki:Common.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" />
+<link rel="stylesheet" href="index.php-title=MediaWiki-Print.css&usemsgcache=yes&ctype=text-css&smaxage=18000&action=raw&maxage=18000" tppabs="http://dev.discuz.org/wiki/index.php?title=MediaWiki:Print.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" media="print" />
+<link rel="stylesheet" href="index.php-title=MediaWiki-Monobook.css&usemsgcache=yes&ctype=text-css&smaxage=18000&action=raw&maxage=18000" tppabs="http://dev.discuz.org/wiki/index.php?title=MediaWiki:Monobook.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" />
+<link rel="stylesheet" href="index.php-title=-&action=raw&maxage=18000&gen=css" tppabs="http://dev.discuz.org/wiki/index.php?title=-&action=raw&maxage=18000&gen=css" />
+<script>
+var skin="monobook",
+stylepath="/wiki/skins",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/wiki/index.php?title=$1",
+wgScriptPath="/wiki",
+wgScriptExtension=".php",
+wgScript="/wiki/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="http://dev.discuz.org/",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="性能优化",
+wgTitle="性能优化",
+wgAction="view",
+wgArticleId=102,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="zh-cn",
+wgContentLanguage="zh-cn",
+wgBreakFrames=false,
+wgCurRevisionId=337,
+wgVersion="1.16.2",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="首页",
+wgFormattedNamespaces={"-2": "媒体", "-1": "特殊", "0": "", "1": "讨论", "2": "用户", "3": "用户讨论", "4": "Discuz! 技术文库", "5": "Discuz! 技术文库讨论", "6": "文件", "7": "文件讨论", "8": "MediaWiki", "9": "MediaWiki讨论", "10": "模板", "11": "模板讨论", "12": "帮助", "13": "帮助讨论", "14": "分类", "15": "分类讨论"},
+wgNamespaceIds={"媒体": -2, "特殊": -1, "": 0, "讨论": 1, "用户": 2, "用户讨论": 3, "discuz!_技术文库": 4, "discuz!_技术文库讨论": 5, "文件": 6, "文件讨论": 7, "mediawiki": 8, "mediawiki讨论": 9, "模板": 10, "模板讨论": 11, "帮助": 12, "帮助讨论": 13, "分类": 14, "分类讨论": 15, "对话": 1, "用户对话": 3, "图像": 6, "档案": 6, "image": 6, "image_talk": 7, "图像对话": 7, "图像讨论": 7, "档案对话": 7, "档案讨论": 7, "文件对话": 7, "模板对话": 11, "帮助对话": 13, "分类对话": 15},
+wgSiteName="Discuz! 技术文库",
+wgCategories=[],
+wgRestrictionEdit=[],
+wgRestrictionMove=[];
+</script><script src="skins/common/wikibits.js-270" tppabs="http://dev.discuz.org/wiki/skins/common/wikibits.js?270"></script>
+<script src="skins/common/ajax.js-270" tppabs="http://dev.discuz.org/wiki/skins/common/ajax.js?270"></script>
+<script src="index.php-title=-&action=raw&gen=js&useskin=monobook&270" tppabs="http://dev.discuz.org/wiki/index.php?title=-&action=raw&gen=js&useskin=monobook&270"></script>
+
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-性能优化 skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content" >
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">性能优化</h1>
+	<div id="bodyContent">
+		<h3 id="siteSub">出自Discuz! 技术文库</h3>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">跳转到： <a href="#column-one">导航</a>, <a href="#searchInput">搜索</a></div>
+		<!-- start content -->
+<h1> <span class="mw-headline" id="MySQL.E4.BC.98.E5.8C.96">MySQL优化</span></h1>
+<dl><dd>在编码规范中提到数据库的设计方法中包括<a href="index.php-title=编码规范.htm#.E6.95.B0.E6.8D.AE.E5.BA.93.E8.AE.BE.E8.AE.A1" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83#.E6.95.B0.E6.8D.AE.E5.BA.93.E8.AE.BE.E8.AE.A1" title="编码规范"><b>性能与效率</b></a>的前提下，做相应的SQL优化。在整个产品中，有时候不能忽略一些细小的优化，当出现过多未优化的细节时，也能带来致命的负载问题。
+<ul><li><b>延迟更新机制</b>，例如：首页的在线人数等，在实际产品中，有些数据不一定需要实时更新的，因为对于这类型的数据来说，实时更新的价值不高，对于这种情况我们可以考虑在产品研发过程中引入廷迟更新机制，这样可以从一定程度上降低SQL的负载。
+</li><li><a href="index.php-title=编码规范.htm#.E7.BB.93.E6.9E.84.E4.BC.98.E5.8C.96.E4.B8.8E.E7.B4.A2.E5.BC.95.E4.BC.98.E5.8C.96" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83#.E7.BB.93.E6.9E.84.E4.BC.98.E5.8C.96.E4.B8.8E.E7.B4.A2.E5.BC.95.E4.BC.98.E5.8C.96" title="编码规范"><b>索引的合理使用</b></a>，能给你带来高效的SQL查询，但不是索引越多越好，索引的引入需在查看整个模块的设计，使之最大程度上使用索引。
+</li><li><b>读写分离</b>，在X2的版本中，我们引入了多SQL服务器的支持，在主从服务器中，你可以配置写服务器跟读服务器，这样对于负载高的站点中可以使用这个功能达到读写分离，降低由于写过程序中造成的MySQL表锁定后的SQL排队等候时间过长。当你的服务器支持读写分离要求时，你可以在config_global.php中配置。例如：
+</li></ul>
+</dd></dl>
+<pre>
+
+/**
+ * 数据库主服务器设置, 支持多组服务器设置, 当设置多组服务器时, 则会根据分布式策略使用某个服务器
+ * @example
+ * $_config['db']['1']['dbhost'] = 'localhost'; // 服务器地址
+ * $_config['db']['1']['dbuser'] = 'root'; // 用户
+ * $_config['db']['1']['dbpw'] = 'root';// 密码
+ * $_config['db']['1']['dbcharset'] = 'gbk';// 字符集
+ * $_config['db']['1']['pconnect'] = '0';// 是否持续连接
+ * $_config['db']['1']['dbname'] = 'x1';// 数据库
+ * $_config['db']['1']['tablepre'] = 'pre_';// 表名前缀
+ *
+ * $_config['db']['2']['dbhost'] = 'localhost';
+ * ...
+ *
+ */
+$_config['db'][1]['dbhost']  		= 'localhost';		
+$_config['db'][1]['dbuser']  		= 'root';		
+$_config['db'][1]['dbpw'] 	 	= 'root';		
+$_config['db'][1]['dbcharset'] 		= 'gbk';		
+$_config['db'][1]['pconnect'] 		= 0;			
+$_config['db'][1]['dbname']  		= 'ultrax';		
+$_config['db'][1]['tablepre'] 		= 'pre_';		
+
+/**
+ * 数据库从服务器设置( slave, 只读 ), 支持多组服务器设置, 当设置多组服务器时, 系统每次随机使用
+ * @example
+ * $_config['db']['slave']['1']['dbhost'] = 'localhost';
+ * $_config['db']['slave']['1']['dbuser'] = 'root';
+ * $_config['db']['slave']['1']['dbpw'] = 'root';
+ * $_config['db']['slave']['1']['dbcharset'] = 'gbk';
+ * $_config['db']['slave']['1']['pconnect'] = '0';
+ * $_config['db']['slave']['1']['dbname'] = 'x2';
+ * $_config['db']['slave']['1']['tablepre'] = 'pre_';
+ *
+ * $_config['db']['slave']['2']['dbhost'] = 'localhost';
+ * ...
+ * 
+ */
+$_config['db']['slave'] = array();
+</pre>
+<dl><dd><ul><li><b>禁止在循环中进行相应的SQL查询</b>，当遇到这种情况时，可以尽可能的将其转换成循环外的查询。
+</li><li><b>在SQL查询中禁用NOT IN条件</b>，NOT IN的效率比IN低很多，当使用IN时，也要尽可能的保证IN的数量。
+</li><li>化繁为简，在优化过程中，尽可能的化繁为简，把复杂的SQL分拆面几个简单的SQL更有种于对整体SQL的优化处理
+</li></ul>
+</dd></dl>
+<h1> <span class="mw-headline" id="PHP.E4.BC.98.E5.8C.96">PHP优化</span></h1>
+<dl><dd>PHP的优点之一是速度很快，但不能因为他的执行效率高而不对PHP的代码进行优化处理。在没有经过优化处理过的逻辑将会拖慢整个程序的执行效率。下面分析几个常见的问题:
+<ul><li>在includes和requires中使用绝对路径，这样在分析路径花的时间更少;
+</li><li>在循环里别用函数，例如For($x=0; $x &lt; count($array); $x), count()函数在外面先计算;
+</li><li>使用error_reporting(0)函数来预防潜在的敏感信息显示给用户。理想的错误报告应该被完全禁用在php.ini文件里。可是如果你在用一个共享的虚拟主机，php.ini你不能修改，那么你最好添加error_reporting(0)函数，放在每个脚本文件的第一行（或用require_once()来加载）这能有效的保护敏感的SQL查询和路径在出错时不被显示;
+</li><li>禁止过多的循环套循环，嵌套过多的循环会拉低执行效率
+</li><li>禁止在循环内部执行相关的查询语句，除非万不得以，不然千万不可这么操作
+</li><li>尽量使用单引号联接字符串
+</li><li>尽可能的减少变量复制操作。例如：$description = $_POST['description'];
+</li><li>当if/else过多时，尽可能的使用switch/case 代替 if/else。能够使代码更加简明
+</li><li>开启缓存机制有助于提升性能，同时降低MySQL负载
+</li><li>开启gzip压缩
+</li></ul>
+</dd></dl>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 15/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key dev-mw_:pcache:idhash:102-0!1!0!!zh-cn!2!edit=0 and timestamp 20110426022816 -->
+<div class="printfooter">
+取自“<a href="index.php-title=性能优化.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96">http://dev.discuz.org/wiki/index.php?title=%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96</a>”</div>
+		<div id='catlinks' class='catlinks catlinks-allhidden'></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>查看</h5>
+		<div class="pBody">
+			<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="index.php-title=性能优化.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96" title="查看页面内容 [c]" accesskey="c">页面</a></li>
+				 <li id="ca-talk" class="new"><a href="index.php-title=特殊-链出更改&limit=50&from=20111128013603&hideliu=1&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E8%AE%A8%E8%AE%BA:%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96&action=edit&redlink=1" title="关于页面正文的讨论 [t]" accesskey="t">讨论</a></li>
+				 <li id="ca-viewsource"><a href="index.php-title=特殊-链出更改&limit=100&from=20111128013603&hideliu=1&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96&action=edit" title="此页面已被保护，你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></li>
+				 <li id="ca-history"><a href="index.php-title=特殊-链出更改&limit=250&from=20111128013603&hideliu=1&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96&action=history" title="此页面的早前修订版本 [h]" accesskey="h">历史</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>个人工具</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="index.php-title=特殊-链出更改&limit=500&from=20111128013603&hideliu=1&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&returnto=%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96" title="我们鼓励您登录，但这并不是必须的 [o]" accesskey="o">登录</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/wiki/images/wiki.gif);" href="index.php-title=首页.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E9%A6%96%E9%A1%B5" title="访问首页"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>导航</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="index.php-title=首页.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E9%A6%96%E9%A1%B5" title="访问首页 [z]" accesskey="z">首页</a></li>
+				<li id="n-portal"><a href="index.php-title=Discuz!_技术文库-社区.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E7%A4%BE%E5%8C%BA" title="关于本计划，您可以做什么，应该如何做">社区入口</a></li>
+				<li id="n-currentevents"><a href="index.php-title=Discuz!_技术文库-当前事件.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E5%BD%93%E5%89%8D%E4%BA%8B%E4%BB%B6" title="查找当前事件的背景信息">当前事件</a></li>
+				<li id="n-recentchanges"><a href="index.php-title=特殊-最近更改.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" title="列出该网站的最近修改 [r]" accesskey="r">最近更改</a></li>
+				<li id="n-randompage"><a href="index.php-title=特殊-用户登录&returnto=特殊-链出更改&returntoquery=hidemyself=1&from=20111128013601&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%9A%8F%E6%9C%BA%E9%A1%B5%E9%9D%A2" title="随机载入一个页面 [x]" accesskey="x">随机页面</a></li>
+				<li id="n-help"><a href="index.php-title=帮助-目录.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E5%B8%AE%E5%8A%A9:%E7%9B%AE%E5%BD%95" title="寻求帮助">帮助</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">搜索</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="http://dev.discuz.org/wiki/index.php" id="searchform">
+				<input type='hidden' name="title" value="特殊:搜索"/>
+				<input id="searchInput" title="搜索该网站" accesskey="f" type="search" name="search" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="进入" title="如果相同的标题存在的话便直接前往该页面" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="搜索" title="搜索该文字的页面" />
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>工具箱</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="index.php-title=特殊-链出更改&hideminor=1&from=20111128013603&hideliu=1&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%85%A5%E9%A1%B5%E9%9D%A2/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96" title="列出所有与此页相链的页面 [j]" accesskey="j">链入页面</a></li>
+				<li id="t-recentchangeslinked"><a href="index.php-title=特殊-链出更改&hidebots=0&from=20111128013603&hideliu=1&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96" title="从此页链出的所有页面的更改 [k]" accesskey="k">链出更改</a></li>
+<li id="t-specialpages"><a href="index.php-title=特殊-特殊页面.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+				<li id="t-print"><a href="index.php-title=特殊-链出更改&hideanons=1&from=20111128013603&hideliu=1&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96&printable=yes" rel="alternate" title="这个页面的可打印版本 [p]" accesskey="p">可打印版</a></li>				<li id="t-permalink"><a href="index.php-title=特殊-链出更改&hideliu=0&from=20111128013603&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96&oldid=337" title="这个页面修订版本的永久链接">永久链接</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico"><a href="javascript:if(confirm('http://www.mediawiki.org/  \n\n�ļ���δ�� Teleport Pro ȡ�أ���Ϊ �������·��������ʼ��ַ�����õķ�Χ��  \n\n��Ҫ�ӷ������ϴ�����'))window.location='http://www.mediawiki.org/'" tppabs="http://www.mediawiki.org/"><img src="skins/common/images/poweredby_mediawiki_88x31.png" tppabs="http://dev.discuz.org/wiki/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a></div>
+	<ul id="f-list">
+		<li id="lastmod"> 此页面最后修订于2011年4月21日 (星期四) 02:48。</li>
+		<li id="privacy"><a href="err:bad_redirect" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E9%9A%90%E7%A7%81%E6%94%BF%E7%AD%96" title="Discuz! 技术文库:隐私政策">隐私政策</a></li>
+		<li id="about"><a href="index.php-title=Discuz!_技术文库-关于.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E5%85%B3%E4%BA%8E" title="Discuz! 技术文库:关于">关于Discuz! 技术文库</a></li>
+		<li id="disclaimer"><a href="err:bad_redirect" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E" title="Discuz! 技术文库:免责声明">免责声明</a></li>
+	</ul>
+</div>
+</div>
+
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.081 secs. --></body><!-- Cached 20110426022816 -->
+</html>

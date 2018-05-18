@@ -1,0 +1,191 @@
+<html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="zh-cn" dir="ltr">
+<head>
+<title>编写插件的原则与注意事项 - Discuz! 技术文库</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="MediaWiki 1.16.2" />
+<link rel="shortcut icon" href="../favicon.ico" tppabs="http://dev.discuz.org/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" tppabs="http://dev.discuz.org/wiki/opensearch_desc.php" title="Discuz! 技术文库 (zh-cn)" />
+<link rel="alternate" type="application/atom+xml" title="Discuz! 技术文库的Atom订阅" href="index.php-title=特殊-最近更改&feed=atom" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&feed=atom" />
+<link rel="stylesheet" href="skins/common/shared.css-270" tppabs="http://dev.discuz.org/wiki/skins/common/shared.css?270" media="screen" />
+<link rel="stylesheet" href="skins/common/commonPrint.css-270" tppabs="http://dev.discuz.org/wiki/skins/common/commonPrint.css?270" media="print" />
+<link rel="stylesheet" href="skins/monobook/main.css-270" tppabs="http://dev.discuz.org/wiki/skins/monobook/main.css?270" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE50Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE55Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki/skins/monobook/IE60Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki/skins/monobook/IE70Fixes.css?270" media="screen" /><![endif]-->
+<link rel="stylesheet" href="index.php-title=MediaWiki-Common.css&usemsgcache=yes&ctype=text-css&smaxage=18000&action=raw&maxage=18000" tppabs="http://dev.discuz.org/wiki/index.php?title=MediaWiki:Common.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" />
+<link rel="stylesheet" href="index.php-title=MediaWiki-Print.css&usemsgcache=yes&ctype=text-css&smaxage=18000&action=raw&maxage=18000" tppabs="http://dev.discuz.org/wiki/index.php?title=MediaWiki:Print.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" media="print" />
+<link rel="stylesheet" href="index.php-title=MediaWiki-Monobook.css&usemsgcache=yes&ctype=text-css&smaxage=18000&action=raw&maxage=18000" tppabs="http://dev.discuz.org/wiki/index.php?title=MediaWiki:Monobook.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" />
+<link rel="stylesheet" href="index.php-title=-&action=raw&maxage=18000&gen=css" tppabs="http://dev.discuz.org/wiki/index.php?title=-&action=raw&maxage=18000&gen=css" />
+<script>
+var skin="monobook",
+stylepath="/wiki/skins",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/wiki/index.php?title=$1",
+wgScriptPath="/wiki",
+wgScriptExtension=".php",
+wgScript="/wiki/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="http://dev.discuz.org/",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="编写插件的原则与注意事项",
+wgTitle="编写插件的原则与注意事项",
+wgAction="view",
+wgArticleId=23,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="zh-cn",
+wgContentLanguage="zh-cn",
+wgBreakFrames=false,
+wgCurRevisionId=62,
+wgVersion="1.16.2",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="首页",
+wgFormattedNamespaces={"-2": "媒体", "-1": "特殊", "0": "", "1": "讨论", "2": "用户", "3": "用户讨论", "4": "Discuz! 技术文库", "5": "Discuz! 技术文库讨论", "6": "文件", "7": "文件讨论", "8": "MediaWiki", "9": "MediaWiki讨论", "10": "模板", "11": "模板讨论", "12": "帮助", "13": "帮助讨论", "14": "分类", "15": "分类讨论"},
+wgNamespaceIds={"媒体": -2, "特殊": -1, "": 0, "讨论": 1, "用户": 2, "用户讨论": 3, "discuz!_技术文库": 4, "discuz!_技术文库讨论": 5, "文件": 6, "文件讨论": 7, "mediawiki": 8, "mediawiki讨论": 9, "模板": 10, "模板讨论": 11, "帮助": 12, "帮助讨论": 13, "分类": 14, "分类讨论": 15, "对话": 1, "用户对话": 3, "图像": 6, "档案": 6, "image": 6, "image_talk": 7, "图像对话": 7, "图像讨论": 7, "档案对话": 7, "档案讨论": 7, "文件对话": 7, "模板对话": 11, "帮助对话": 13, "分类对话": 15},
+wgSiteName="Discuz! 技术文库",
+wgCategories=[],
+wgRestrictionEdit=[],
+wgRestrictionMove=[];
+</script><script src="skins/common/wikibits.js-270" tppabs="http://dev.discuz.org/wiki/skins/common/wikibits.js?270"></script>
+<script src="skins/common/ajax.js-270" tppabs="http://dev.discuz.org/wiki/skins/common/ajax.js?270"></script>
+<script src="index.php-title=-&action=raw&gen=js&useskin=monobook&270" tppabs="http://dev.discuz.org/wiki/index.php?title=-&action=raw&gen=js&useskin=monobook&270"></script>
+
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-编写插件的原则与注意事项 skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content" >
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">编写插件的原则与注意事项</h1>
+	<div id="bodyContent">
+		<h3 id="siteSub">出自Discuz! 技术文库</h3>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">跳转到： <a href="#column-one">导航</a>, <a href="#searchInput">搜索</a></div>
+		<!-- start content -->
+<p>请在您动手编写插件之前，还需要仔细的阅读以下原则，遵循这些原则，将有效的避免可能发生的问题：
+</p>
+<ul><li>所有与插件的程序，包括其全部的前后台程序，请全部放入 source/plugin/ 目录中，同时在插件的安装说明中指出，插件的文件需要复制到哪些目录。为了避免与其他插件冲突，请尽量建立 source/plugin/ 下的子目录，并将插件程序放置于子目录下，这样您编写的插件将获得更好的兼容性。
+</li><li>如果您的插件包含“导航栏”模块，该模块将统一用 plugin.php?identifier=xxx&amp;module=yyy 的方式调用，请在相应链接、表单中使用此方式。其中 xxx 为插件的惟一标识符，yyy 为模块名称。前台插件外壳程序 plugin.php 已经加载了通用初始化模块 /source/class/class_core.php，不需再次引用。
+</li><li>如果您的插件包含“管理中心”模块，该模块将统一用 admin.php?action=plugins&amp;identifier=xxx&amp;pmod=yyy 的方式调用，请在相应链接、表单中使用此方式。其中 xxx 和 yyy 的定义与“导航栏”模块中的相同。系统还允许用 admin.php?action=plugins&amp;edit=$edit&amp;pmod=$mod 的方式来生成链接和表单地址，$edit 和 $mod 变量已经被插件后台管理接口赋值，因此将这两个变量值带入 URL 中也是被支持的。由于后台模块是被 admin.php 调用，因此已加载了通用初始化模块 /source/class/class_core.php 并进行了后台管理人员权限验证，因此模块程序中可直接写功能代码，不需再进行验证。
+</li><li>请勿绕过插件的前后台外壳（plugin.php 和 admin.php）而以直接调用某程序的方式编写插件，因为这样既导致了用户使用不便，代码冗余和不规范，同时又产生了因验证程序考虑不周到而带来的安全隐患。您可以在任何地方，包括链接、表单等处方便的使用上述 URL 地址对插件模块进行调用。
+</li><li>所有与插件有关的程序，包括全部的前台程序，因全部使用外壳调用，请务必在第一行加入
+</li></ul>
+<pre>
+if(!defined('IN_DISCUZ')) {
+	exit('Access Denied');
+}
+</pre>
+<p>后台程序第一行加入
+</p>
+<pre>
+if(!defined('IN_DISCUZ') ||&nbsp;!defined('IN_ADMINCP')) {
+	exit('Access Denied');
+}
+</pre>
+<ul><li>以免其被 URL 直接请求调用，产生安全问题。
+</li><li>一般情况下，您发布插件请使用插件导出的功能，以方便使用者一次性导入插件的配置数据，极特殊的情况下，也可以分步骤告知使用者如何进行插件配置管理和安装此插件。
+</li><li>如果功能独立，请尽量使用单独程序的方式编写插件（即外挂型插件），而尽量少的对论坛本身代码进行修改，这将为使用者今后的升级带来很大方便。
+</li><li>您可以修改 Discuz! 本身的数据结构，但更推荐在不很影响效率的前提下将插件数据用另外的数据表存储，因为不能排除您增加的字段或索引和今后版本 Discuz! 核心数据字段重名的可能。在任何情况下，请不要删除 Discuz! 标准版本数据结构中已有的字段或索引。
+</li><li>请在插件说明书中对插件做以详尽的描述，例如增加了哪些字段、哪些表，修改了或新增了哪些程序，版本兼容性，后续支持的提供方式（例如不提供支持，或以什么样的方式提供）。如果方便，请尽可能提供插件的卸载方法，例如去除哪些字段、删除哪些新增的程序、将哪些被插件修改的程序恢复原状等等，使用者会感激您为此付出的辛勤劳动，甚至愿意支付相应的费用支持您未来的发展。
+</li><li>如果插件使用另外的数据表存储，请在插件管理中准确的设置插件所使用的数据表名称（不包含前缀），这样用户在备份数据的时候，能够把插件数据一同备份。
+</li><li>Discuz! 内置了 8 种自定义积分，存储于 common_member 表中的 extcredits1 至 extcredits8 字段中，类型为有符号整数。
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 7/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key dev-mw_:pcache:idhash:23-0!1!0!!zh-cn!2!edit=0 and timestamp 20110425112411 -->
+<div class="printfooter">
+取自“<a href="index.php-title=编写插件的原则与注意事项.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%BC%96%E5%86%99%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%88%99%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">http://dev.discuz.org/wiki/index.php?title=%E7%BC%96%E5%86%99%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%88%99%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9</a>”</div>
+		<div id='catlinks' class='catlinks catlinks-allhidden'></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>查看</h5>
+		<div class="pBody">
+			<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="index.php-title=编写插件的原则与注意事项.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%BC%96%E5%86%99%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%88%99%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9" title="查看页面内容 [c]" accesskey="c">页面</a></li>
+				 <li id="ca-talk" class="new"><a href="javascript:if(confirm('http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9&hideminor=1&from=20111128013706&hidebots=&hideliu=1&target=%E6%96%87%E4%BB%B6%3AIntroff_1jLOYlJZaqiA.jpg  \n\n�ļ���δ�� Teleport Pro ȡ�أ���Ϊ ��һ�ļ��������˳�ʼ��ַ̫Զ�ˡ���������ӿ�ʼ��ַ����ȡ�ص���ȣ���Ϳ���ȡ�ص���һ�ļ���  \n\n��Ҫ�ӷ������ϴ�����'))window.location='http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9&hideminor=1&from=20111128013706&hidebots=&hideliu=1&target=%E6%96%87%E4%BB%B6%3AIntroff_1jLOYlJZaqiA.jpg'" tppabs="http://dev.discuz.org/wiki/index.php?title=%E8%AE%A8%E8%AE%BA:%E7%BC%96%E5%86%99%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%88%99%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9&action=edit&redlink=1" title="关于页面正文的讨论 [t]" accesskey="t">讨论</a></li>
+				 <li id="ca-viewsource"><a href="index.php-title=编写插件的原则与注意事项&action=edit.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%BC%96%E5%86%99%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%88%99%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9&action=edit" title="此页面已被保护，你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></li>
+				 <li id="ca-history"><a href="index.php-title=编写插件的原则与注意事项&action=history.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%BC%96%E5%86%99%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%88%99%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9&action=history" title="此页面的早前修订版本 [h]" accesskey="h">历史</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>个人工具</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="index.php-title=特殊-用户登录&returnto=编写插件的原则与注意事项.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&returnto=%E7%BC%96%E5%86%99%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%88%99%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9" title="我们鼓励您登录，但这并不是必须的 [o]" accesskey="o">登录</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/wiki/images/wiki.gif);" href="index.php-title=首页.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E9%A6%96%E9%A1%B5" title="访问首页"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>导航</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="index.php-title=首页.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E9%A6%96%E9%A1%B5" title="访问首页 [z]" accesskey="z">首页</a></li>
+				<li id="n-portal"><a href="index.php-title=Discuz!_技术文库-社区.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E7%A4%BE%E5%8C%BA" title="关于本计划，您可以做什么，应该如何做">社区入口</a></li>
+				<li id="n-currentevents"><a href="index.php-title=Discuz!_技术文库-当前事件.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E5%BD%93%E5%89%8D%E4%BA%8B%E4%BB%B6" title="查找当前事件的背景信息">当前事件</a></li>
+				<li id="n-recentchanges"><a href="index.php-title=特殊-最近更改.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" title="列出该网站的最近修改 [r]" accesskey="r">最近更改</a></li>
+				<li id="n-randompage"><a href="index.php-title=特殊-用户登录&returnto=特殊-链出更改&returntoquery=hidemyself=1&from=20111128013601&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%9A%8F%E6%9C%BA%E9%A1%B5%E9%9D%A2" title="随机载入一个页面 [x]" accesskey="x">随机页面</a></li>
+				<li id="n-help"><a href="index.php-title=帮助-目录.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E5%B8%AE%E5%8A%A9:%E7%9B%AE%E5%BD%95" title="寻求帮助">帮助</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">搜索</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="http://dev.discuz.org/wiki/index.php" id="searchform">
+				<input type='hidden' name="title" value="特殊:搜索"/>
+				<input id="searchInput" title="搜索该网站" accesskey="f" type="search" name="search" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="进入" title="如果相同的标题存在的话便直接前往该页面" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="搜索" title="搜索该文字的页面" />
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>工具箱</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="index.php-title=特殊-链入页面-编写插件的原则与注意事项.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%85%A5%E9%A1%B5%E9%9D%A2/%E7%BC%96%E5%86%99%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%88%99%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9" title="列出所有与此页相链的页面 [j]" accesskey="j">链入页面</a></li>
+				<li id="t-recentchangeslinked"><a href="index.php-title=特殊-链出更改-编写插件的原则与注意事项.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9/%E7%BC%96%E5%86%99%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%88%99%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9" title="从此页链出的所有页面的更改 [k]" accesskey="k">链出更改</a></li>
+<li id="t-specialpages"><a href="index.php-title=特殊-特殊页面.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+				<li id="t-print"><a href="index.php-title=编写插件的原则与注意事项&printable=yes.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%BC%96%E5%86%99%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%88%99%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9&printable=yes" rel="alternate" title="这个页面的可打印版本 [p]" accesskey="p">可打印版</a></li>				<li id="t-permalink"><a href="index.php-title=编写插件的原则与注意事项&oldid=62.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%BC%96%E5%86%99%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%88%99%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9&oldid=62" title="这个页面修订版本的永久链接">永久链接</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico"><a href="javascript:if(confirm('http://www.mediawiki.org/  \n\n�ļ���δ�� Teleport Pro ȡ�أ���Ϊ �������·��������ʼ��ַ�����õķ�Χ��  \n\n��Ҫ�ӷ������ϴ�����'))window.location='http://www.mediawiki.org/'" tppabs="http://www.mediawiki.org/"><img src="skins/common/images/poweredby_mediawiki_88x31.png" tppabs="http://dev.discuz.org/wiki/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a></div>
+	<ul id="f-list">
+		<li id="lastmod"> 此页面最后修订于2011年4月8日 (星期五) 06:14。</li>
+		<li id="privacy"><a href="err:bad_redirect" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E9%9A%90%E7%A7%81%E6%94%BF%E7%AD%96" title="Discuz! 技术文库:隐私政策">隐私政策</a></li>
+		<li id="about"><a href="index.php-title=Discuz!_技术文库-关于.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E5%85%B3%E4%BA%8E" title="Discuz! 技术文库:关于">关于Discuz! 技术文库</a></li>
+		<li id="disclaimer"><a href="err:bad_redirect" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E" title="Discuz! 技术文库:免责声明">免责声明</a></li>
+	</ul>
+</div>
+</div>
+
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.060 secs. --></body><!-- Cached 20110425112411 -->
+</html>

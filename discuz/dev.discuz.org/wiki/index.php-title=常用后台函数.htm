@@ -1,0 +1,361 @@
+<html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="zh-cn" dir="ltr">
+<head>
+<title>常用后台函数 - Discuz! 技术文库</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="MediaWiki 1.16.2" />
+<link rel="shortcut icon" href="../favicon.ico" tppabs="http://dev.discuz.org/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" tppabs="http://dev.discuz.org/wiki/opensearch_desc.php" title="Discuz! 技术文库 (zh-cn)" />
+<link rel="alternate" type="application/atom+xml" title="Discuz! 技术文库的Atom订阅" href="index.php-title=特殊-最近更改&feed=atom" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&feed=atom" />
+<link rel="stylesheet" href="skins/common/shared.css-270" tppabs="http://dev.discuz.org/wiki/skins/common/shared.css?270" media="screen" />
+<link rel="stylesheet" href="skins/common/commonPrint.css-270" tppabs="http://dev.discuz.org/wiki/skins/common/commonPrint.css?270" media="print" />
+<link rel="stylesheet" href="skins/monobook/main.css-270" tppabs="http://dev.discuz.org/wiki/skins/monobook/main.css?270" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE50Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE55Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki/skins/monobook/IE60Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki/skins/monobook/IE70Fixes.css?270" media="screen" /><![endif]-->
+<link rel="stylesheet" href="index.php-title=MediaWiki-Common.css&usemsgcache=yes&ctype=text-css&smaxage=18000&action=raw&maxage=18000" tppabs="http://dev.discuz.org/wiki/index.php?title=MediaWiki:Common.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" />
+<link rel="stylesheet" href="index.php-title=MediaWiki-Print.css&usemsgcache=yes&ctype=text-css&smaxage=18000&action=raw&maxage=18000" tppabs="http://dev.discuz.org/wiki/index.php?title=MediaWiki:Print.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" media="print" />
+<link rel="stylesheet" href="index.php-title=MediaWiki-Monobook.css&usemsgcache=yes&ctype=text-css&smaxage=18000&action=raw&maxage=18000" tppabs="http://dev.discuz.org/wiki/index.php?title=MediaWiki:Monobook.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" />
+<link rel="stylesheet" href="index.php-title=-&action=raw&maxage=18000&gen=css" tppabs="http://dev.discuz.org/wiki/index.php?title=-&action=raw&maxage=18000&gen=css" />
+<script>
+var skin="monobook",
+stylepath="/wiki/skins",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/wiki/index.php?title=$1",
+wgScriptPath="/wiki",
+wgScriptExtension=".php",
+wgScript="/wiki/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="http://dev.discuz.org/",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="常用后台函数",
+wgTitle="常用后台函数",
+wgAction="view",
+wgArticleId=89,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="zh-cn",
+wgContentLanguage="zh-cn",
+wgBreakFrames=false,
+wgCurRevisionId=197,
+wgVersion="1.16.2",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="首页",
+wgFormattedNamespaces={"-2": "媒体", "-1": "特殊", "0": "", "1": "讨论", "2": "用户", "3": "用户讨论", "4": "Discuz! 技术文库", "5": "Discuz! 技术文库讨论", "6": "文件", "7": "文件讨论", "8": "MediaWiki", "9": "MediaWiki讨论", "10": "模板", "11": "模板讨论", "12": "帮助", "13": "帮助讨论", "14": "分类", "15": "分类讨论"},
+wgNamespaceIds={"媒体": -2, "特殊": -1, "": 0, "讨论": 1, "用户": 2, "用户讨论": 3, "discuz!_技术文库": 4, "discuz!_技术文库讨论": 5, "文件": 6, "文件讨论": 7, "mediawiki": 8, "mediawiki讨论": 9, "模板": 10, "模板讨论": 11, "帮助": 12, "帮助讨论": 13, "分类": 14, "分类讨论": 15, "对话": 1, "用户对话": 3, "图像": 6, "档案": 6, "image": 6, "image_talk": 7, "图像对话": 7, "图像讨论": 7, "档案对话": 7, "档案讨论": 7, "文件对话": 7, "模板对话": 11, "帮助对话": 13, "分类对话": 15},
+wgSiteName="Discuz! 技术文库",
+wgCategories=[],
+wgRestrictionEdit=[],
+wgRestrictionMove=[];
+</script><script src="skins/common/wikibits.js-270" tppabs="http://dev.discuz.org/wiki/skins/common/wikibits.js?270"></script>
+<script src="skins/common/ajax.js-270" tppabs="http://dev.discuz.org/wiki/skins/common/ajax.js?270"></script>
+<script src="index.php-title=-&action=raw&gen=js&useskin=monobook&270" tppabs="http://dev.discuz.org/wiki/index.php?title=-&action=raw&gen=js&useskin=monobook&270"></script>
+
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-常用后台函数 skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content" >
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">常用后台函数</h1>
+	<div id="bodyContent">
+		<h3 id="siteSub">出自Discuz! 技术文库</h3>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">跳转到： <a href="#column-one">导航</a>, <a href="#searchInput">搜索</a></div>
+		<!-- start content -->
+<p>返回 <b><a href="index.php-title=后台二次开发.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E5%90%8E%E5%8F%B0%E4%BA%8C%E6%AC%A1%E5%BC%80%E5%8F%91" title="后台二次开发">后台二次开发</a></b>
+</p>
+<ul><li> 当您在编写后台时，需要对几个常用后台显示函数进行详细的了解
+</li><li> 下面的函数讲解按照重要性、常用性进行排序
+</li></ul>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#showsetting.28.29.E8.A1.A8.E5.8D.95.E6.98.BE.E7.A4.BA"><span class="tocnumber">1</span> <span class="toctext">showsetting()表单显示</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#cpmsg.28.29.E6.8F.90.E7.A4.BA.E6.B6.88.E6.81.AF"><span class="tocnumber">2</span> <span class="toctext">cpmsg()提示消息</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#showformheader.28.29.E5.88.9B.E5.BB.BA.E8.A1.A8.E5.8D.95.E5.A4.B4"><span class="tocnumber">3</span> <span class="toctext">showformheader()创建表单头</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#showformfooter.28.29.E5.88.9B.E5.BB.BA.E8.A1.A8.E5.8D.95.E5.B0.BE"><span class="tocnumber">4</span> <span class="toctext">showformfooter()创建表单尾</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#showtableheader.28.29.E5.88.9B.E5.BB.BA.E8.A1.A8.E6.A0.BC.E5.A4.B4"><span class="tocnumber">5</span> <span class="toctext">showtableheader()创建表格头</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#showtablefooter.28.29.E5.88.9B.E5.BB.BA.E8.A1.A8.E6.A0.BC.E5.B0.BE"><span class="tocnumber">6</span> <span class="toctext">showtablefooter()创建表格尾</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#showtablerow.28.29.E5.88.9B.E5.BB.BA.E5.88.97.E8.A1.A8.E5.BC.8F.E9.A1.B5.E9.9D.A2.E7.9A.84.E8.A1.8C"><span class="tocnumber">7</span> <span class="toctext">showtablerow()创建列表式页面的行</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#showsubmit.28.29.E5.88.9B.E5.BB.BA.E6.8F.90.E4.BA.A4.E6.8C.89.E9.92.AE"><span class="tocnumber">8</span> <span class="toctext">showsubmit()创建提交按钮</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#showhiddenfields.28.29.E5.88.9B.E5.BB.BA.E9.9A.90.E8.97.8F.E8.A1.A8.E5.8D.95.E5.9F.9F"><span class="tocnumber">9</span> <span class="toctext">showhiddenfields()创建隐藏表单域</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#showsubmenu.28.29.E4.BA.8C.E7.BA.A7.E5.AF.BC.E8.88.AA.E6.A0.8F.E6.98.BE.E7.A4.BA"><span class="tocnumber">10</span> <span class="toctext">showsubmenu()二级导航栏显示</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#shownav.28.29.E9.9D.A2.E5.8C.85.E5.B1.91.E5.AF.BC.E8.88.AA.E6.A0.8F.E6.98.BE.E7.A4.BA.E5.8F.8A.E4.BA.8C.E7.BA.A7.E5.AF.BC.E8.88.AA.E6.A0.8F.E6.A0.87.E9.A2.98"><span class="tocnumber">11</span> <span class="toctext">shownav()面包屑导航栏显示及二级导航栏标题</span></a></li>
+</ul>
+</td></tr></table><script>if (window.showTocToggle) { var tocShowText = "显示"; var tocHideText = "隐藏"; showTocToggle(); } </script>
+<h2> <span class="mw-headline" id="showsetting.28.29.E8.A1.A8.E5.8D.95.E6.98.BE.E7.A4.BA"><b>showsetting()</b>表单显示</span></h2>
+<ul><li> 返回值：无
+</li><li> 参数：
+</li></ul>
+<ol><li> $setname - 指定输出标题，如:setting_basic_bbname, 自动匹配描述文字为：setting_basic_bbname<b>_comment</b>，comment形式文字可以在./source/language/lang_admincp.php语言包中添加
+</li><li> $varname - 指定表单的name值，如settingnew[bbname]
+</li><li> $value - 指定表单默认值\变量
+</li><li> $type - 表单样式
+<ol><li> radio单选
+</li><li> text文本、password密码、number数字
+</li><li> file上传文件
+</li><li> filetext 上传文件或在线文件切换型表单
+</li><li> textarea 多行文本
+</li><li> select 选择框
+</li><li> mradio 高级单选模式
+</li><li> mcheckbox 高级多选模式
+</li><li> binmcheckbox 二进制数值多选模式
+</li><li> mselect 高级选择框模式
+</li><li> color 颜色选择
+</li><li> calendar 日期选择
+</li><li> multiply多表单型，daterange时间范围
+</li><li> 其他未在上述样式中出现的$type均独立输出
+</li></ol>
+</li></ol>
+<ol><li> $disabled - 是否不可修改
+</li><li> $hidden - 是否隐藏
+</li><li> $comment - 强制描述文字
+</li><li> $extra - 表单扩展属性
+</li><li> $setid - 用于拼接表单外层Div的id
+</li></ol>
+<ul><li> 使用方法举例：
+</li><li> 以文本形式输出表单(站点名称 <b>text</b>)：
+</li></ul>
+<pre>showsetting('setting_basic_bbname', 'settingnew[bbname]', $setting['bbname'], 'text');</pre>
+<ul><li> 以单选形式输出表单(显示授权信息链接 <b>radio</b>)：
+</li></ul>
+<pre>showsetting('setting_basic_boardlicensed', 'settingnew[boardlicensed]', $setting['boardlicensed'], 'radio');</pre>
+<ul><li> 以多行文本形式输出表单(网站第三方统计代码 <b>textarea</b>)：
+</li></ul>
+<pre>showsetting('setting_basic_stat', 'settingnew[statcode]', $setting['statcode'], 'textarea');</pre>
+<ul><li> 以高级单选形式输出表单(新用户注册验证 <b>mradio</b>)
+</li></ul>
+<pre>showsetting('setting_access_register_verify', array('settingnew[regverify]', array(
+	array(0, $lang['none'], array('regverifyext' =&gt; 'none')),
+	array(1, $lang['setting_access_register_verify_email'], array('regverifyext' =&gt; '')),
+	array(2, $lang['setting_access_register_verify_manual'], array('regverifyext' =&gt; ''))
+)), $setting['regverify'], 'mradio');</pre>
+<ul><li> 以高级多选形式输出表单('允许新用户注册 <b>mcheckbox</b>)
+</li></ul>
+<pre>
+showsetting('setting_access_register_status', array('settingnew[regstatus]', array(
+	array('open', $lang['setting_access_register_open']),
+	array('invite', $lang['setting_access_register_invite'], 'showinvite'),
+	$_G['setting']['connect']['allow']&nbsp;? array('connect', $lang['setting_access_register_connect'], 'showconnect')&nbsp;: array(),
+)), $regstatus, 'mcheckbox');
+</pre>
+<h2> <span class="mw-headline" id="cpmsg.28.29.E6.8F.90.E7.A4.BA.E6.B6.88.E6.81.AF"><b>cpmsg()</b>提示消息</span></h2>
+<ul><li> 返回值：无
+</li><li> 参数：
+</li></ul>
+<ol><li> $message - lang_admincp_msg.php 语言包中需要输出的key
+</li><li> $url - 提示信息后跳转的页面，留空则返回上一页
+</li><li> $type - 特殊提示信息时指定页面的提示样式，可选参数：succeed、error、download、loadingform
+</li><li> $values - 为语言包中的变量关键词指定值，以数组形式输入
+</li><li> $extra - 消息文字扩展
+</li><li> $halt - 是否输出“Discuz! 提示”标题
+</li></ol>
+<ul><li> 使用方法举例：
+</li><li> 成功提示信息
+</li></ul>
+<pre>cpmsg('tasks_installed', 'action=tasks&amp;operation=type', 'succeed');</pre>
+<ul><li> 错误提示信息，并传递变量(cachethreaddir为要传递如语言包中的变量关键词)
+</li></ul>
+<pre>cpmsg('cachethread_dir_noexists', '', 'error', array('cachethreaddir' =&gt; $settingnew['cachethreaddir']));
+</pre>
+<h2> <span class="mw-headline" id="showformheader.28.29.E5.88.9B.E5.BB.BA.E8.A1.A8.E5.8D.95.E5.A4.B4"><b>showformheader()</b>创建表单头</span></h2>
+<ul><li> 返回值：无
+</li><li> 参数:
+</li></ul>
+<ol><li> $action - 表单action的一部分，程序会自动添加 admincp.php?action= 这些内容
+</li><li> $extra - 表单附加属性，可以是样式等
+</li><li> $name - 表单的name和id
+</li><li> $method - 表单提交方式
+</li></ol>
+<ul><li> 使用方法举例，合并版块表单：
+</li></ul>
+<pre>
+showformheader('forums&amp;operation=merge');
+</pre>
+<h2> <span class="mw-headline" id="showformfooter.28.29.E5.88.9B.E5.BB.BA.E8.A1.A8.E5.8D.95.E5.B0.BE"><b>showformfooter()</b>创建表单尾</span></h2>
+<ul><li> 无返回值、无参数
+</li><li> 用于接上showformheader()函数进行收尾工作
+</li></ul>
+<h2> <span class="mw-headline" id="showtableheader.28.29.E5.88.9B.E5.BB.BA.E8.A1.A8.E6.A0.BC.E5.A4.B4"><b>showtableheader()</b>创建表格头</span></h2>
+<ul><li> 返回值：无
+</li><li> 参数：
+</li></ul>
+<ol><li> $title - 如果输入title则显示标题，class为header，否则仅显示一个table头
+</li><li> $classname - 定义此输出表格的CSS样式
+</li><li> $extra - 表格扩展属性
+</li><li> $titlespan - 表格列数
+</li></ol>
+<ul><li> 使用方法实例：
+</li></ul>
+<pre>showtableheader('forums_edit_posts', 'nobottom');</pre>
+<h2> <span class="mw-headline" id="showtablefooter.28.29.E5.88.9B.E5.BB.BA.E8.A1.A8.E6.A0.BC.E5.B0.BE"><b>showtablefooter()</b>创建表格尾</span></h2>
+<p>用于接上showformheader()函数进行收尾工作
+</p>
+<h2> <span class="mw-headline" id="showtablerow.28.29.E5.88.9B.E5.BB.BA.E5.88.97.E8.A1.A8.E5.BC.8F.E9.A1.B5.E9.9D.A2.E7.9A.84.E8.A1.8C"><b>showtablerow()</b>创建列表式页面的行</span></h2>
+<ul><li> 返回值：有
+</li><li> 参数：
+</li></ul>
+<ol><li> $trstyle - 此行 tr 标签的格式定义，如 class="partition"
+</li><li> $tdstyle &lt;array&gt; - TD 标签的格式定义，如 class，colspan 等
+</li><li> $tdtext &lt;array&gt; - TD内显示的内容
+</li><li> $return 是否返回值
+</li></ol>
+<ul><li> 此函数多用于循环中，用来逐行创建一个有规律的数据列表如：论坛版块列表等
+</li><li> 使用方法举例 ./source/admincp/admincp_forums.php
+</li></ul>
+<pre>
+showtablerow('', array('class=&quot;td25&quot;', 'class=&quot;td28&quot;'), array(
+	'&lt;input type=&quot;checkbox&quot; class=&quot;checkbox&quot; name=&quot;delete[]&quot; value=&quot;'.$mod[uid].'&quot;'.($mod['inherited']&nbsp;? ' disabled'&nbsp;: '').' /&gt;',
+	'&lt;input type=&quot;text&quot; class=&quot;txt&quot; name=&quot;displayordernew['.$mod[uid].']&quot; value=&quot;'.$mod[displayorder].'&quot; size=&quot;2&quot; /&gt;',
+	&quot;&lt;a href=\&quot;&quot;.ADMINSCRIPT.&quot;?mod=forum&amp;action=members&amp;operation=group&amp;uid=$mod[uid]\&quot; target=\&quot;_blank\&quot;&gt;$mod[username]&lt;/a&gt;&quot;,
+	$modgroups[$mod['groupid']],
+	cplang($mod['inherited']&nbsp;? 'yes'&nbsp;: 'no'),
+));
+</pre>
+<h2> <span class="mw-headline" id="showsubmit.28.29.E5.88.9B.E5.BB.BA.E6.8F.90.E4.BA.A4.E6.8C.89.E9.92.AE"><b>showsubmit()</b>创建提交按钮</span></h2>
+<ul><li> 返回值：无
+</li></ul>
+<ol><li> $name - 定义提交按钮的name值
+</li><li> $value - 定义按钮的文字值
+</li><li> $before - 根据此按钮之前的属性来输出样式
+</li><li> $after - 根据此按钮之后的属性来输出样式
+</li><li> $floatright - 是否有浮动
+</li><li> $entersubmit - 是否使用回车定义按钮提交动作
+</li></ol>
+<h2> <span class="mw-headline" id="showhiddenfields.28.29.E5.88.9B.E5.BB.BA.E9.9A.90.E8.97.8F.E8.A1.A8.E5.8D.95.E5.9F.9F"><b>showhiddenfields()</b>创建隐藏表单域</span></h2>
+<ul><li> 返回值：无
+</li><li> 参数：
+</li></ul>
+<ol><li> $hiddenfields &lt;array&gt; 以数组形式传入，循环输出隐藏表单域
+</li></ol>
+<h2> <span class="mw-headline" id="showsubmenu.28.29.E4.BA.8C.E7.BA.A7.E5.AF.BC.E8.88.AA.E6.A0.8F.E6.98.BE.E7.A4.BA"><b>showsubmenu()</b>二级导航栏显示</span></h2>
+<ul><li> 返回值：无
+</li><li> 参数：
+</li></ul>
+<ol><li> $title - 二级导航的当前栏标题
+</li><li> $menus &lt;array&gt; - 多个子导航
+</li></ol>
+<ul><li> 使用方法举例：
+</li><li> 后台-用户-会员管理
+</li></ul>
+<pre>
+showsubmenu('nav_members', array(
+	array('search', 'members&amp;operation=search', 1),
+	array('clean', 'members&amp;operation=clean', 0),
+	array('nav_repeat', 'members&amp;operation=repeat', 0),
+));
+</pre>
+<h2> <span class="mw-headline" id="shownav.28.29.E9.9D.A2.E5.8C.85.E5.B1.91.E5.AF.BC.E8.88.AA.E6.A0.8F.E6.98.BE.E7.A4.BA.E5.8F.8A.E4.BA.8C.E7.BA.A7.E5.AF.BC.E8.88.AA.E6.A0.8F.E6.A0.87.E9.A2.98"><b>shownav()</b>面包屑导航栏显示及二级导航栏标题</span></h2>
+<ul><li> 返回值：无
+</li><li> 参数：
+</li></ul>
+<ol><li> $header - 导航起点
+</li><li> $menu - 子导航标题
+</li><li> $nav - 面包屑导航第三层
+</li></ol>
+<ul><li> 使用方法举例：
+</li><li> 后台-运营-电子商务
+</li></ul>
+<pre>shownav('extended', 'nav_ec', 'nav_ec_config');</pre>
+<p><br />
+</p>
+<ul><li> <b>以上列举的均为最常用后台函数，仔细了解这些函数的使用已经能够满足您对 Discuz! X 系列版本的后台开发需求</b>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 145/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key dev-mw_:pcache:idhash:89-0!1!0!!zh-cn!2!edit=0 and timestamp 20110425122619 -->
+<div class="printfooter">
+取自“<a href="index.php-title=常用后台函数.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E5%B8%B8%E7%94%A8%E5%90%8E%E5%8F%B0%E5%87%BD%E6%95%B0">http://dev.discuz.org/wiki/index.php?title=%E5%B8%B8%E7%94%A8%E5%90%8E%E5%8F%B0%E5%87%BD%E6%95%B0</a>”</div>
+		<div id='catlinks' class='catlinks catlinks-allhidden'></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>查看</h5>
+		<div class="pBody">
+			<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="index.php-title=常用后台函数.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E5%B8%B8%E7%94%A8%E5%90%8E%E5%8F%B0%E5%87%BD%E6%95%B0" title="查看页面内容 [c]" accesskey="c">页面</a></li>
+				 <li id="ca-talk" class="new"><a href="index.php-title=特殊-链出更改&hidebots=0&from=20111128013716&hideliu=1&hidemyself=1&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E8%AE%A8%E8%AE%BA:%E5%B8%B8%E7%94%A8%E5%90%8E%E5%8F%B0%E5%87%BD%E6%95%B0&action=edit&redlink=1" title="关于页面正文的讨论 [t]" accesskey="t">讨论</a></li>
+				 <li id="ca-viewsource"><a href="index.php-title=常用后台函数&action=edit.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E5%B8%B8%E7%94%A8%E5%90%8E%E5%8F%B0%E5%87%BD%E6%95%B0&action=edit" title="此页面已被保护，你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></li>
+				 <li id="ca-history"><a href="index.php-title=常用后台函数&action=history.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E5%B8%B8%E7%94%A8%E5%90%8E%E5%8F%B0%E5%87%BD%E6%95%B0&action=history" title="此页面的早前修订版本 [h]" accesskey="h">历史</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>个人工具</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="index.php-title=特殊-用户登录&returnto=常用后台函数.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&returnto=%E5%B8%B8%E7%94%A8%E5%90%8E%E5%8F%B0%E5%87%BD%E6%95%B0" title="我们鼓励您登录，但这并不是必须的 [o]" accesskey="o">登录</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/wiki/images/wiki.gif);" href="index.php-title=首页.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E9%A6%96%E9%A1%B5" title="访问首页"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>导航</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="index.php-title=首页.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E9%A6%96%E9%A1%B5" title="访问首页 [z]" accesskey="z">首页</a></li>
+				<li id="n-portal"><a href="index.php-title=Discuz!_技术文库-社区.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E7%A4%BE%E5%8C%BA" title="关于本计划，您可以做什么，应该如何做">社区入口</a></li>
+				<li id="n-currentevents"><a href="index.php-title=Discuz!_技术文库-当前事件.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E5%BD%93%E5%89%8D%E4%BA%8B%E4%BB%B6" title="查找当前事件的背景信息">当前事件</a></li>
+				<li id="n-recentchanges"><a href="index.php-title=特殊-最近更改.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" title="列出该网站的最近修改 [r]" accesskey="r">最近更改</a></li>
+				<li id="n-randompage"><a href="index.php-title=特殊-用户登录&returnto=特殊-链出更改&returntoquery=hidemyself=1&from=20111128013601&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%9A%8F%E6%9C%BA%E9%A1%B5%E9%9D%A2" title="随机载入一个页面 [x]" accesskey="x">随机页面</a></li>
+				<li id="n-help"><a href="index.php-title=帮助-目录.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E5%B8%AE%E5%8A%A9:%E7%9B%AE%E5%BD%95" title="寻求帮助">帮助</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">搜索</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="http://dev.discuz.org/wiki/index.php" id="searchform">
+				<input type='hidden' name="title" value="特殊:搜索"/>
+				<input id="searchInput" title="搜索该网站" accesskey="f" type="search" name="search" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="进入" title="如果相同的标题存在的话便直接前往该页面" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="搜索" title="搜索该文字的页面" />
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>工具箱</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="index.php-title=特殊-链入页面-常用后台函数.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%85%A5%E9%A1%B5%E9%9D%A2/%E5%B8%B8%E7%94%A8%E5%90%8E%E5%8F%B0%E5%87%BD%E6%95%B0" title="列出所有与此页相链的页面 [j]" accesskey="j">链入页面</a></li>
+				<li id="t-recentchangeslinked"><a href="index.php-title=特殊-链出更改-常用后台函数.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9/%E5%B8%B8%E7%94%A8%E5%90%8E%E5%8F%B0%E5%87%BD%E6%95%B0" title="从此页链出的所有页面的更改 [k]" accesskey="k">链出更改</a></li>
+<li id="t-specialpages"><a href="index.php-title=特殊-特殊页面.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+				<li id="t-print"><a href="index.php-title=常用后台函数&printable=yes.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E5%B8%B8%E7%94%A8%E5%90%8E%E5%8F%B0%E5%87%BD%E6%95%B0&printable=yes" rel="alternate" title="这个页面的可打印版本 [p]" accesskey="p">可打印版</a></li>				<li id="t-permalink"><a href="index.php-title=常用后台函数&oldid=197.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E5%B8%B8%E7%94%A8%E5%90%8E%E5%8F%B0%E5%87%BD%E6%95%B0&oldid=197" title="这个页面修订版本的永久链接">永久链接</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico"><a href="javascript:if(confirm('http://www.mediawiki.org/  \n\n�ļ���δ�� Teleport Pro ȡ�أ���Ϊ �������·��������ʼ��ַ�����õķ�Χ��  \n\n��Ҫ�ӷ������ϴ�����'))window.location='http://www.mediawiki.org/'" tppabs="http://www.mediawiki.org/"><img src="skins/common/images/poweredby_mediawiki_88x31.png" tppabs="http://dev.discuz.org/wiki/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a></div>
+	<ul id="f-list">
+		<li id="lastmod"> 此页面最后修订于2011年4月13日 (星期三) 07:54。</li>
+		<li id="privacy"><a href="err:bad_redirect" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E9%9A%90%E7%A7%81%E6%94%BF%E7%AD%96" title="Discuz! 技术文库:隐私政策">隐私政策</a></li>
+		<li id="about"><a href="index.php-title=Discuz!_技术文库-关于.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E5%85%B3%E4%BA%8E" title="Discuz! 技术文库:关于">关于Discuz! 技术文库</a></li>
+		<li id="disclaimer"><a href="err:bad_redirect" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E" title="Discuz! 技术文库:免责声明">免责声明</a></li>
+	</ul>
+</div>
+</div>
+
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.121 secs. --></body><!-- Cached 20110425122619 -->
+</html>

@@ -1,0 +1,764 @@
+<html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="zh-cn" dir="ltr">
+<head>
+<title>第三方DIY模块拓展类的开发 - Discuz! 技术文库</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="MediaWiki 1.16.2" />
+<link rel="shortcut icon" href="../favicon.ico" tppabs="http://dev.discuz.org/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" tppabs="http://dev.discuz.org/wiki/opensearch_desc.php" title="Discuz! 技术文库 (zh-cn)" />
+<link rel="alternate" type="application/atom+xml" title="Discuz! 技术文库的Atom订阅" href="index.php-title=特殊-最近更改&feed=atom" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&feed=atom" />
+<link rel="stylesheet" href="skins/common/shared.css-270" tppabs="http://dev.discuz.org/wiki/skins/common/shared.css?270" media="screen" />
+<link rel="stylesheet" href="skins/common/commonPrint.css-270" tppabs="http://dev.discuz.org/wiki/skins/common/commonPrint.css?270" media="print" />
+<link rel="stylesheet" href="skins/monobook/main.css-270" tppabs="http://dev.discuz.org/wiki/skins/monobook/main.css?270" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE50Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE55Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki/skins/monobook/IE60Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki/skins/monobook/IE70Fixes.css?270" media="screen" /><![endif]-->
+<link rel="stylesheet" href="index.php-title=MediaWiki-Common.css&usemsgcache=yes&ctype=text-css&smaxage=18000&action=raw&maxage=18000" tppabs="http://dev.discuz.org/wiki/index.php?title=MediaWiki:Common.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" />
+<link rel="stylesheet" href="index.php-title=MediaWiki-Print.css&usemsgcache=yes&ctype=text-css&smaxage=18000&action=raw&maxage=18000" tppabs="http://dev.discuz.org/wiki/index.php?title=MediaWiki:Print.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" media="print" />
+<link rel="stylesheet" href="index.php-title=MediaWiki-Monobook.css&usemsgcache=yes&ctype=text-css&smaxage=18000&action=raw&maxage=18000" tppabs="http://dev.discuz.org/wiki/index.php?title=MediaWiki:Monobook.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" />
+<link rel="stylesheet" href="index.php-title=-&action=raw&maxage=18000&gen=css" tppabs="http://dev.discuz.org/wiki/index.php?title=-&action=raw&maxage=18000&gen=css" />
+<script>
+var skin="monobook",
+stylepath="/wiki/skins",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/wiki/index.php?title=$1",
+wgScriptPath="/wiki",
+wgScriptExtension=".php",
+wgScript="/wiki/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="http://dev.discuz.org/",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="第三方DIY模块拓展类的开发",
+wgTitle="第三方DIY模块拓展类的开发",
+wgAction="view",
+wgArticleId=14,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="zh-cn",
+wgContentLanguage="zh-cn",
+wgBreakFrames=false,
+wgCurRevisionId=38,
+wgVersion="1.16.2",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="首页",
+wgFormattedNamespaces={"-2": "媒体", "-1": "特殊", "0": "", "1": "讨论", "2": "用户", "3": "用户讨论", "4": "Discuz! 技术文库", "5": "Discuz! 技术文库讨论", "6": "文件", "7": "文件讨论", "8": "MediaWiki", "9": "MediaWiki讨论", "10": "模板", "11": "模板讨论", "12": "帮助", "13": "帮助讨论", "14": "分类", "15": "分类讨论"},
+wgNamespaceIds={"媒体": -2, "特殊": -1, "": 0, "讨论": 1, "用户": 2, "用户讨论": 3, "discuz!_技术文库": 4, "discuz!_技术文库讨论": 5, "文件": 6, "文件讨论": 7, "mediawiki": 8, "mediawiki讨论": 9, "模板": 10, "模板讨论": 11, "帮助": 12, "帮助讨论": 13, "分类": 14, "分类讨论": 15, "对话": 1, "用户对话": 3, "图像": 6, "档案": 6, "image": 6, "image_talk": 7, "图像对话": 7, "图像讨论": 7, "档案对话": 7, "档案讨论": 7, "文件对话": 7, "模板对话": 11, "帮助对话": 13, "分类对话": 15},
+wgSiteName="Discuz! 技术文库",
+wgCategories=[],
+wgRestrictionEdit=[],
+wgRestrictionMove=[];
+</script><script src="skins/common/wikibits.js-270" tppabs="http://dev.discuz.org/wiki/skins/common/wikibits.js?270"></script>
+<script src="skins/common/ajax.js-270" tppabs="http://dev.discuz.org/wiki/skins/common/ajax.js?270"></script>
+<script src="index.php-title=-&action=raw&gen=js&useskin=monobook&270" tppabs="http://dev.discuz.org/wiki/index.php?title=-&action=raw&gen=js&useskin=monobook&270"></script>
+
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-第三方DIY模块拓展类的开发 skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content" >
+	<a id="top"></a>
+
+	<h1 id="firstHeading" class="firstHeading">第三方DIY模块拓展类的开发</h1>
+	<div id="bodyContent">
+		<h3 id="siteSub">出自Discuz! 技术文库</h3>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">跳转到： <a href="#column-one">导航</a>, <a href="#searchInput">搜索</a></div>
+		<!-- start content -->
+
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>目录</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E5.86.85.E7.BD.AEPHP.E7.B1.BB.E6.89.A9.E5.B1.95.E6.96.B9.E5.BC.8F"><span class="tocnumber">1</span> <span class="toctext">内置PHP类扩展方式</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#.E8.84.9A.E6.9C.AC.E7.9B.AE.E5.BD.95"><span class="tocnumber">1.1</span> <span class="toctext">脚本目录</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#.E5.BF.85.E9.9C.80.E7.9A.84.E8.84.9A.E6.9C.AC"><span class="tocnumber">1.2</span> <span class="toctext">必需的脚本</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#.E8.AF.AD.E8.A8.80.E5.8C.85.E4.BD.8D.E7.BD.AE.EF.BC.88.E9.9D.9E.E5.BF.85.E9.9C.80.EF.BC.89"><span class="tocnumber">1.3</span> <span class="toctext">语言包位置（非必需）</span></a></li>
+
+<li class="toclevel-2 tocsection-5"><a href="#.E5.86.85.E5.AE.B9.E7.A4.BA.E4.BE.8B"><span class="tocnumber">1.4</span> <span class="toctext">内容示例</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#.E7.AC.AC.E4.B8.89.E6.96.B9_C.2FS_.E6.89.A9.E5.B1.95.E6.96.B9.E5.BC.8F"><span class="tocnumber">2</span> <span class="toctext">第三方 C/S 扩展方式</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#XML_.E8.A7.84.E8.8C.83"><span class="tocnumber">2.1</span> <span class="toctext">XML 规范</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#.E9.85.8D.E7.BD.AE.E8.A7.84.E8.8C.83"><span class="tocnumber">2.1.1</span> <span class="toctext">配置规范</span></a></li>
+
+<li class="toclevel-3 tocsection-9"><a href="#.E6.95.B0.E6.8D.AE.E8.A7.84.E8.8C.83"><span class="tocnumber">2.1.2</span> <span class="toctext">数据规范</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#.E6.9C.8D.E5.8A.A1.E7.AB.AF.E5.BA.94.E7.94.A8.E7.A8.8B.E5.BA.8F.E6.8E.A5.E5.8F.A3.E7.A4.BA.E4.BE.8B"><span class="tocnumber">2.2</span> <span class="toctext">服务端应用程序接口示例</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#.E7.AD.BE.E5.90.8D.E6.9C.BA.E5.88.B6"><span class="tocnumber">2.3</span> <span class="toctext">签名机制</span></a></li>
+</ul>
+</li>
+</ul>
+
+</td></tr></table><script>if (window.showTocToggle) { var tocShowText = "显示"; var tocHideText = "隐藏"; showTocToggle(); } </script>
+<h2> <span class="mw-headline" id=".E5.86.85.E7.BD.AEPHP.E7.B1.BB.E6.89.A9.E5.B1.95.E6.96.B9.E5.BC.8F"> 内置PHP类扩展方式 </span></h2>
+<h3> <span class="mw-headline" id=".E8.84.9A.E6.9C.AC.E7.9B.AE.E5.BD.95"> 脚本目录 </span></h3>
+<dl><dd>source/class/block/[模块大分类目录] ，此目录需要自行创建 
+</dd></dl>
+<h3> <span class="mw-headline" id=".E5.BF.85.E9.9C.80.E7.9A.84.E8.84.9A.E6.9C.AC"> 必需的脚本 </span></h3>
+<ul><li>source/class/block/[模块大分类目录]/blockclass.php, 此文件为该目录中必需存在的文件,其内容为： 
+
+</li></ul>
+<pre>	&lt;?php
+	$blockclass = array(
+		'name' =&gt; '模块大分类名', //为此目录定义一个名字
+	);
+	?&gt;
+</pre>
+<ul><li>source/class/block/[模块大分类目录]/block_name.php 
+</li></ul>
+<dl><dd>注意：脚本文件名必需以 block_ 开头，且类名必需和文件名一样。 
+</dd></dl>
+<h3> <span class="mw-headline" id=".E8.AF.AD.E8.A8.80.E5.8C.85.E4.BD.8D.E7.BD.AE.EF.BC.88.E9.9D.9E.E5.BF.85.E9.9C.80.EF.BC.89"> 语言包位置（非必需）</span></h3>
+<dl><dd>source/language/block/lang_name.php 
+</dd></dl>
+
+<h3> <span class="mw-headline" id=".E5.86.85.E5.AE.B9.E7.A4.BA.E4.BE.8B"> 内容示例 </span></h3>
+<dl><dd>source/class/block/[模块大分类目录]/block_name.php内容示例：
+</dd></dl>
+<pre>
+&lt;?php
+
+class block_name {
+
+	/**
+	 * 必须！
+	 * 返回本数据调用类的显示名称（显示在创建模块时选择“模块数据”的下拉列表里）
+	 * @return &lt;type&gt;
+	 */
+	function name() {
+		return '示例数据类';
+	}
+
+	/**
+	 * 必须！
+	 * 返回一个数组： 第一个值为本数据类所在的模块分类；第二个值为模块分类显示的名称（显示在 DIY 模块面板）
+	 * @return &lt;type&gt;
+	 */
+	function blockclass() {
+		return array('sample', '示例分类');
+	}
+
+	/**
+	 * 必须！
+	 * 返回数据类中可供“模块样式”使用的字段。
+	 * 格式见示例：
+	 * name 为该字段的显示名称
+	 * formtype 决定编辑单条数据时该字段的显示方式： 类型有： text, textarea, date, title, summary, pic； 详见 portalcp_block.htm 模板（搜 $field[formtype] ）
+	 * datatype 决定该字段的数据展示，类型有： string, int, date, title, summary, pic； 详见 function_block.php 中 block_template 函数
+	 * @return &lt;type&gt;
+
+	 */
+	function fields() {
+		return array(
+			'field1' =&gt; array('name' =&gt; '示例字段1', 'formtype' =&gt; 'text', 'datatype' =&gt; 'string'),
+			'field2' =&gt; array('name' =&gt; '示例字段2', 'formtype' =&gt; 'title', 'datatype' =&gt; 'title'),
+		);
+	}
+
+	/**
+	 * 必须！
+	 * 返回使用本数据类调用数据时的设置项
+	 * 格式见示例：
+	 * title 为显示的名称
+	 * type 为表单类型， 有： text, password, number, textarea, radio, select, mselect, mradio, mcheckbox, calendar； 详见 function_block.php 中 block_makeform() 函数
+	 * @return &lt;type&gt;
+
+	 */
+	function getsetting() {
+		return array(
+			'param1' =&gt; array(
+				'title' =&gt; '数据调用参数1',
+				'type' =&gt; 'text',
+				'default' =&gt; ''
+			),
+			'param2' =&gt; array(
+				'title' =&gt; '数据调用参数2',
+				'type' =&gt; 'mcheckbox',
+				'value' =&gt; array(
+					array('1', '选项1'),
+					array('2', '选项2'),
+				),
+				'default' =&gt; '1'
+			),
+		);
+	}
+
+	/**
+	 * 必须！
+	 * 处理设置参数，返回数据
+	 * 返回数据有两种：
+	 * 一种是返回 html，放到模块 summary 字段，直接显示； 返回格式为： array('html'=&gt;'返回内容', 'data'=&gt;null)
+	 * 一种是返回 data，通过模块样式渲染后展示，返回的数据应该包含 fields() 函数中指定的所有字段； 返回格式为： array('html'=&gt;'', 'data'=&gt;array(array('title'=&gt;'value1'), array('title'=&gt;'value2')))
+	 * 特别的：
+	 * parameter 参数包含 getsetting() 提交后的内容； 并附加了字段：
+	 * items ，为用户指定显示的模块数据条数；
+	 * bannedids ，为用户选择屏蔽某数据时记录在模块中的该数据 id。 应该在获取数据时屏蔽该数据；
+	 *
+	 * 如果返回的数据给 data， 那么应该包含 fields() 函数指定的所有字段。并附加以下字段：
+	 * id 标志该数据的 id，如果用户屏蔽某数据时，会将该数据的 id 添加到 parameter[bannedids] 里
+	 * idtype 标志该数据的 idtype
+	 *
+	 * @param &lt;type&gt; $style 模块样式（见 common_block_style 表）。 可以根据模块样式中用到的字段来选择性的获取/不获取某些数据
+	 * @param &lt;type&gt; $parameter 用户对 getsetting() 给出的表单提交后的内容。
+	 * @return &lt;type&gt;
+
+	 */
+	function getdata($style, $parameter) {
+
+		// 返回summary
+		return array('html' =&gt; '&lt;p&gt;这是一个演示模块数据类&lt;/p&gt;', 'data' =&gt; null);
+
+		// 返回数据
+		// 需要注意： 除 id，idtype， title， url， pic， picflag， summary 几个字段外，其它字段需要放到 fields 数组里。 可以参考系统内置模块类 source/class/block/block_thread.php
+		return array('html'=&gt;'', 'data' =&gt; array(
+			array(
+				'id' =&gt; '1',
+				'idtype' =&gt; 'sampleid',
+				'title' =&gt; 'title1',
+				'url' =&gt; '#',
+				'pic' =&gt; 'nophoto.gif',
+				'picflag' =&gt; '1',
+				'summary' =&gt; '',
+				'fields' =&gt; array(
+					'field1' =&gt; 'value1'
+				)
+			)
+		));
+	}
+
+}
+
+?&gt;
+
+</pre>
+<h2> <span class="mw-headline" id=".E7.AC.AC.E4.B8.89.E6.96.B9_C.2FS_.E6.89.A9.E5.B1.95.E6.96.B9.E5.BC.8F"> 第三方 C/S 扩展方式 </span></h2>
+<dl><dd>此扩展方式需要第三方提供一个服务端应用程序接口，为使用该服务的客户端提供数据。 
+</dd><dd>服务端提供的数据必需为 XML 格式的数据，具体的 XML 规范请参考下面的详细说明。 
+</dd></dl>
+<h3> <span class="mw-headline" id="XML_.E8.A7.84.E8.8C.83"> XML 规范 </span></h3>
+<h4> <span class="mw-headline" id=".E9.85.8D.E7.BD.AE.E8.A7.84.E8.8C.83"> 配置规范 </span></h4>
+<ul><li> 请示方式
+
+</li></ul>
+<dl><dd>客户端以 GET 的方式向服务器端提交以下参数请求此 XML 文档
+</dd></dl>
+<pre>
+ op=getconfig，此参数表示客户端要请求配置文档；
+ clientid，客户端ID（服务器分配给客户端的ID）；
+ charset，客户端的数据编码 
+ sign=签名，如果服务器端没有设置通信密钥则此值为空，如果服务器端不使用签名则此值为通信密钥；签名机制
+</pre>
+<ul><li> 规范内容包括Title和Data部分
+<ul><li> Title部分 
+</li></ul>
+</li></ul>
+<dl><dd>此部分是固定的代码且区分大小写
+</dd></dl>
+<pre>
+&lt;item id=&quot;Title&quot;&gt;&lt;![CDATA[Discuz! Block]]&gt;&lt;/item&gt;
+
+</pre>
+<ul><li><ul><li> Data部分
+</li></ul>
+</li></ul>
+<dl><dd>主要包括5个属性
+</dd></dl>
+<pre>
+version 版本号（必需）
+name 模块名（必需）
+fields 可显示的字段,在模块样式中使用（必需）包括以下内容
+　　　name 为该字段的显示名称
+　　　formtype 决定编辑单条数据时该字段的显示方式： 类型有： text, textarea, date, title, summary, pic；
+　　　datatype 决定该字段的数据展示，类型有： string, int, date, title, summary, pic；
+getsetting 可设置和接收的参数（必需）,包括以下内容
+　　　title 为显示的名称
+　　　type 为表单类型， 有： text, password, number, textarea, radio, select, mselect, mradio, mcheckbox, calendar；
+style 内置的显示样式（非必需）
+</pre>
+<ul><li> 配置规范 XML 文档示例如下
+</li></ul>
+<pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+
+&lt;root&gt;
+	&lt;item id=&quot;Title&quot;&gt;&lt;![CDATA[Discuz! Block]]&gt;&lt;/item&gt;
+	&lt;item id=&quot;Data&quot;&gt;
+		&lt;item id=&quot;version&quot;&gt;&lt;![CDATA[X1.5]]&gt;&lt;/item&gt;
+
+		&lt;item id=&quot;name&quot;&gt;&lt;![CDATA[C/S 数据类]]&gt;&lt;/item&gt;
+		&lt;item id=&quot;fields&quot;&gt;
+			&lt;item id=&quot;url&quot;&gt;
+				&lt;item id=&quot;name&quot;&gt;&lt;![CDATA[链接地址]]&gt;&lt;/item&gt;
+
+				&lt;item id=&quot;formtype&quot;&gt;&lt;![CDATA[text]]&gt;&lt;/item&gt;
+				&lt;item id=&quot;datatype&quot;&gt;&lt;![CDATA[string]]&gt;&lt;/item&gt;
+			&lt;/item&gt;
+			&lt;item id=&quot;title&quot;&gt;
+
+				&lt;item id=&quot;name&quot;&gt;&lt;![CDATA[标题]]&gt;&lt;/item&gt;
+				&lt;item id=&quot;formtype&quot;&gt;&lt;![CDATA[title]]&gt;&lt;/item&gt;
+				&lt;item id=&quot;datatype&quot;&gt;&lt;![CDATA[title]]&gt;&lt;/item&gt;
+
+			&lt;/item&gt;
+			&lt;item id=&quot;pic&quot;&gt;
+				&lt;item id=&quot;name&quot;&gt;&lt;![CDATA[图片]]&gt;&lt;/item&gt;
+				&lt;item id=&quot;formtype&quot;&gt;&lt;![CDATA[pic]]&gt;&lt;/item&gt;
+
+				&lt;item id=&quot;datatype&quot;&gt;&lt;![CDATA[pic]]&gt;&lt;/item&gt;
+			&lt;/item&gt;
+			&lt;item id=&quot;summary&quot;&gt;
+				&lt;item id=&quot;name&quot;&gt;&lt;![CDATA[简介]]&gt;&lt;/item&gt;
+
+				&lt;item id=&quot;formtype&quot;&gt;&lt;![CDATA[summary]]&gt;&lt;/item&gt;
+				&lt;item id=&quot;datatype&quot;&gt;&lt;![CDATA[summary]]&gt;&lt;/item&gt;
+			&lt;/item&gt;
+			&lt;item id=&quot;author&quot;&gt;
+
+				&lt;item id=&quot;name&quot;&gt;&lt;![CDATA[作者]]&gt;&lt;/item&gt;
+				&lt;item id=&quot;formtype&quot;&gt;&lt;![CDATA[text]]&gt;&lt;/item&gt;
+				&lt;item id=&quot;datatype&quot;&gt;&lt;![CDATA[text]]&gt;&lt;/item&gt;
+
+			&lt;/item&gt;
+			&lt;item id=&quot;authorid&quot;&gt;
+				&lt;item id=&quot;name&quot;&gt;&lt;![CDATA[作者ID]]&gt;&lt;/item&gt;
+				&lt;item id=&quot;formtype&quot;&gt;&lt;![CDATA[text]]&gt;&lt;/item&gt;
+
+				&lt;item id=&quot;datatype&quot;&gt;&lt;![CDATA[int]]&gt;&lt;/item&gt;
+			&lt;/item&gt;
+			&lt;item id=&quot;field1&quot;&gt;
+				&lt;item id=&quot;name&quot;&gt;&lt;![CDATA[字段1]]&gt;&lt;/item&gt;
+
+				&lt;item id=&quot;formtype&quot;&gt;&lt;![CDATA[text]]&gt;&lt;/item&gt;
+				&lt;item id=&quot;datatype&quot;&gt;&lt;![CDATA[string]]&gt;&lt;/item&gt;
+			&lt;/item&gt;
+			&lt;item id=&quot;field2&quot;&gt;
+
+				&lt;item id=&quot;name&quot;&gt;&lt;![CDATA[字段2]]&gt;&lt;/item&gt;
+				&lt;item id=&quot;formtype&quot;&gt;&lt;![CDATA[title]]&gt;&lt;/item&gt;
+				&lt;item id=&quot;datatype&quot;&gt;&lt;![CDATA[title]]&gt;&lt;/item&gt;
+
+			&lt;/item&gt;
+		&lt;/item&gt;
+		&lt;item id=&quot;getsetting&quot;&gt;
+			&lt;item id=&quot;param1&quot;&gt;
+				&lt;item id=&quot;title&quot;&gt;&lt;![CDATA[数据调用参数1]]&gt;&lt;/item&gt;
+
+				&lt;item id=&quot;type&quot;&gt;&lt;![CDATA[text]]&gt;&lt;/item&gt;
+				&lt;item id=&quot;default&quot;&gt;&lt;![CDATA[]]&gt;&lt;/item&gt;
+			&lt;/item&gt;
+			&lt;item id=&quot;param2&quot;&gt;
+
+				&lt;item id=&quot;title&quot;&gt;&lt;![CDATA[数据调用参数2]]&gt;&lt;/item&gt;
+				&lt;item id=&quot;type&quot;&gt;&lt;![CDATA[mcheckbox]]&gt;&lt;/item&gt;
+				&lt;item id=&quot;value&quot;&gt;
+					&lt;item id=&quot;0&quot;&gt;
+
+						&lt;item id=&quot;0&quot;&gt;&lt;![CDATA[1]]&gt;&lt;/item&gt;
+						&lt;item id=&quot;1&quot;&gt;&lt;![CDATA[选项1]]&gt;&lt;/item&gt;
+					&lt;/item&gt;
+					&lt;item id=&quot;1&quot;&gt;
+
+						&lt;item id=&quot;0&quot;&gt;&lt;![CDATA[2]]&gt;&lt;/item&gt;
+						&lt;item id=&quot;1&quot;&gt;&lt;![CDATA[选项2]]&gt;&lt;/item&gt;
+					&lt;/item&gt;
+				&lt;/item&gt;
+
+				&lt;item id=&quot;default&quot;&gt;&lt;![CDATA[1]]&gt;&lt;/item&gt;
+			&lt;/item&gt;
+			&lt;item id=&quot;start&quot;&gt;
+				&lt;item id=&quot;title&quot;&gt;&lt;![CDATA[起始数据行数]]&gt;&lt;/item&gt;
+
+				&lt;item id=&quot;type&quot;&gt;&lt;![CDATA[text]]&gt;&lt;/item&gt;
+				&lt;item id=&quot;default&quot;&gt;&lt;![CDATA[0]]&gt;&lt;/item&gt;
+			&lt;/item&gt;
+		&lt;/item&gt;
+
+		&lt;item id=&quot;style&quot;&gt;
+			&lt;item id=&quot;0&quot;&gt;
+				&lt;item id=&quot;name&quot;&gt;&lt;![CDATA[模板名称]]&gt;&lt;/item&gt;
+				&lt;item id=&quot;template&quot;&gt;&lt;![CDATA[&lt;div class=&quot;module cl xl xl1&quot;&gt;&lt;ul&gt;[loop]&lt;li&gt;&lt;em&gt;&lt;a href=&quot;home.php?uid={authorid}&quot;&gt;&lt;FONT COLOR=&quot;RED&quot;&gt;{author}&lt;/FONT&gt;&lt;/a&gt;&lt;/em&gt;&lt;a href=&quot;{url}&quot;&gt;{title}&lt;/a&gt;&lt;/li&gt;[/loop]&lt;/ul&gt;&lt;/div&gt;]]&gt;&lt;/item&gt;
+
+			&lt;/item&gt;
+			&lt;item id=&quot;1&quot;&gt;
+				&lt;item id=&quot;name&quot;&gt;&lt;![CDATA[模板名称红色]]&gt;&lt;/item&gt;
+				&lt;item id=&quot;template&quot;&gt;&lt;![CDATA[&lt;div class=&quot;module cl xl xl1&quot;&gt;&lt;ul&gt;[loop]&lt;li&gt;&lt;em&gt;&lt;font color=&quot;red&quot;&gt;&lt;a href=&quot;home.php?uid={authorid}&quot;&gt;{author}&lt;/a&gt;&lt;/font&gt;&lt;/em&gt;&lt;a href=&quot;{url}&quot;&gt;{title}&lt;/a&gt;&lt;/li&gt;[/loop]&lt;/ul&gt;&lt;/div&gt;]]&gt;&lt;/item&gt;
+
+			&lt;/item&gt;
+		&lt;/item&gt;
+	&lt;/item&gt;
+&lt;/root&gt;
+
+</pre>
+<h4> <span class="mw-headline" id=".E6.95.B0.E6.8D.AE.E8.A7.84.E8.8C.83"> 数据规范 </span></h4>
+
+<p>数据规范分为数据列表和HTML代码
+</p>
+<ul><li> 数据列表格式
+</li></ul>
+<dl><dd>客户端在请求数据时以 POST 的方式提交客户端设置的参数值，参数值包括在配置规范中可设置和接收的参数 getsetting 指定的所有字段,除了设置的参数外，系统会以 POST 的方式追加以下参数：
+</dd></dl>
+<pre>
+* op=getdata ，此参数表示客户端要请求数据；
+* clientid ，客户端ID（服务器分配给客户端的ID）；
+* op=getdata ，此参数表示客户端要请求数据；
+* items ，为用户指定显示的模块数据条数；
+* bannedids ，为用户选择屏蔽某数据时记录在模块中的该数据 id，多个 id 以半角分号(,)分隔。 应该在获取数据时屏蔽该数据；
+* charset，客户端的数据编码
+* sign ，数据签名，如果服务器端没有设置通信密钥则此值为空，如果服务器端不使用签名则此值为通信密钥；签名机制
+服务器端返回数据的 data 中应该包含 配置规范中可显示的字段 fields 指定的所有字段。并附加以下字段：
+* id 标志该数据的 id，如果用户屏蔽某数据时，会将该数据的 id 以 POST 的方式变量名为 bannedids，多个id以半角逗号(,)分隔提交到服务器端
+* picflag 如果有图片，则该值标志图片的类型，0 为 url、1 为本地、2 为 ftp 远程；如果图片是 Discuz! X 系统中的图片可以情况设置为 1 或 2，其它情况为 0
+需要注意： 除 id，title， url， pic， picflag， summary 几个字段外，其它字段需要放到 fields 数组里。
+</pre>
+<dl><dd>数据列表格式示例
+</dd></dl>
+<pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+
+&lt;root&gt;
+	&lt;item id=&quot;html&quot;&gt;&lt;![CDATA[]]&gt;&lt;/item&gt;
+	&lt;item id=&quot;data&quot;&gt;
+		&lt;item id=&quot;0&quot;&gt;
+			&lt;item id=&quot;id&quot;&gt;&lt;![CDATA[14]]&gt;&lt;/item&gt;
+
+			&lt;item id=&quot;title&quot;&gt;&lt;![CDATA[xml_block_title14]]&gt;&lt;/item&gt;
+			&lt;item id=&quot;url&quot;&gt;&lt;![CDATA[xml_server.php]]&gt;&lt;/item&gt;
+			&lt;item id=&quot;pic&quot;&gt;&lt;![CDATA[nophoto.gif]]&gt;&lt;/item&gt;
+
+			&lt;item id=&quot;picflag&quot;&gt;&lt;![CDATA[1]]&gt;&lt;/item&gt;
+			&lt;item id=&quot;summary&quot;&gt;&lt;![CDATA[]]&gt;&lt;/item&gt;
+			&lt;item id=&quot;fields&quot;&gt;
+				&lt;item id=&quot;author&quot;&gt;&lt;![CDATA[xml_user14]]&gt;&lt;/item&gt;
+
+				&lt;item id=&quot;authorid&quot;&gt;&lt;![CDATA[14]]&gt;&lt;/item&gt;
+				&lt;item id=&quot;field1&quot;&gt;&lt;![CDATA[field1value14]]&gt;&lt;/item&gt;
+				&lt;item id=&quot;field2&quot;&gt;&lt;![CDATA[field2value14]]&gt;&lt;/item&gt;
+
+			&lt;/item&gt;
+		&lt;/item&gt;
+		&lt;item id=&quot;1&quot;&gt;
+			&lt;item id=&quot;id&quot;&gt;&lt;![CDATA[15]]&gt;&lt;/item&gt;
+			&lt;item id=&quot;title&quot;&gt;&lt;![CDATA[xml_block_title15]]&gt;&lt;/item&gt;
+
+			&lt;item id=&quot;url&quot;&gt;&lt;![CDATA[xml_server.php]]&gt;&lt;/item&gt;
+			&lt;item id=&quot;pic&quot;&gt;&lt;![CDATA[nophoto.gif]]&gt;&lt;/item&gt;
+			&lt;item id=&quot;picflag&quot;&gt;&lt;![CDATA[1]]&gt;&lt;/item&gt;
+
+			&lt;item id=&quot;summary&quot;&gt;&lt;![CDATA[]]&gt;&lt;/item&gt;
+			&lt;item id=&quot;fields&quot;&gt;
+				&lt;item id=&quot;author&quot;&gt;&lt;![CDATA[xml_user15]]&gt;&lt;/item&gt;
+				&lt;item id=&quot;authorid&quot;&gt;&lt;![CDATA[15]]&gt;&lt;/item&gt;
+
+				&lt;item id=&quot;field1&quot;&gt;&lt;![CDATA[field1value15]]&gt;&lt;/item&gt;
+				&lt;item id=&quot;field2&quot;&gt;&lt;![CDATA[field2value15]]&gt;&lt;/item&gt;
+			&lt;/item&gt;
+		&lt;/item&gt;
+
+	&lt;/item&gt;
+&lt;/root&gt;
+</pre>
+<ul><li><ul><li> HTML 代码格式
+</li></ul>
+</li></ul>
+<dl><dd>例示 
+</dd></dl>
+<pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+
+&lt;root&gt;
+	&lt;item id=&quot;html&quot;&gt;&lt;![CDATA[&lt;div style=&quot;border:1px solid red;width:100px; height: 100px;&quot;&gt;HTML CODE&lt;/div&gt;]]&gt;&lt;/item&gt;
+	&lt;item id=&quot;data&quot;&gt;&lt;![CDATA[]]&gt;&lt;/item&gt;
+
+&lt;/root&gt;
+</pre>
+<h3> <span class="mw-headline" id=".E6.9C.8D.E5.8A.A1.E7.AB.AF.E5.BA.94.E7.94.A8.E7.A8.8B.E5.BA.8F.E6.8E.A5.E5.8F.A3.E7.A4.BA.E4.BE.8B"> 服务端应用程序接口示例 </span></h3>
+<dl><dt>以下提供一个 PHP 版本的程序示例： 
+</dt></dl>
+<pre>
+&lt;?php
+
+define('CHARSET', 'GBK'); //服务器端数据编码
+require './source/class/class_xml.php'; //XML格式的文档和array的相互转换的类
+error_reporting(7);
+
+$charset = $_GET['charset']&nbsp;? $_GET['charset']&nbsp;: $_POST['charset']; //客户端数据编码
+//数据转码
+if(strtoupper($charset)&nbsp;!= CHARSET) {
+	foreach($POST as $key =&gt; $value) {
+		$POST[$key] = iconv($charset, CHARSET, $value);
+	}
+	foreach($GET as $key =&gt; $value) {
+		$GET[$key] = iconv($charset, CHARSET, $value);
+	}
+}
+
+$data = array('html'=&gt;'', 'data'=&gt;''); //初始化要返回数据
+$sign = $_GET['sign']&nbsp;? $_GET['sign']&nbsp;: $_POST['sign']; //获取客户端请求数据的签名
+$clientid = $_GET['clientid']&nbsp;? $_GET['clientid']&nbsp;: $_POST['clientid']; //客户端ID
+
+$client = get_client_by_clientid($clientid); //得到客户端的相关信息
+if(empty($client)) { //客户端不存在
+	exit('CLIENT_NOT_EXISTS'); //直接返回失败
+}
+
+$datasign = ''; //数据签名
+if(!empty($_POST)) {
+	unset($_POST['sign']); //删除签名参数，此参数不参加签名计算
+	$datasign = get_sign($_POST, $client['key']); //计算数据的签名
+} else {
+	unset($_GET['sign']); //删除签名参数，此参数不参加签名计算
+	$datasign = get_sign($_GET, $client['key']); //计算数据的签名
+}
+
+if($datasign&nbsp;!= $sign) { //签名不正确
+	exit('SIGN_ERROR'); //输入签名错误
+}
+
+if($_POST['op'] == 'getdata') { //判断是否为请求数据列表
+	$datalist = $data = array();//数据列表
+	$wherearr = array(); //SQL 条件数组
+
+	//获取客户端POST参数
+	$start = intval($_POST['start']); //起始数据行数
+	$limit = intval($_POST['items']); //要显示多少条数
+	$bannedids = addslashes($_POST['bannedids']); //客户端屏蔽的IDS
+	$param1 = addslashes($_POST['param1']); //数据调用参数1,假设此值要求为string型
+	$param2 = intval($_POST['param2']); //数据调用参数2,假设此值要求为int型
+
+	//处理参数1
+	if(!empty($param1)){
+		$wherearr[] = &quot;fieldsparam1='$param1'&quot;;
+	}
+	//处理参数2
+	if(!empty($param2)) {
+		$wherearr[] = &quot;fieldsparam2='$param2'&quot;;
+	}
+	//处理客户端屏蔽的IDS
+	if(!empty($bannedids)) {
+		$banids = explode(',', $bannedids);
+		$wherearr[] = &quot;csid NOT IN (&quot;.implode(&quot;','&quot;, $banids).&quot;')&quot;;
+	}
+	$where =&nbsp;!empty($wherearr)&nbsp;? 'WHERE '.implode(' AND ', $wherearr)&nbsp;: ''; //构造条件
+	/*数据库相关处理
+	$query = DB::query('SELECT * FROM '.DB::table('tablename').&quot; $where LIMIT $start, $limit&quot;); //SQL查询
+	while($value = DB::fetch($query)) {
+		//此处为数据处理逻辑代码
+		$data[] = $value;
+	}
+	 */
+
+	//以下为临时测试数据，正式环境请根据自己的业务做相关调整
+	$url = 'http://www.xxx.com/';
+	$data = range($start, $start + $limit);//构造临时的假数据
+	foreach($data as $value) {
+		//需要注意： 除 id， title， url， pic， picflag， summary 几个字段外，其它字段需要放到 fields 数组里。
+		$datalist[] = array(
+			'id' =&gt; $value,
+			'title' =&gt; 'xml_block_title'.$value, //标题
+			'url' =&gt; $url.'xml_server.php?csid='.$value, //链接地址
+			'pic' =&gt; $url.'/data/attachment/photo.gif', //图片地址
+			'picflag' =&gt; '0', //0为url 1为本地 2 为ftp远程；如果图片是DX系统中的图片可以情况设置为1或2，其它情况为0
+			'summary' =&gt; '', //简介
+			'fields' =&gt; array( //配置规范中fields中指定的字段
+				'author' =&gt; 'xml_user'.$value,
+				'authorid' =&gt; $value,
+				'field1' =&gt; 'field1value'.$value,
+				'field2' =&gt; 'field2value'.$value
+			)
+		);
+	}
+	$data['data'] = $datalist;
+
+	//如果要返回HTML代码，可直接使用以下代码
+	//$data['html'] = 'HTML CODE';
+	$xml = array2xml($data); //转换为XML文档
+} else if($_GET['op'] == 'getconfig') {
+	$xml = file_get_contents('block_xml_sample.xml');//block_xml_sample.xml文件中的内容为 配置规范XML文档示例 的内容
+} else {
+	$xml = 'NO_OPERATION';
+}
+ob_end_clean();
+@header(&quot;Expires: -1&quot;);
+@header(&quot;Cache-Control: no-store, private, post-check=0, pre-check=0, max-age=0&quot;, FALSE);
+@header(&quot;Pragma: no-cache&quot;);
+header(&quot;Content-type: text/xml&quot;);
+echo $xml;
+exit();
+
+/**
+ * 获得客户端信息
+ * @param  $clientid
+ * @return array 客户端信息数组
+ */
+function get_client_by_clientid($clientid){
+	$client = array();
+	$clientid = intval($clientid);
+	if($clientid) {
+
+		/*数据库相关处理
+		$client = DB::fetch_first('SELECT * FROM '.DB::table('clienttable').&quot; clientid='$clientid'&quot;); //SQL查询
+		 */
+
+		//以下为临时测试数据，正式环境请根据自己的业务做相关调整
+		//模拟数据库
+		$CLIENTSDB = array(
+			'100000' =&gt; array(
+				'clientid' =&gt; '100000',
+				'key' =&gt; '*654%#(asd94',
+			),
+			'200000' =&gt; array(
+				'clientid' =&gt; '200000',
+				'key' =&gt; '1#9!(@@34#94',
+			),
+			'300000' =&gt; array(
+				'clientid' =&gt; '300000',
+				'key' =&gt; '7$@^8^$7as89',
+			),
+			'400000' =&gt; array(
+				'clientid' =&gt; '400000',
+				'key' =&gt; '23@#86^%4&amp;32',
+			),
+		);
+		$client = isset($CLIENTSDB[$clientid])&nbsp;? $CLIENTSDB[$clientid]&nbsp;: array();
+	}
+	return $client;
+}
+
+
+/**
+ * 生成签名
+ * @param array $para 参数数组
+ * @param string $key 加密密钥
+ * @return string 签名
+ */
+function get_sign($para, $key = ''){
+	ksort($para);
+	$signarr = array();
+	foreach($para as $k =&gt; $v) {
+		$signarr[] = $k.'='.$v;
+	}
+	$sign = implode('&amp;', $signarr);
+	$sign = md5($sign.$key);
+	return $sign;
+}
+?&gt;
+
+</pre>
+<h3> <span class="mw-headline" id=".E7.AD.BE.E5.90.8D.E6.9C.BA.E5.88.B6"> 签名机制 </span></h3>
+<ul><li>计算方法
+</li></ul>
+<dl><dd>待签名数据 + 通信密钥（服务器端提供给客户端的通信密钥）的MD5值作为签名。
+</dd><dd>所有HTTP请求中传递的参数(除sign外)按照参数名称字符升序的顺序串联起来（例如：k1=v1&amp;k2=v2&amp;k3=v3），构成待签名数据。
+</dd><dd>例如：请求配置文档需要以下参数：
+</dd></dl>
+<pre>
+op=getconfig
+clientid=10000
+charset=utf-8
+那么待签名数据就是：clientid=10000&amp;op=getconfig&amp;charset=utf-8。
+
+</pre>
+<ul><li>签名注意事项：
+</li></ul>
+<dl><dd>无论参数是否有值，只要在请示中传递即包含到待签名数据中。
+</dd><dd>根据 HTTP 协议要求，传递参数的值中如果存在特殊字符（如：&amp;、@等），那么该值需要做 URL Encoding，这样请求接受方才能接受到正确的参数值。这种情况下，做签名时使用的应该是原生值而不是 encoding 之后的值。
+</dd></dl>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 1/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key dev-mw_:pcache:idhash:14-0!1!0!!zh-cn!2!edit=0 and timestamp 20110425112222 -->
+<div class="printfooter">
+取自“<a href="index.php-title=第三方DIY模块拓展类的开发.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6">http://dev.discuz.org/wiki/index.php?title=%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6</a>”</div>
+		<div id='catlinks' class='catlinks catlinks-allhidden'></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>查看</h5>
+		<div class="pBody">
+			<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="index.php-title=第三方DIY模块拓展类的开发.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6" title="查看页面内容 [c]" accesskey="c">页面</a></li>
+				 <li id="ca-talk" class="new"><a href="javascript:if(confirm('http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9&hidebots=0&days=14&hideliu=1&target=%E6%96%87%E4%BB%B6%3AIntroff_1jLOYlJZaqiA.jpg  \n\nļδ Teleport Pro ȡأΪ һļ˳ʼַ̫ԶˡӿʼַȡصȣͿȡصһļ  \n\nҪӷϴ'))window.location='http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9&hidebots=0&days=14&hideliu=1&target=%E6%96%87%E4%BB%B6%3AIntroff_1jLOYlJZaqiA.jpg'" tppabs="http://dev.discuz.org/wiki/index.php?title=%E8%AE%A8%E8%AE%BA:%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6&action=edit&redlink=1" title="关于页面正文的讨论 [t]" accesskey="t">讨论</a></li>
+				 <li id="ca-viewsource"><a href="index.php-title=第三方DIY模块拓展类的开发&action=edit.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6&action=edit" title="此页面已被保护，你可以查看其源代码。 [e]" accesskey="e">查看源代码</a></li>
+				 <li id="ca-history"><a href="index.php-title=第三方DIY模块拓展类的开发&action=history.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6&action=history" title="此页面的早前修订版本 [h]" accesskey="h">历史</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>个人工具</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="index.php-title=特殊-用户登录&returnto=第三方DIY模块拓展类的开发.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&returnto=%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6" title="我们鼓励您登录，但这并不是必须的 [o]" accesskey="o">登录</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/wiki/images/wiki.gif);" href="index.php-title=首页.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E9%A6%96%E9%A1%B5" title="访问首页"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>导航</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="index.php-title=首页.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E9%A6%96%E9%A1%B5" title="访问首页 [z]" accesskey="z">首页</a></li>
+				<li id="n-portal"><a href="index.php-title=Discuz!_技术文库-社区.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E7%A4%BE%E5%8C%BA" title="关于本计划，您可以做什么，应该如何做">社区入口</a></li>
+				<li id="n-currentevents"><a href="index.php-title=Discuz!_技术文库-当前事件.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E5%BD%93%E5%89%8D%E4%BA%8B%E4%BB%B6" title="查找当前事件的背景信息">当前事件</a></li>
+				<li id="n-recentchanges"><a href="index.php-title=特殊-最近更改.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" title="列出该网站的最近修改 [r]" accesskey="r">最近更改</a></li>
+				<li id="n-randompage"><a href="index.php-title=特殊-用户登录&returnto=特殊-链出更改&returntoquery=hidemyself=1&from=20111128013601&target=文件-Introff_1jLOYlJZaqiA.jpg.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%9A%8F%E6%9C%BA%E9%A1%B5%E9%9D%A2" title="随机载入一个页面 [x]" accesskey="x">随机页面</a></li>
+				<li id="n-help"><a href="index.php-title=帮助-目录.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E5%B8%AE%E5%8A%A9:%E7%9B%AE%E5%BD%95" title="寻求帮助">帮助</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">搜索</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="http://dev.discuz.org/wiki/index.php" id="searchform">
+				<input type='hidden' name="title" value="特殊:搜索"/>
+				<input id="searchInput" title="搜索该网站" accesskey="f" type="search" name="search" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="进入" title="如果相同的标题存在的话便直接前往该页面" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="搜索" title="搜索该文字的页面" />
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>工具箱</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="index.php-title=特殊-链入页面-第三方DIY模块拓展类的开发.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%85%A5%E9%A1%B5%E9%9D%A2/%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6" title="列出所有与此页相链的页面 [j]" accesskey="j">链入页面</a></li>
+				<li id="t-recentchangeslinked"><a href="index.php-title=特殊-链出更改-第三方DIY模块拓展类的开发.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9/%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6" title="从此页链出的所有页面的更改 [k]" accesskey="k">链出更改</a></li>
+<li id="t-specialpages"><a href="index.php-title=特殊-特殊页面.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2" title="所有特殊页面列表 [q]" accesskey="q">特殊页面</a></li>
+				<li id="t-print"><a href="index.php-title=第三方DIY模块拓展类的开发&printable=yes.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6&printable=yes" rel="alternate" title="这个页面的可打印版本 [p]" accesskey="p">可打印版</a></li>				<li id="t-permalink"><a href="index.php-title=第三方DIY模块拓展类的开发&oldid=38.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6&oldid=38" title="这个页面修订版本的永久链接">永久链接</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico"><a href="javascript:if(confirm('http://www.mediawiki.org/  \n\nļδ Teleport Pro ȡأΪ ·ʼַõķΧ  \n\nҪӷϴ'))window.location='http://www.mediawiki.org/'" tppabs="http://www.mediawiki.org/"><img src="skins/common/images/poweredby_mediawiki_88x31.png" tppabs="http://dev.discuz.org/wiki/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a></div>
+	<ul id="f-list">
+		<li id="lastmod"> 此页面最后修订于2011年4月8日 (星期五) 05:25。</li>
+		<li id="privacy"><a href="err:bad_redirect" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E9%9A%90%E7%A7%81%E6%94%BF%E7%AD%96" title="Discuz! 技术文库:隐私政策">隐私政策</a></li>
+		<li id="about"><a href="index.php-title=Discuz!_技术文库-关于.htm" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E5%85%B3%E4%BA%8E" title="Discuz! 技术文库:关于">关于Discuz! 技术文库</a></li>
+		<li id="disclaimer"><a href="err:bad_redirect" tppabs="http://dev.discuz.org/wiki/index.php?title=Discuz!_%E6%8A%80%E6%9C%AF%E6%96%87%E5%BA%93:%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E" title="Discuz! 技术文库:免责声明">免责声明</a></li>
+	</ul>
+</div>
+</div>
+
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.060 secs. --></body><!-- Cached 20110425112222 -->
+</html>
